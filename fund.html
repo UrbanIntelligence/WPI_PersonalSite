@@ -30,35 +30,18 @@
 <main class="container">
   <h1>Funding &amp; Awards</h1>
   <div class="card">
-    <ol class="news-list" style="list-style: decimal; padding-left: 1.4em;">
-      <li><span class="tag tag-award">NSF Grant</span> PI, $529,537, NSF CAREER Award, <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1942680">IIS-1942680</a>, July 1, 2020&ndash;June 30, 2025. (<a href="https://users.wpi.edu/~yli15/NSF1942680.html">Project website</a>)</li>
-      <li><span class="tag tag-award">NSF Grant</span> PI, $1,997,764, NSF SCC (Smart &amp; Connected Community) program, <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1952085">CNS-1952085</a>, Oct 1, 2020&ndash;Sep 30, 2023. (Subawarded to PI Li at WPI with a total share of $265,979.)</li>
-      <li><span class="tag tag-award">NSF Grant</span> PI, $1,750,856, NSF SCC (Smart &amp; Connected Community) program, <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1831140">CMMI-1831140</a>, Sep 15, 2018&ndash;Aug 31, 2023. (Subawarded to PI Li at WPI with a total share of $250,610.)</li>
-      <li><span class="tag tag-award">NSF Grant</span> PI, $190,956, NSF CISE Research Initiation Initiative (CRII), <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1657350&HistoricalAwards=false">CNS-1657350</a>, Aug 1, 2017&ndash;Jul 31, 2020.</li>
-      <li><span class="tag tag-award">NSF Grant</span> Senior Personnel, $2,999,289, NSF NRT Program, <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2021871&HistoricalAwards=false">DGE-2021871</a>, Sep 1, 2020&ndash;Aug 31, 2025. (<a href="https://wp.wpi.edu/cedar/">Project link</a>)</li>
-      <li><span class="tag tag-award">Industry Grant</span> PI, $100,000, <a href="http://www.didichuxing.com/en/">DiDi Chuxing Research</a>, Research Funding (as unrestricted gift), "User Behavior Analysis for Ride-Hailing Services", Mar 1, 2018&ndash;Feb 28, 2019.</li>
-      <li><span class="tag tag-award">Industry Grant</span> PI, $25,000, <a href="http://www.pitneybowes.com/us">Pitney Bowes Inc.</a> Research Grant, "Sampling Big Urban Data", Mar 1, 2017&ndash;Feb 28, 2018.</li>
-      <li><span class="tag tag-award">Industry Grant</span> PI, $10,000, <a href="http://www.pitneybowes.com/us">Pitney Bowes Inc.</a> Research Funding (as unrestricted gift), "Dynamic Footfall Predictions on Point-of-Interests with Heterogeneous Urban Data", Jan 1, 2016&ndash;Dec 31, 2016.</li>
-      <li><span class="tag tag-award">Industry Support</span> PI, <a href="http://www.nvidia.com/page/home.html">NVIDIA Corporate</a> Gift Research Hardware Award, "Enabling Smart and Scalable Urban Event Detection and Diagnosis Using GPU Technology", Sep 22, 2017&ndash;Sep 21, 2018.</li>
-      <li><span class="tag tag-award">WPI Seed Grant</span> Co-PI, Total $60,000 (my share $20,000) with PI Qingshuo Song and Co-PI Seyed A Zekavat, <a href="https://www.wpi.edu/research/internal-grant-programs/triad-grants-awarded-2019-20">WPI Transformative Research and Innovation, Accelerating Discovery (TRIAD) seed grant program</a>, "A Journey from High Dimensional PDE to Reinforcement Learning and Its Applications", March 1, 2020&ndash;Mar 1, 2021.</li>
-      <li><span class="tag tag-award">10-Year Impact Award</span> In Nov 2024, our paper was selected as a runner-up for the 2024 10-Year Impact Award for the ACM SIGSPATIAL Conference (<a href="https://sigspatial2024.sigspatial.org/">Conference link</a>).</li>
-      <li><span class="tag tag-award">Best Paper Award</span> In April 2019, our <a href="https://www.siam.org/Conferences/CM/Main/sdm19">SDM'19</a> paper won Best Applied Data Science Paper Award (<a href="http://urban.cs.wpi.edu/DLCTD/">Project link</a>).</li>
-      <li><a href="https://cps-vo.org/group/aspiring-pimtg-17">2017 NSF Aspiring Cyber-Physical Systems Principal Investigators' Workshop</a>, Travel Award, 2017.</li>
-      <li><a href="http://cps-vo.org/group/CPSEarlyCareerInvestigators2015">2015 NSF Early-Career Investigators Workshop on CPS and Smart City</a>, Travel Award, 2015.</li>
-      <li><a href="http://simplexconf.net/">SIMPLEX 2015</a>, Best Paper Award, 2015.</li>
-      <li><a href="https://cis.temple.edu/">IEEE ICDCS 2013</a>, Travel Grant, 2013.</li>
-      <li><a href="https://icnp12.cs.umd.edu/">IEEE ICNP 2012</a>, Travel Grant, 2012.</li>
-      <li><a href="http://www.mathstat.dal.ca/~mominis/WAW2012/">LNCS WAW 2012</a>, Travel Grant, 2012.</li>
-      <li><a href="https://www.usenix.org/conference/nsdi12">USENIX NSDI 2012</a>, Travel Grant, 2012.</li>
-      <li><a href="http://infocom2012.ieee-infocom.org/netscicom/">NetSciCom 2012</a> (Co-located with INFOCOM 2012), Travel Grant, 2012.</li>
-      <li>Received MSRA Internship Excellence Award, Summer 2011.</li>
-      <li>Best Student Presentation Award in CASIN 2011, Beijing, July 22, 2011.</li>
-      <li>MASS 2009 Travel Grant, NSF, 2009.</li>
+    <ol class="news-list" style="list-style: decimal; padding-left: 1.4em;" id="funding-list">
+      <li class="pub-loading">Loading&hellip;</li>
     </ol>
   </div>
 </main>
 
 <footer class="site-footer">Yanhua Li &middot; Worcester Polytechnic Institute</footer>
+
+<script src="assets/render.js"></script>
+<script>
+  SiteRender.renderSimpleList('funding-list', 'data/funding.json', { forceTagClass: 'tag-award' });
+</script>
 
 </body>
 </html>

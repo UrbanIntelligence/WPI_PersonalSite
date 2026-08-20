@@ -32,18 +32,19 @@
   <div class="card">
     <table class="simple">
       <tr><th>Course</th><th>Recent offerings</th></tr>
-      <tr><td>DS551/CS551: Reinforcement Learning</td><td>2019 Fall, 2020 Fall, 2022 Spring, 2022 Fall, 2023 Fall, 2024 Fall, 2025 Fall</td></tr>
-      <tr><td>DS504/CS586: Big Data Analytics</td><td>2016 Fall, 2016 Spring, 2017 Fall, 2018 Spring, 2018 Fall, 2019 Spring, 2020 Spring, 2021 Spring, 2023 Spring, 2024 Spring, 2025 Spring, 2026 Spring</td></tr>
-      <tr><td>CS539: Machine Learning</td><td>2024 Fall, 2025 Spring</td></tr>
-      <tr><td>DS3010: Data Science III: Computational Data Intelligence</td><td>2022 Spring D-term</td></tr>
-      <tr><td>CS3516: Computer Networks</td><td>2016 Fall A-term, 2017 Fall A-term, 2018 Fall A-term, 2019 Fall A-term, 2020 Fall A-term, 2023 Spring D-term, 2023 Fall B-term, 2024 Fall B-term, 2026 Spring D-term</td></tr>
-      <tr><td>DS595/CS525: Urban Network Analysis: Methodologies and Applications</td><td>2017 Spring</td></tr>
-      <tr><td>CS4516: Advanced Computer Networks</td><td>2015 Fall B-term</td></tr>
+      <tbody id="teaching-rows">
+        <tr><td colspan="2">Loading&hellip;</td></tr>
+      </tbody>
     </table>
   </div>
 </main>
 
 <footer class="site-footer">Yanhua Li &middot; Worcester Polytechnic Institute</footer>
+
+<script src="assets/render.js"></script>
+<script>
+  SiteRender.renderTeachingTable('teaching-rows', 'data/teaching.json');
+</script>
 
 </body>
 </html>

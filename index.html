@@ -170,64 +170,57 @@
 
 <footer class="site-footer">Yanhua Li &middot; Worcester Polytechnic Institute</footer>
 
+<script src="assets/render.js"></script>
 <script>
 (function () {
   var TARGET_VENUES = ['ICDM', 'ICML', 'NeurIPS', 'KDD'];
   var YEARS_TO_SHOW = 3;
   var container = document.getElementById('recent-pubs');
 
-  function pickTitle(entryEl) {
-    var bolds = entryEl.querySelectorAll('b');
+  function pickTitle(html) {
+    var div = document.createElement('div');
+    div.innerHTML = html;
+    var bolds = div.querySelectorAll('b');
     var best = null;
     bolds.forEach(function (b) {
       var text = b.textContent.trim();
       if (text === 'Yanhua Li') return;
       if (!best || text.length > best.length) best = text;
     });
-    return best || entryEl.textContent.trim().slice(0, 140);
+    return best || div.textContent.trim().slice(0, 140);
   }
 
-  fetch('res.html')
-    .then(function (r) {
-      if (!r.ok) throw new Error('fetch failed: ' + r.status);
-      return r.text();
-    })
-    .then(function (html) {
-      var doc = new DOMParser().parseFromString(html, 'text/html');
-      var entries = Array.prototype.slice.call(doc.querySelectorAll('.pub-entry[data-venue]'));
-
+  SiteRender.fetchJSON('data/publications.json')
+    .then(function (entries) {
       var matching = entries.filter(function (e) {
-        return TARGET_VENUES.indexOf(e.dataset.venue) !== -1;
+        return e.venue && TARGET_VENUES.indexOf(e.venue) !== -1;
       });
-
       if (matching.length === 0) throw new Error('no matching entries found');
 
-      var years = matching
-        .map(function (e) { return parseInt(e.dataset.year, 10); })
-        .filter(function (y) { return !isNaN(y); });
-      var distinctYears = Array.from(new Set(years)).sort(function (a, b) { return b - a; });
+      var distinctYears = Array.from(new Set(matching.map(function (e) { return e.year; })))
+        .sort(function (a, b) { return b - a; });
       var allowedYears = new Set(distinctYears.slice(0, YEARS_TO_SHOW));
 
-      var shown = matching.filter(function (e) {
-        return allowedYears.has(parseInt(e.dataset.year, 10));
-      });
+      var shown = matching
+        .filter(function (e) { return allowedYears.has(e.year); })
+        .sort(function (a, b) { return b.year - a.year; });
 
       if (shown.length === 0) throw new Error('no entries in latest ' + YEARS_TO_SHOW + ' years');
 
       container.innerHTML = '';
       shown.forEach(function (e) {
-        var badge = e.querySelector('.venue-badge');
         var li = document.createElement('li');
         li.className = 'pub-entry';
-        var badgeHtml = badge ? badge.outerHTML : '';
-        var title = pickTitle(e);
+        var badgeCls = 'venue-badge prestige v-' + e.venue.toLowerCase();
+        var title = pickTitle(e.html);
         var anchor = e.id ? 'res.html#' + e.id : 'res.html';
-        li.innerHTML = badgeHtml + ' <a href="' + anchor + '">' + title + '</a>';
+        li.innerHTML = '<span class="' + badgeCls + '">' + e.tag + '</span> <a href="' + anchor + '">' + title + '</a>';
         container.appendChild(li);
       });
     })
     .catch(function (err) {
       container.innerHTML = '<li class="pub-loading">Couldn\'t load automatically &mdash; see the <a href="res.html">full publications list</a>.</li>';
+      console.error(err);
     });
 })();
 </script>

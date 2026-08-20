@@ -1,0 +1,1017 @@
+[
+  {
+    "id": "pub-1",
+    "year": 2026,
+    "tag": "ICLM'26 Spotlight",
+    "venue": "ICML",
+    "html": "Xin Zhang, Jonathan Martinez, <b>Yanhua Li</b>, and Yingxue Zhang,<br/>\n<b>Decision Transformers As Zero-Shot Learners via Text-Behavior Alignment.</b>[To be available soon]<br/>\n<i>the Forty-Third International Conference on Machine Learning, July 6–11, 2026, Seoul, Korea, (~2.2% Spotlight Acceptance Ratio: 536 out of 23,918 submissions)</i>"
+  },
+  {
+    "id": "pub-2",
+    "year": 2026,
+    "tag": "KDD'26",
+    "venue": "KDD",
+    "html": "Yuhang Liu, Yingxue Zhang, Xin Zhang, <b>Yanhua Li</b>, and Jun Luo,<br/>\n<b>UniLLM: A Unified Large Language Model for Multi‑Modal Urban Dynamics Prediction.</b>[To be available soon]<br/>\n<i>the 32nd SIGKDD conference on Knowledge Discovery and Data Mining, August 9–13, 2026, Jeju, Korea, (~20% Acceptance Ratio out of 912 submissions)</i>"
+  },
+  {
+    "id": "pub-3",
+    "year": 2026,
+    "tag": "CVEU'26",
+    "venue": null,
+    "html": "Nasrin Kalanat, Yiqun Xie, <b>Yanhua Li</b>, Xiaowei Jia,<br/>\n<b>Temporal Environment-Aware Image Generation via Latent Diffusion.</b>[To be available soon]<br/>\n<i>CVPR 2026 Workshop on AI for Creative Visual Content Generation Editing and Understanding, June 3–4, 2026, Denver, Colorado, USA.</i>"
+  },
+  {
+    "id": "pub-4",
+    "year": 2025,
+    "tag": "NeurIPS'25",
+    "venue": "NeurIPS",
+    "html": "Zhihao Wang, Yiqun Xie, Lei Ma, George Hurtt, Xiaowei Jia, <b>Yanhua Li</b>, Ruohan Li, Zhili Li, Shuo Xu, <br/>\n<b>Carbon-Bench: A Forty-year Global-scale Benchmark Dataset for Carbon Forecasting in Forest Ecosystems.</b> [vailable soon]<br/>\n<i>Thirty-ninth Conference on Neural Information Processing Systems (Track Datasets and Benchmarks), San Diego, CA, USA, December 2 - 7, 2025, (24.91% Acceptance Ratio; 497 of 1995 submissions)</i>"
+  },
+  {
+    "id": "pub-5",
+    "year": 2025,
+    "tag": "KDD'25",
+    "venue": "KDD",
+    "html": "Yuhang Liu, Yingxue Zhang, Xin Zhang, <b>Yanhua Li</b>, and Jun Luo,<br/>\n<b>UrbanMind: Urban Dynamics Prediction with Multifaceted Spatial-Temporal Large Language Models.</b>[To be available soon]<br/>\n<i>the 31st SIGKDD conference on Knowledge Discovery and Data Mining, August 3–7, 2025, Toronto, ON, Canada, (~18.4% Acceptance Ratio out of 1988 submissions)</i>"
+  },
+  {
+    "id": "pub-6",
+    "year": 2025,
+    "tag": "ICDM'25",
+    "venue": "ICDM",
+    "html": "Yuhang Liu, Yingxue Zhang, Xin Zhang, Yu Yang, <b>Yanhua Li</b>, and Jun Luo,<br/><b>MARCEL: Multifaceted Spatial-Temporal Contrastive Learning for Generic Spatial-Temporal Representations.</b>[Available soon!]<br/>\n<i>IEEE International Conference on Data Mining, (13.5%=106/785 Full paper acceptance ratio), Washington DC, USA, Nov. 12 - Nov 15, 2025.</i>"
+  },
+  {
+    "id": "pub-7",
+    "year": 2025,
+    "tag": "SIGSPATIAL GIS'25",
+    "venue": "SIGSPATIAL",
+    "html": "Mingzhi Hu, Xin Zhang, <b>Yanhua Li</b>, Jun Luo, <br/>\n<b>KG-STFT: Knowledge Graph-Guided Human-Generated Spatial-Temporal Cross-task Fine-Tuning. </b>[<a href=\"\">PDF</a>]<br/>\n<i>33rd ACM SIGSPATIAL International Conference on Advances in Geographic Information Systems, (26%=51/195 Full paper acceptance ratio), Minneapolis, MN, USA, Nov. 3 - 6, 2025.</i>"
+  },
+  {
+    "id": "pub-8",
+    "year": 2025,
+    "tag": "SIGSPATIAL GIS'25",
+    "venue": "SIGSPATIAL",
+    "html": "Shiyuan Luo, Runlong Yu, Shengyu Chen, Yingda Fan, Yiqun Xie, <b>Yanhua Li</b>, Xiaowei Jia,<br/>\n<b>Geo-Aware Models for Stream Temperature Prediction across Different Spatial Regions and Scales. </b>[<a href=\"\">PDF</a>]<br/>\n<i>33rd ACM SIGSPATIAL International Conference on Advances in Geographic Information Systems, (26%=51/195 Full paper acceptance ratio), Minneapolis, MN, USA, Nov. 3 - 6, 2025.</i>"
+  },
+  {
+    "id": "pub-9",
+    "year": 2024,
+    "tag": "NeurIPS'24",
+    "venue": "NeurIPS",
+    "html": "Ruohan Li, Yiqun Xie, Xiaowei Jia, Dongdong Wang, <b>Yanhua Li</b>, Yingxue Zhang, Zhihao Wang, Zhili Li, <br/><b>SolarCube: An Integrative Benchmark Dataset Harnessing Satellite and In-situ Observations for Large-scale Solar Energy Forecasting.</b> [vailable soon]<br/>\n<i>Thirty-eighth Conference on Neural Information Processing Systems (Track Datasets and Benchmarks), Vancouver Canada, December 9 - 15, 2024, (25.3% Acceptance Ratio out of 1820 submissions)</i>"
+  },
+  {
+    "id": "pub-10",
+    "year": 2024,
+    "tag": "KDD'24",
+    "venue": "KDD",
+    "html": "Xinbo Zhao, Yingxue Zhang, Xin Zhang, Yu Yang, Yiqun Xie, <b>Yanhua Li</b>, Jun Luo,<br/>\n<b>Urban-Focused Multi-Task Offline Reinforcement Learning with Contrastive Data Sharing.</b>[To be available soon]<br/>\n<i>the 30th SIGKDD conference on Knowledge Discovery and Data Mining, Barcelona, Spain, August 25 - 29, 2024, (~20% Acceptance Ratio out of 2046 submissions)</i>"
+  },
+  {
+    "id": "pub-11",
+    "year": 2024,
+    "tag": "ICDM'24",
+    "venue": "ICDM",
+    "html": "Runlong Yu, Chonghao Qiu, Robert Ladwig, Paul Hanson, Yiqun Xie, <b>Yanhua Li</b>, and Xiaowei Jia,<br/><b>Adaptive Process-Guided Learning: An Application in Predicting Lake DO Concentrations.</b>[Available soon!]<br/>\n<i>IEEE International Conference on Data Mining, (10.9%=66/604 Full paper acceptance ratio), Abu Dhabi, UAE, Dec. 9 - Dec 12, 2024.</i>"
+  },
+  {
+    "id": "pub-12",
+    "year": 2024,
+    "tag": "ICDM'24",
+    "venue": "ICDM",
+    "html": "Yuhang Liu, Yingxue Zhang, Xin Zhang, Yu Yang, Yiqun Xie, Sahar Ghanipoor Machiani, <b>Yanhua Li</b>, and Jun Luo,<br/><b>Align Along Time and Space: A Graph Latent Diffusion Model for Traffic Dynamics Prediction.</b>[Available soon!]<br/>\n<i>IEEE International Conference on Data Mining, (10.9%=66/604 Full paper acceptance ratio), Abu Dhabi, UAE, Dec. 9 - Dec 12, 2024.</i>"
+  },
+  {
+    "id": "pub-13",
+    "year": 2024,
+    "tag": "SDM'24",
+    "venue": "SDM",
+    "html": "Mingzhi Hu, Xin Zhang, <b>Yanhua Li</b>, Yiqun Xie, Xiaowei Jia, Xun Zhou, Jun Luo<br/>\n<b>Only Attending What Matter within Trajectories -- Memory-Efficient Trajectory Attention.</b>[Available Soon]<br/>\n<i>SIAM International Conference on Data Mining (SDM24), Houston, TX April 18 - 20, 2024. (23.6%=98/416 Acceptance Ratio)</i>"
+  },
+  {
+    "id": "pub-14",
+    "year": 2024,
+    "tag": "SDM'24",
+    "venue": "SDM",
+    "html": "Nasrin Kalanat, Yiqun Xie, <b>Yanhua Li</b>, Xiaowei Jia<br/>\n<b>Spatial-Temporal Augmented Adaptation via Cycle-Consistent Adversarial Network: An Application in Streamflow Prediction.</b>[Available Soon]<br/>\n<i>SIAM International Conference on Data Mining (SDM24), Houston, TX April 18 - 20, 2024. (23.6%=98/416 Acceptance Ratio)</i>"
+  },
+  {
+    "id": "pub-15",
+    "year": 2024,
+    "tag": "IROS'24",
+    "venue": null,
+    "html": "Fangzhou Lin, Haotian Liu, Haoying Zhou, Songlin Hou, Kazunori D Yamada, Gregory S. Fischer, <b>Yanhua Li</b>, Haichong K. Zhang, and Ziming Zhang<br/>\n<b>Loss Distillation via Gradient Matching for Point Cloud Completion with Weighted Chamfer Distance.</b>[Available Soon]<br/>\n<i>IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS 2024), Abu Dhabi, UAE, Oct 14 - 18, 2024. </i>"
+  },
+  {
+    "id": "pub-16",
+    "year": 2024,
+    "tag": "TKDD",
+    "venue": null,
+    "html": "Yingxue Zhang, <b>Yanhua Li</b>, Xun Zhou, Zhenming Liu, and Jun Luo,<br/><b>C3-GAN+: Complex-Condition-Controlled Generative Adversarial Networks with Enhanced Embedding.</b>[PDF]<br/>\n<i>Transactions on Knowledge Discovery from Data (TKDD), Accepted, Dec 2024.</i>"
+  },
+  {
+    "id": "pub-17",
+    "year": 2023,
+    "tag": "KDD'23",
+    "venue": "KDD",
+    "html": "Mingzhi Hu, Xin Zhang, <b>Yanhua Li</b>, Xun Zhou, Jun Luo,<br/>\n<b>ST-iFGSM: Enhancing Robustness of Human Mobility Signature Identification Model via Spatial-Temporal Iterative FGSM.</b>[<a href=\"http://users.wpi.edu/~yli15/Includes/23-KDD-ST-iFGSM-Mingzhi-PDFA.pdf\">PDF</a>]<br/>\n<i>the 29th SIGKDD conference on Knowledge Discovery and Data Mining, Long Beach, CA, USA, August 6 - 10, 2023, (22.1%=313/1416 Acceptance Ratio)</i>"
+  },
+  {
+    "id": "pub-18",
+    "year": 2023,
+    "tag": "AAAI'23",
+    "venue": "AAAI",
+    "html": "Qiong Wu, Jian Li, Zhenming Liu, <b>Yanhua Li</b>, Mihai Cucuringu,<br/>\n<b>Symphony in the Latent Space: Provably Integrating High-dimensional Techniques with Non-linear Machine Learning Models</b>[<a href=\"https://arxiv.org/abs/2212.00852\">PDF</a>]<br/>\n<i>the Thirty-Seventh AAAI Conference on Artificial Intelligence, Washington D.C., USA, Feb 7--14, 2023. </i>"
+  },
+  {
+    "id": "pub-19",
+    "year": 2023,
+    "tag": "ICDM'23",
+    "venue": "ICDM",
+    "html": "Mingzhi Hu, Zhuoyun Zhong, Xin Zhang, <b>Yanhua Li</b>, Yiqun Xie, Xiaowei Jia, Xun Zhou, Jun Luo,<br/><b>Self-supervised Pre-training for Robust and Generic Spatial-Temporal Representations.</b>[<a href=\"Includes/23_ICDM_MingzhiCR.pdf\">PDF</a>][<a href=\"https://github.com/mhu3/STPT\">GitHub</a>]<br/>\n<i>IEEE International Conference on Data Mining, (9.37%=87/926 Full paper acceptance ratio), Shanghai, China, Dec. 1 - Dec 4, 2023.</i>"
+  },
+  {
+    "id": "pub-20",
+    "year": 2023,
+    "tag": "ICDM'23",
+    "venue": "ICDM",
+    "html": "Xin Zhang, <b>Yanhua Li</b>, Ziming Zhang, Christopher Brinton, Zhenming Liu, Zhi-Li Zhang,<br/><b>Distributional Cloning for Stabilized Imitation Learning via ADMM.</b>[<a href=\"Includes/23_ICDM_XinDC.pdf\">PDF</a>][<a href=\"https://github.com/XinZhang525/DC\">GitHub</a>]<br/>\n<i>IEEE International Conference on Data Mining, (9.37%=87/926 Full paper acceptance ratio), Shanghai, China, Dec. 1 - Dec 4, 2023.</i>"
+  },
+  {
+    "id": "pub-21",
+    "year": 2023,
+    "tag": "ICDM'23",
+    "venue": "ICDM",
+    "html": "Palawat Busaranuvong, Xin Zhang, <b>Yanhua Li</b>, Xun Zhou, Jun Luo,<br/><b> CAC: Enabling Customer-Centered Passenger-Seeking for Self-Driving Ride Service with Conservative Actor-Critic.</b>[<a href=\"Includes/23_ICDM_PalawatCR.pdf\">PDF</a>][<a href=\"https://github.com/XinZhang525/CAC\">GitHub</a>]<br/>\n<i>IEEE International Conference on Data Mining, (9.37%=87/926 Full paper acceptance ratio), Shanghai, China, Dec. 1 - Dec 4, 2023.</i>"
+  },
+  {
+    "id": "pub-22",
+    "year": 2023,
+    "tag": "SIGSPATIAL GIS'23",
+    "venue": "SIGSPATIAL",
+    "html": "Yiqun Xie, Zhaonan Wang, Gengchen Mai, <b>Yanhua Li</b>, Xiaowei Jia, Song Gao and Shaowen Wang, <br/>\n<b>\"Geo\"-Foundation Models: Reality, Gaps and Opportunities (Vision Paper). </b>[<a href=\"\">PDF</a>]<br/>\n<i>31st ACM SIGSPATIAL International Conference on Advances in Geographic Information Systems, (Vision paper) Nov. 13 - 16, 2023, Hamburg, Germany.</i>"
+  },
+  {
+    "id": "pub-23",
+    "year": 2023,
+    "tag": "SIGSPATIAL GIS'23",
+    "venue": "SIGSPATIAL",
+    "html": "Huimin Ren, Sijie Ruan, Ye Yuan, <b>Yanhua Li</b>, Jie Bao, Tianfu He, Huajun He, Chuishi Meng and Yu Zheng, <br/>\n<b>A Novel Approach for Company Real Workplace Identification via E-commercial Data (Industrial Paper). </b>[<a href=\"\">PDF</a>]<br/>\n<i>31st ACM SIGSPATIAL International Conference on Advances in Geographic Information Systems, (short paper) Nov. 13 - 16, 2023, Hamburg, Germany, (24.8% = 60/242 Acceptance Ratio).</i>"
+  },
+  {
+    "id": "pub-24",
+    "year": 2023,
+    "tag": "WACV'23",
+    "venue": null,
+    "html": "Guojun Wu, Xin Zhang, Ziming Zhang, <b>Yanhua Li</b>, Xun Zhou, Christopher Brinton, Zhenming Liu, <br/><b>Learning Lightweight Neural Networks via Channel-Split Recurrent Convolution.</b>[<a href=\"http://users.wpi.edu/~yli15/Includes/23-WACV-XIn-CSR-Conv-PDFA.pdf\">PDF</a>]<br/>\n<i>Winter Conference on Applications of Computer Vision 2023, Waikoloa, Hawaii, Jan 3 - Jan 7, 2023.</i>"
+  },
+  {
+    "id": "pub-25",
+    "year": 2023,
+    "tag": "SDM'23",
+    "venue": "SDM",
+    "html": "Xin Zhang, <b>Yanhua Li</b>, Ziming Zhang, Zhi-Li Zhang<br/>\n<b>Domain Disentangled Meta-Learning.</b>[<a href=\"http://users.wpi.edu/~yli15/Includes/23-SDM-DDML-Xin-PDFA.pdf\">PDF</a>]<br/>\n<i>SIAM International Conference on Data Mining (SDM23), Minneapolis, April 27 - 39, 2023. (27.5% = 105/382 Acceptance Ratio)</i>"
+  },
+  {
+    "id": "pub-26",
+    "year": 2023,
+    "tag": "SDM'23",
+    "venue": "SDM",
+    "html": "Yingxue Zhang, <b>Yanhua Li</b>, Xun Zhou, Ziming Zhang, Jun Luo<br/>\n<b>STM-GAIL: Spatial-Temporal Meta-GAIL for Learning Diverse Human Driving Strategies.</b>[<a href=\"http://users.wpi.edu/~yli15/Includes/23-SDM-STM-GAIL-Yingxue-PDFA.pdf\">PDF</a>]<br/>\n<i>SIAM International Conference on Data Mining (SDM23), Minneapolis, April 27 - 39, 2023. (27.5% = 105/382 Acceptance Ratio)</i>"
+  },
+  {
+    "id": "pub-27",
+    "year": 2023,
+    "tag": "BigData'23",
+    "venue": null,
+    "html": "Hang Yin, Yao Su, Xinyue Liu, Thomas Hartvigsen, <b>Yanhua Li</b>, and Xiangnan Kong, <br/><b>Multi-State Brain Network Discovery.</b>[<a href=\"\">PDF</a>]<br/>\n<i>BigData'23: the 2023 IEEE International Conference on Big Data, December 15-18, 2023, Sorrento, Italy.</i>"
+  },
+  {
+    "id": "pub-28",
+    "year": 2023,
+    "tag": "KAIS",
+    "venue": null,
+    "html": "Han Bao, Xun Zhou, Yiqun Xie, <b>Yanhua Li</b>, and Xiaowei Jia,<br/><b>STORM-GAN+: Spatio-Temporal Meta-GAN for Cross-City Estimation of Heterogeneous Human Mobility Responses to COVID-19.</b>[PDF]<br/>\n<i>Knowledge and Information Systems, Accepted, June 2023.</i>"
+  },
+  {
+    "id": "pub-29",
+    "year": 2022,
+    "tag": "ICDM'22",
+    "venue": "ICDM",
+    "html": "Yingxue Zhang, <b>Yanhua Li</b>, Xun Zhou, Xiangnan Kong, and Jun Luo, <br/><b>STrans-GAN: Spatially-Transferable Generative Adversarial Networks for Urban Traffic Estimation.</b>[<a href=\"http://users.wpi.edu/~yli15/Includes/22-ICDM-STrans-GAN-Yingxue-PDFA.pdf\">PDF</a>]<br/>\n<i>IEEE International Conference on Data Mining, (9.77%=85/870 Full paper acceptance ratio), Orlando, FL, Nov. 28 - Dec 1, 2022.</i>"
+  },
+  {
+    "id": "pub-30",
+    "year": 2022,
+    "tag": "ICDM'22",
+    "venue": "ICDM",
+    "html": "Yingxue Zhang, <b>Yanhua Li</b>, Xun Zhou, and Jun Luo, <br/><b>Mest-GAN: Cross-City Urban Traffic Estimation with Meta Spatial-Temporal Generative Adversarial Networks.</b>[<a href=\"http://users.wpi.edu/~yli15/Includes/22-ICDM-Mest-GAN-Yingxue-PDFA.pdf\">PDF</a>]<br/>\n<i>IEEE International Conference on Data Mining, (9.77%=85/870 Full paper acceptance ratio), Orlando, FL, Nov. 28 - Dec 1, 2022.</i>"
+  },
+  {
+    "id": "pub-31",
+    "year": 2022,
+    "tag": "ICDM'22",
+    "venue": "ICDM",
+    "html": "Han Bao, Xun Zhou, Yiqun Xie, <b>Yanhua Li</b>, and Xiaowei Jia,<br/><b>STORM-GAN: Spatio-Temporal Meta-GAN for Cross-City Estimation of Human Mobility Responses to COVID-19.</b>[<a href=\"http://users.wpi.edu/~yli15/Includes/22-ICDM-STORM-GAN-Han-PDFA.pdf\">PDF</a>]<br/>\n<i>IEEE International Conference on Data Mining, (9.77%=85/870 Full paper acceptance ratio), Orlando, FL, Nov. 28 - Dec 1, 20212</i>"
+  },
+  {
+    "id": "pub-32",
+    "year": 2022,
+    "tag": "SIGSPATIAL GIS'22",
+    "venue": "SIGSPATIAL",
+    "html": "Yichen Ding, Ziming Zhang, Xun Zhou, <b>Yanhua Li</b>, <br/>\n<b>EgoSpeed-Net: Forecasting Speed-Control in Driver Behavior from Egocentric Video Data. </b>[<a href=\"http://users.wpi.edu/~yli15/Includes/22-SIGSPATIAL-Ego-Speed-Net-Yichen-PDFA.pdf\">PDF</a>]<br/>\n<i>30th ACM SIGSPATIAL International Conference on Advances in Geographic Information Systems, (Full paper,) Oct. 30 - Nov. 4, 2022, Seattle, WA, (23.8% = 38/160 Acceptance Ratio).</i>"
+  },
+  {
+    "id": "pub-33",
+    "year": 2022,
+    "tag": "SDM'22",
+    "venue": "SDM",
+    "html": "Bang An, Amin Vahedian, Xun Zhou, W. Nick Street and <b>Yanhua Li</b><br/>\n<b>HintNet: Hierarchical Knowledge Transfer Networks for Traffic Accident Forecasting on Heterogeneous Spatio-Temporal Data.</b>[<a href=\"http://users.wpi.edu/~yli15/Includes/22-SDM-HintNet-Bang-PDFA.pdf\">PDF</a>]<br/>\n<i>SIAM International Conference on Data Mining (SDM22), Alexandria, Virginia, April 28 - 30, 2022. (27.8% Acceptance Ratio)</i>"
+  },
+  {
+    "id": "pub-34",
+    "year": 2022,
+    "tag": "GNNet'22",
+    "venue": null,
+    "html": "Wei Ye, Xinyue Hu, Tian Liu, Ruoyu Sun, <b>Yanhua Li</b>, Zhi-Li Zhang, <br/><b>5GNN: extrapolating 5G measurements through GNNs.</b>[PDF]<br/>\n<i>GNNet'22: Proceedings of the 1st International Workshop on Graph Neural Networking, December 22, 2022, Rome, Italy. (Held in conjunction with ACM CoNEXT 2022.)</i>"
+  },
+  {
+    "id": "pub-35",
+    "year": 2021,
+    "tag": "NeurIPS'21",
+    "venue": "NeurIPS",
+    "html": "Ziming Zhang, Yun Yue, Guojun Wu, <b>Yanhua Li</b>, Haichong Zhang, <br/><b>SBO-RNN: Reformulating Recurrent Neural Networks via Stochastic Bilevel Optimization.</b> [<a href=\"https://papers.nips.cc/paper/2021/hash/d87ca511e2a8593c8039ef732f5bffed-Abstract.html\">NeurIPS Link</a>] [<a href=\"http://users.wpi.edu/~yli15/Includes/21_NeurIPS21_SBORNN.pdf\">PDF</a>]<br/>\n<i>Thirty-fifth Conference on Neural Information Processing Systems, Virtual Conference, December 6 - 14, 2021, (26.0%=2344/9122 Acceptance Ratio)</i>"
+  },
+  {
+    "id": "pub-36",
+    "year": 2021,
+    "tag": "KDD'21",
+    "venue": "KDD",
+    "html": "Huimin Ren, Sijie Ruan, <b>Yanhua Li</b>, Jie Bao, Chuishi Meng, Ruiyuan Li, and Yu Zheng,<br/>\n<b>MTrajRec: Map-Constrained Trajectory Recovery via Seq2Seq Multi-task Learning.</b> [<a href=\"https://dl.acm.org/doi/10.1145/3447548.3467238\">PDF</a>]<br/>\n<i>the 27th SIGKDD conference on Knowledge Discovery and Data Mining, Singapore, August 14 - 18, 2021, (15.4%=238/1541 Acceptance Ratio)</i>"
+  },
+  {
+    "id": "pub-37",
+    "year": 2021,
+    "tag": "ICDM'21",
+    "venue": "ICDM",
+    "html": "Xin Zhang, <b>Yanhua Li</b>, Xun Zhou, Oren Mangoubi, Ziming Zhang, Vincent Filardi, and Jun Luo, <br/><b>DAC-ML: Domain Adaptable Continuous Meta-Learning for Urban Dynamics Prediction.</b> [<a href=\"http://users.wpi.edu/~yli15/Includes/21_ICDM21_DACML.pdf\">PDF</a>]<br/>\n<i>IEEE International Conference on Data Mining, (9.9%=98/990 Full paper acceptance ratio), Auckland, New Zealand, Nov. 7-10, 2021.</i>"
+  },
+  {
+    "id": "pub-38",
+    "year": 2021,
+    "tag": "ICDM'21",
+    "venue": "ICDM",
+    "html": "Ziming Zhang, Guojun Wu, Yue Yue, <b>Yanhua Li</b>, and Xun Zhou, <br/><b>Deep Incremental RNN for Learning Sequential Data: A Lyapunov Stable Dynamical System.</b> [<a href=\"http://users.wpi.edu/~yli15/Includes/21_ICDM21_TinyRNN.pdf\">PDF</a>]<br/>\n<i>IEEE International Conference on Data Mining, (9.9%=98/990 Full paper acceptance ratio), Auckland, New Zealand, Nov. 7-10, 2021.</i>"
+  },
+  {
+    "id": "pub-39",
+    "year": 2021,
+    "tag": "ICDM'21",
+    "venue": "ICDM",
+    "html": "Yingxue Zhang, <b>Yanhua Li</b>, Xun Zhou, Zhenming Liu, and Jun Luo, <br/><b>C3-GAN: Complex-Condition-Controlled Urban Traffic Estimation through Generative Adversarial Networks.</b> [<a href=\"http://users.wpi.edu/~yli15/Includes/21_ICDM21_C3GAN.pdf\">PDF</a>]<br/>\n<i>IEEE International Conference on Data Mining, (20.0%=198/990 Short paper acceptance ratio), Auckland, New Zealand, Nov. 7-10, 2021.</i>"
+  },
+  {
+    "id": "pub-40",
+    "year": 2021,
+    "tag": "SIGSPATIAL GIS'21",
+    "venue": "SIGSPATIAL",
+    "html": "Menghai Pan, Xin Zhang, <b>Yanhua Li</b>, Xun Zhou, and Jun Luo, <br/>\n<b>Learning Decision Making Strategies of Non-experts: A NEXT-GAIL Model for Taxi Drivers. </b>[<a href=\"https://dl.acm.org/doi/10.1145/3474717.3483924\">PDF</a>]<br/>\n<i>29th ACM SIGSPATIAL International Conference on Advances in Geographic Information Systems, Nov. 2 - Nov. 5, 2021, Beijing, China. (34/152=22.4% Full paper acceptance ratio.)</i>"
+  },
+  {
+    "id": "pub-41",
+    "year": 2021,
+    "tag": "SIGSPATIAL GIS'21",
+    "venue": "SIGSPATIAL",
+    "html": "Zheng Zhu, Huimin Ren, Sijie Ruan, Boyang Han, Jie Bao, Ruiyuan Li, <b>Yanhua Li</b> and Yu Zheng, <br/>\n<b>ICFinder: A Ubiquitous Approach to Detecting Illegal Hazardous Chemical Facilities with Truck Trajectories. </b>[<a href=\"https://dl.acm.org/doi/10.1145/3474717.3483633\">PDF</a>]<br/>\n<i>29th ACM SIGSPATIAL International Conference on Advances in Geographic Information Systems, (short paper,) Nov. 2 - Nov. 5, 2021, Beijing, China.</i>"
+  },
+  {
+    "id": "pub-42",
+    "year": 2021,
+    "tag": "CDC'21",
+    "venue": null,
+    "html": "Xin Zhang, Weixiao Huang, <b>Yanhua Li</b>, Renjie Liao, Ziming Zhang,<br/>\n<b>Imitation Learning From Inconcurrent Multi-Agent Interactions.</b>[<a href=\"http://users.wpi.edu/~yli15/Includes/21_CDC21_AMAGAIL.pdf\">PDF</a>]<br/>\n<i>the 60th IEEE Conference on Decision and Control (CDC 2021), Austin, TX on December 13-15, 2021.</i>"
+  },
+  {
+    "id": "pub-43",
+    "year": 2021,
+    "tag": "TIST",
+    "venue": null,
+    "html": "Yingxue Zhang, <b>Yanhua Li</b>, Xun Zhou, Jun Luo, and Zhi-Li Zhang<br/>\n<b>Urban Traffic Dynamics Prediction -- A Continuous Spatial-Temporal Meta-Learning Approach,</b> [To be available soon.]<br/>\n<i>ACM Transactions on Intelligent Systems and Technologies (TIST), Accepted for publication, July 2021.</i>"
+  },
+  {
+    "id": "pub-44",
+    "year": 2021,
+    "tag": "TIST",
+    "venue": null,
+    "html": "Han Bao, Xun Zhou, Yiqun Xie, Yingxue Zhang, <b>Yanhua Li</b>,<br/>\n<b>COVID-GAN+: Estimating Human Mobility Responses to COVID-19 through Spatio-Temporal Generative Adversarial Networks with Enhanced Features,</b> [To be available soon.]<br/>\n<i>ACM Transactions on Intelligent Systems and Technologies (TIST), Accepted for publication, August 2021.</i>"
+  },
+  {
+    "id": "pub-45",
+    "year": 2021,
+    "tag": "TIST",
+    "venue": null,
+    "html": "Amin Vahedian Khezerlou, Xun Zhou, Xinyi Li, Yuwei Tu, Nick Street, and <b>Yanhua Li</b>, <br/>\n<b>DILSA+: Predicting Urban Dispersal Events Through Deep Survival Analysis with Enhanced Urban Features,</b> [<a href=\"https://dl.acm.org/doi/abs/10.1145/3469085?af=R10.1145%2F3469085\">PDF</a>]<br/>\n<i>ACM Transactions on Intelligent Systems and Technologies (TIST), Accepted for publication, May 2021.</i>"
+  },
+  {
+    "id": "pub-46",
+    "year": 2021,
+    "tag": "TIST",
+    "venue": null,
+    "html": "Qiong Wu, Adam Hare, Sirui Wang, Yuwei Tu, Zhenming Liu, Christopher Brinton, <b>Yanhua Li</b>, <br/>\n<b>BATS: A Spectral Biclustering Approach to Single Document Topic Modeling and Segmentation,</b> [<a href=\"https://dl.acm.org/doi/fullHtml/10.1145/3468268\">PDF</a>]<br/>\n<i>ACM Transactions on Intelligent Systems and Technologies (TIST), Accepted for publication, May 2021.</i>"
+  },
+  {
+    "id": "pub-47",
+    "year": 2021,
+    "tag": "Book Chapter",
+    "venue": null,
+    "html": "<b>Yanhua Li</b>, Xun Zhou, and Menghai Pan, <br/>\n<b>Chapter 27: Graph Neural Networks in Urban Intelligence, in book entitled \"Graph Neural Networks: Foundations, Frontiers, and Applications\",</b> [<a href=\"https://graph-neural-networks.github.io/index.html#tab-part4\">Link</a>]<br/>\n<i>Springer, pp 1--720, July 2021.</i>"
+  },
+  {
+    "id": "pub-48",
+    "year": 2020,
+    "tag": "NeurIPS'20",
+    "venue": "NeurIPS",
+    "html": "Xin Zhang, <b>Yanhua Li</b>, Ziming Zhang, Zhi-Li Zhang, <br/><b>f-GAIL: Learning f-Divergence for Generative Adversarial Imitation Learning.</b> [<a href=\"https://proceedings.neurips.cc/paper/2020/file/967990de5b3eac7b87d49a13c6834978-Paper.pdf\">PDF</a>][<a href=\"https://proceedings.neurips.cc/paper/2020/hash/967990de5b3eac7b87d49a13c6834978-Abstract.html\">NeurIPS Link</a>] [<a href=\"https://arxiv.org/abs/2010.01207\">arXiv</a>]<br/>\n<i>Thirty-fourth Conference on Neural Information Processing Systems, Virtual Conference, December 6 - 12, 2020, (20.0%=1900/9454 Acceptance Ratio)</i>"
+  },
+  {
+    "id": "pub-49",
+    "year": 2020,
+    "tag": "NeurIPS'20",
+    "venue": "NeurIPS",
+    "html": "Qiong Wu, Felix Wong, Zhenming Liu, <b>Yanhua Li</b>, Varun Kanade, <br/><b>Adaptive Reduced Rank Regression.</b> [<a href=\"https://proceedings.neurips.cc/paper/2020/file/2a27b8144ac02f67687f76782a3b5d8f-Paper.pdf\">PDF</a>] [<a href=\"https://proceedings.neurips.cc/paper/2020/hash/2a27b8144ac02f67687f76782a3b5d8f-Abstract.html\">NeurIPS Link</a>] [<a href=\"https://arxiv.org/abs/1905.11566\">arXiv</a>]<br/>\n<i>Thirty-fourth Conference on Neural Information Processing Systems, Virtual Conference, December 6 - 12, 2020, (20.0%=1900/9454 Acceptance Ratio)</i>"
+  },
+  {
+    "id": "pub-50",
+    "year": 2020,
+    "tag": "KDD'20",
+    "venue": "KDD",
+    "html": "Menghai Pan, Weixiao Huang, <b>Yanhua Li</b>, Xun Zhou, Jun Luo, <br/><b>xGAIL: Explainable Generative Adversarial Imitation Learningfor Explainable Human Decision Analysis.</b> [<a href=\"Includes/20_KDD_xGAIL-Xin_PDFA.pdf\">PDF</a>] [<a href=\"https://www.kdd.org/kdd2020/accepted-papers/view/xgail-explainable-generative-adversarial-imitation-learning-for-explainable\">Link</a>]<br/>\n<i>the 26th SIGKDD conference on Knowledge Discovery and Data Mining, San Diego, CA, August 23 - 27, 2020, (16.8%=216/1279 Acceptance Ratio)</i>"
+  },
+  {
+    "id": "pub-51",
+    "year": 2020,
+    "tag": "KDD'20",
+    "venue": "KDD",
+    "html": "Yingxue Zhang, <b>Yanhua Li</b>, Xun Zhou, Xiangnan Kong and Jun Luo,<br/>\n<b>Curb-GAN: Conditional Urban Traffic Estimation through Spatio-Temporal Generative Adversarial Networks</b> [<a href=\"Includes/20_KDD_CurbGAN-Yingxue_PDFA.pdf\">PDF</a>] [<a href=\"https://www.kdd.org/kdd2020/accepted-papers/view/curb-gan-conditional-urban-traffic-estimation-through-spatio-temporal-gener\">Link</a>]<br/>\n<i>the 26th SIGKDD conference on Knowledge Discovery and Data Mining, San Diego, CA, August 23 - 27, 2020, (16.8%=216/1279 Acceptance Ratio)</i>"
+  },
+  {
+    "id": "pub-52",
+    "year": 2020,
+    "tag": "KDD'20",
+    "venue": "KDD",
+    "html": "Huimin Ren*, Menghai Pan*, <b>Yanhua Li</b>, Xun Zhou and Jun Luo,<br/>\n<b>ST-SiameseNet: Spatio-Temporal Siamese Networks for Human Mobility Signature Identification</b> [<a href=\"Includes/20_KDD_STSiamese-Huimin_PDFA.pdf\">PDF</a>] [<a href=\"https://www.kdd.org/kdd2020/accepted-papers/view/st-siamesenet-spatio-temporal-siamese-networks-for-human-mobility-signature\">Link</a>]<br/>\n<i>the 26th SIGKDD conference on Knowledge Discovery and Data Mining, San Diego, CA, August 23 - 27, 2020, (16.8%=216/1279 Acceptance Ratio)</i>"
+  },
+  {
+    "id": "pub-53",
+    "year": 2020,
+    "tag": "ICDM'20",
+    "venue": "ICDM",
+    "html": "Xin Zhang, <b>Yanhua Li</b>, Xun Zhou, Ziming Zhang, Jun Luo, <br/><b>TrajGAIL: Trajectory Generative Adversarial Imitation Learning for Long-term Decision Analysis.</b> [<a href=\"http://users.wpi.edu/~yli15/Includes/20_ICDM_Xin_TrajGAIL_10Pages.pdf\">PDF</a>]<br/>\n<i>IEEE International Conference on Data Mining, (9.8%=91/930 Full paper acceptance ratio), Sorrento, Italy, Nov. 17-20, 2020.</i>"
+  },
+  {
+    "id": "pub-54",
+    "year": 2020,
+    "tag": "ICDM'20",
+    "venue": "ICDM",
+    "html": "Yingxue Zhang, <b>Yanhua Li</b>, Xun Zhou, Jun Luo, <br/><b>cST-ML: Continuous Spatial-Temporal Meta-Learning for Traffic Dynamics Prediction.</b> [<a href=\"http://users.wpi.edu/~yli15/Includes/20_ICDM_Yingxue_6pages.pdf\">PDF</a>]<br/>\n<i>IEEE International Conference on Data Mining, (19.7%=183/930 Short paper acceptance ratio), Sorrento, Italy, Nov. 17-20, 2020.</i>"
+  },
+  {
+    "id": "pub-55",
+    "year": 2020,
+    "tag": "WWW'20",
+    "venue": "WWW",
+    "html": "Mingzhou Yang, <b>Yanhua Li</b>, Xun Zhou, Hui Lu, Zhihong Tian, Jun Luo, <br/><b>Inferring Passengers’ Interactive Choices on Public Transits via MA-AL: Multi-Agent Apprenticeship Learning.</b> [<a href=\"http://users.wpi.edu/~yli15/Includes/WWW20Mingzhou-PDFA.pdf\">PDF</a>]<br/>\n<i>The Web Conference, (19.2%=217/1,129 Acceptance Ratio), Taipei, Apr. 20-24, 2020.</i>"
+  },
+  {
+    "id": "pub-56",
+    "year": 2020,
+    "tag": "WWW'20",
+    "venue": "WWW",
+    "html": "Tianfu He, Jie Bao, Ruiyuan Li, Sijie Ruan, <b>Yanhua Li</b>, Li Song, Hui He, Yu Zheng, <br/><b>What is the Human Mobility in a New City? -- Transfer Mobility Knowledge Across Cities.</b> [<a href=\"http://users.wpi.edu/~yli15/Includes/WWW20Tianfu-PDFA.pdf\">PDF</a>]<br/>\n<i>The Web Conference, (19.2%=217/1,129 Acceptance Ratio), Taipei, Apr. 20-24, 2020.</i>"
+  },
+  {
+    "id": "pub-57",
+    "year": 2020,
+    "tag": "Ubicomp'20",
+    "venue": null,
+    "html": "Sijie Ruan, Jie Bao, Yuxuan Liang, Ruiyuan Li, Tianfu He, Chuishi Meng, <b>Yanhua Li</b>, Yingcai Wu, Yu Zheng, <br/><b>Dynamic Public Resource Allocation based on Human Mobility Prediction.</b> [<a href=\"http://users.wpi.edu/~yli15/Includes/20_Ubicomp_Sijie.pdf\">PDF</a>]<br/>\n<i>The ACM international joint conference on pervasive and ubiquitous computing, Cancun, Maxico, Sep. 12-16, 2020.</i>"
+  },
+  {
+    "id": "pub-58",
+    "year": 2020,
+    "tag": "SIGSPATIAL GIS'20",
+    "venue": "SIGSPATIAL",
+    "html": "Menghai Pan, Weixiao Huang, <b>Yanhua Li</b>, Xun Zhou, Zhenming Liu, Jie Bao, Yu Zheng and Jun Luo,<br/>\n<b>Is Reinforcement Learning the Choice of Human Learners? A Case Study of Taxi Drivers. </b>[<a href=\"http://users.wpi.edu/~yli15/Includes/SIGSPATIAL2020_RL_MenghaiF.pdf\">PDF</a>]<br/>\n<i>28th ACM SIGSPATIAL International Conference on Advances in Geographic Information Systems, Nov. 5 - Nov. 8, 2020, Seattle, WA, USA. (33/149=22.1% Full paper acceptance ratio.)</i>"
+  },
+  {
+    "id": "pub-59",
+    "year": 2020,
+    "tag": "SIGSPATIAL GIS'20",
+    "venue": "SIGSPATIAL",
+    "html": "Han Bao, Xun Zhou, Yingxue Zhang, <b>Yanhua Li</b> and Yiqun Xie,<br/>\n<b>COVID-GAN: Estimating Human Mobility Responses to COVID-19 Pandemic through Spatio-Temporal Conditional Generative Adversarial Networks. </b>[<a href=\"http://users.wpi.edu/~yli15/Includes/SIGSPATIAL2020_COVID19_HanF.pdf\">PDF</a>]<br/>\n<i>28th ACM SIGSPATIAL International Conference on Advances in Geographic Information Systems, Nov. 5 - Nov. 8, 2020, Seattle, WA, USA. (33/149=22.1% Full paper acceptance ratio.)</i>"
+  },
+  {
+    "id": "pub-60",
+    "year": 2020,
+    "tag": "SIGSPATIAL GIS'20",
+    "venue": "SIGSPATIAL",
+    "html": "Yichen Ding, Xun Zhou, Han Bao, <b>Yanhua Li</b>, Cara Hamann, Steven Spears, and Zhuoning Yuan,<br/>\n<b>Cycling-Net: A Deep Learning Approach to Predicting Cyclist Behaviors from Geo-Referenced Egocentric Video Data. </b>[<a href=\"http://users.wpi.edu/~yli15/Includes/SIGSPATIAL2020_Cycling_Net_YichenF.pdf\">PDF</a>]<br/>\n<i>28th ACM SIGSPATIAL International Conference on Advances in Geographic Information Systems, Nov. 5 - Nov. 8, 2020, Seattle, WA, USA. (33/149=22.1% Full paper acceptance ratio.)</i>"
+  },
+  {
+    "id": "pub-61",
+    "year": 2020,
+    "tag": "CIKM'20",
+    "venue": null,
+    "html": "Guojun Wu, <b>Yanhua Li</b>, Shikai Luo, Ge Song, Qichao Wang, Jing He, Jieping Ye, Xiaohu Qie and Hongtu Zhu,<br/><b>A Joint Inverse Reinforcement Learning and Deep Learning Model for Drivers' Behavioral Prediction. </b>[<a href=\"http://users.wpi.edu/~yli15/Includes/20_CIKM2020_Guojun.pdf\">PDF</a>]<br/>\n<i>The 29th ACM International Conference on Information and Knowledge Management, Galway, Ireland, Oct. 19 - 23, 2020. (Applied research track)</i>"
+  },
+  {
+    "id": "pub-62",
+    "year": 2020,
+    "tag": "TBD",
+    "venue": null,
+    "html": "Menghai Pan, <b>Yanhua Li</b>, Zhi-Li Zhang, Jun Luo,<br/>\n<b>SCCS: Smart Cloud Commuting System with Shared Autonomous Vehicles</b> <a href=\"http://users.wpi.edu/~yli15/Includes/20_TBD-Menghai-SCCS.pdf\">[PDF]</a><br/>\n<i>IEEE Transactions on Big Data, Accepted for publication, 2020.</i>"
+  },
+  {
+    "id": "pub-63",
+    "year": 2020,
+    "tag": "TBD",
+    "venue": null,
+    "html": "Xin Zhang, <b>Yanhua Li</b>, Xun Zhou, Jun Luo,<br/>\n<b>cGAIL: Conditional Generative Adversarial Imitation Learning—An Application in Taxi Drivers’ Strategy Learning</b> <a href=\"http://users.wpi.edu/~yli15/Includes/20_TBD-cGAIL-Xin.pdf\">[PDF]</a><br/>\n<i>IEEE Transactions on Big Data, Accepted for publication, 2020.</i>"
+  },
+  {
+    "id": "pub-64",
+    "year": 2020,
+    "tag": "TBD",
+    "venue": null,
+    "html": "Yingxue Zhang, <b>Yanhua Li</b>, Xun Zhou, Xiangnan Kong, Jun Luo,<br/>\n<b>Off-Deployment Traffic Estimation -- A Traffic Generative Adversarial Networks Approach</b> <a href=\"Includes/20_TBD_Yingxue_TrafficGAN.pdf\">[PDF]</a><br/>\n<i>IEEE Transactions on Big Data, Accepted for publication, 2020.</i>"
+  },
+  {
+    "id": "pub-65",
+    "year": 2020,
+    "tag": "AdvML'20",
+    "venue": null,
+    "html": "Huimin Ren, Yun Yue, Chong Zhou, Rany Paffenroth, <b>Yanhua Li</b>, and Matthew Weiss, <br/><b>Robust Variational Autoencoders: Generating Noise-Free Images from Corrupted Images. </b>[<a href=\"http://users.wpi.edu/~yli15/Includes/AdvML20_Huimin.pdf\">PDF</a>]<br/>\n<i>AdvML'20: 2nd Workshop on Adversarial Learning Methods for Machine Learning and Data Mining, San Diego, CA, August 24, 2020. (Held in conjunction with ACM SIGKDD 2020).</i>"
+  },
+  {
+    "id": "pub-66",
+    "year": 2019,
+    "tag": "ICDM'19",
+    "venue": "ICDM",
+    "html": "Xin Zhang, <b>Yanhua Li</b>, Xun Zhou, Jun Luo, <br/><b>Unveiling Taxi Drivers’ Strategies via cGAIL - Conditional Generative Adversarial Imitation Learning .</b> [<a href=\"http://users.wpi.edu/~yli15/Includes/ICDM19Xin-PDFA.pdf\">PDF</a>]<br/>\n<i>IEEE International Conference on Data Mining, (18.5%=194/1,046 Acceptance Ratio), Beijing, China, Nov. 8-11, 2019.</i>"
+  },
+  {
+    "id": "pub-67",
+    "year": 2019,
+    "tag": "ICDM'19",
+    "venue": "ICDM",
+    "html": "Yingxue Zhang, <b>Yanhua Li</b>, Xun Zhou, Xiangnan Kong, Jun Luo, <br/><b>TrafficGAN: Off-Deployment Traffic Estimation with Traffic Generative Adversarial Networks.</b> [<a href=\"http://users.wpi.edu/~yli15/Includes/ICDM19Yingxue-PDFA.pdf\">PDF</a>]<br/>\n<i>IEEE International Conference on Data Mining, (18.5%=194/1,046 Acceptance Ratio), Beijing, China, Nov. 8-11, 2019.</i>"
+  },
+  {
+    "id": "pub-68",
+    "year": 2019,
+    "tag": "SDM'19",
+    "venue": "SDM",
+    "html": "Menghai Pan, <b>Yanhua Li</b>, Xun Zhou, Zhenming Liu, Rui Song, Hui Lu, Jun Luo,<br/>\n<b>Dissecting the Learning Curve of Taxi Drivers: A Data-Driven Approach.</b>[<a href=\"http://users.wpi.edu/~yli15/Includes/SDM19_Taxi.pdf\">PDF</a>][<a href=\"http://users.wpi.edu/~yli15/Includes/SDM_2019_MP.pdf\">Slides</a>][<a href=\"http://urban.cs.wpi.edu/DLCTD/\">Project Link</a>][<a href=\"http://urban.cs.wpi.edu/DLCTD/download.html\">Data&amp;Code</a>]<br/>\n<i>SIAM International Conference on Data Mining (SDM19), Hyatt Regency Calgary | Calgary, Alberta, Canada, May 2 - 4, 2019. (90/397=22.7% Acceptance Ratio)</i><br/>\n<p style=\"color: blue\">(SDM'19 Best Applied Data Science Paper Award!)</p>"
+  },
+  {
+    "id": "pub-69",
+    "year": 2019,
+    "tag": "AAAI'19",
+    "venue": "AAAI",
+    "html": "Amin Vahedian Khezerlou, Xun Zhou, Ling Tong, W. Nick Street, <b>Yanhua Li</b><br/>\n<b>Predicting Urban Dispersal Events: A Two-Stage Framework through Deep Survival Analysis on Mobility Data</b>[<a href=\"http://users.wpi.edu/~yli15/Includes/AAAI19.pdf\">PDF</a>]<br/>\n<i>the Thirty-Third AAAI Conference on Artificial Intelligence, Honolulu, Hawaii, USA, Jan 27-Feb 1, 2019. (1150/7700=16.2% acceptance ratio.)</i>"
+  },
+  {
+    "id": "pub-70",
+    "year": 2019,
+    "tag": "SIGSPATIAL GIS'19",
+    "venue": "SIGSPATIAL",
+    "html": "Cong Zhang, <b>Yanhua Li</b>, Jie Bao, Sijie Ruan, Tianfu He, Hui Lu, Zhihong Tian, Cong Liu, Chao Tian, Jianfeng Lin and Xianen Li,<br/>\n<b>Effective Recycling Planning for Dockless Sharing Bikes. </b>[<a href=\"http://users.wpi.edu/~yli15/Includes/SIGSPATIAL19Cong-PDFA.pdf\">PDF</a>]<br/>\n<i>27th ACM SIGSPATIAL International Conference on Advances in Geographic Information Systems, Nov. 5 - Nov. 8, 2019, Chicago, IL, USA. (40/184=21.7% Full paper acceptance ratio.)</i>"
+  },
+  {
+    "id": "pub-71",
+    "year": 2019,
+    "tag": "CDC'19",
+    "venue": null,
+    "html": "Guojun Wu, <b>Yanhua Li</b>, Jun Luo,<br/>\n<b>Transforming Policy via Reward Advancement.</b>[<a href=\"http://users.wpi.edu/~yli15/Includes/CDC19Guojun-PDFA.pdf\">PDF</a>]<br/>\n<i>the 58th IEEE Conference on Decision and Control (CDC 2019), Nice, France on December 11-13, 2019.</i>"
+  },
+  {
+    "id": "pub-72",
+    "year": 2019,
+    "tag": "TIST",
+    "venue": null,
+    "html": "Menghai Pan, Weixiao Huang, <b>Yanhua Li</b>, Xun Zhou, Zhenming Liu, Rui Song, Hui Lu, Zhihong Tian, Jun Luo,<br/>\n<b>DHPA: Dynamic Human Preference Analytics Framework -- A Case Study on Taxi Drivers' Learning Curve Analysis,</b> [To be available soon.]<br/>\n<i>ACM Transactions on Intelligent Systems and Technologies (TIST), Accepted for publication, September 2019.</i>"
+  },
+  {
+    "id": "pub-73",
+    "year": 2019,
+    "tag": "TKDE",
+    "venue": null,
+    "html": "Yichen Ding, Xun Zhou, Guojun Wu, <b>Yanhua Li</b>, Jie Bao, Yu Zheng, Jun Luo,<br/>\n<b>Mining Spatio-temporal Reachable Regions with Multiple Sources from Massive Trajectory Data,</b> [To be available soon.]<br/>\n<i>IEEE Transactions on Knowledge and Data Engineering, Accepted for publication, Nov. 2019.</i>"
+  },
+  {
+    "id": "pub-74",
+    "year": 2019,
+    "tag": "TKDE",
+    "venue": null,
+    "html": "Amin Vahedian Khezerlou, Xun Zhou, Ling Tong, <b>Yanhua Li</b>, Jun Luo,<br/>\n<b>Forecasting Gathering Events through Trajectory Destination Prediction: a Dynamic Hybrid Model,</b> [To be available soon.]<br/>\n<i>IEEE Transactions on Knowledge and Data Engineering, Accepted for publication, Aug. 2019.</i>"
+  },
+  {
+    "id": "pub-75",
+    "year": 2019,
+    "tag": "TKDE",
+    "venue": null,
+    "html": "Tianfu He, Jie Bao, Sijie Ruan, Ruiyuan Li, <b>Yanhua Li</b>, Hui He, Yu Zheng,<br/>\n<b>Interactive Bike Lane Planning using Sharing Bikes’ Trajectories</b> [To be available soon.]<br/>\n<i>IEEE Transactions on Knowledge and Data Engineering, Accepted for publication, Mar. 2019.</i>"
+  },
+  {
+    "id": "pub-76",
+    "year": 2019,
+    "tag": "TR-C",
+    "venue": null,
+    "html": "Yan Lyu, Chi-Yin Chow, Victor C. S. Lee, Joseph K. Y. Ng, <b>Yanhua Li</b>, Jia Zeng,<br/>\n<b>CB-Planner: A Bus Line Planning Framework for Customized Bus Systems</b> <a href=\"wpi.edu/~yli15\">[PDF]</a> <br/>\n<i>Transportation Research Part C, Accepted for publication, 2019.</i>"
+  },
+  {
+    "id": "pub-77",
+    "year": 2019,
+    "tag": "GeoAI'19",
+    "venue": null,
+    "html": "<b>Yanhua Li</b>, and Weixiao Huang, <br/><b>Imitation Learning from Human-Generated Spatial-Temporal Data.</b>[<a href=\"http://users.wpi.edu/~yli15/Includes/GeoAI19Yanhua-PDFA.pdf\">PDF</a>]<br/>\n<i>GeoAI'19: the third international workshop on AI for Geographic Knowledge Discovery, November 5th, 2019, Chicago, Illinois, USA. (Held in conjunction with ACM SIGSPATIAL GIS 2019.)</i>"
+  },
+  {
+    "id": "pub-78",
+    "year": 2018,
+    "tag": "KDD'18",
+    "venue": "KDD",
+    "html": "Tianfu He, Jie Bao, Ruiyuan Li, Sijie Ruan, <b>Yanhua Li</b>, Chao Tian, and Yu Zheng,<br/>\n<b>Detecting Illegal Vehicle Parking Events using Sharing Bikes' Trajectories</b>[<a href=\"http://users.wpi.edu/~yli15/Includes/kdd2018illegalparking.pdf\">PDF</a>]<br/>\n<i>the 24th SIGKDD conference on Knowledge Discovery and Data Mining, London, UK, August 19 - 23, 2018, (Oral Presentation with 8.0% Acceptance Ratio=40/496)</i>"
+  },
+  {
+    "id": "pub-79",
+    "year": 2018,
+    "tag": "ICDM'18",
+    "venue": "ICDM",
+    "html": "Guojun Wu, <b>Yanhua Li</b>, Jie Bao, Yu Zheng, Jieping Ye, Jun Luo, <br/><b>Human-Centric Urban Transit Evaluation and Planning. </b>[<a href=\"http://users.wpi.edu/~yli15/Includes/icdm18.pdf\">PDF</a>]<br/>\n<i>IEEE International Conference on Data Mining, (8.86%=82/948 Full Paper Acceptance Ratio), Singapore, November 17-20, 2018.</i>"
+  },
+  {
+    "id": "pub-80",
+    "year": 2018,
+    "tag": "TKDE",
+    "venue": null,
+    "html": "Ke Deng, <b>Yanhua Li</b>, Jia Zeng, Mingxuan Yuan, Jun Luo, Jeffrey Yu,<br/>\n<b>User Preference Analysis for Most Frequent Peer/Dominator</b> [To be available soon.]<br/>\n<i>IEEE Transactions on Knowledge and Data Engineering, Accepted for publication, Jul. 2018.</i>"
+  },
+  {
+    "id": "pub-81",
+    "year": 2018,
+    "tag": "TBD",
+    "venue": null,
+    "html": "<b>Yanhua Li</b>, Guanxiong Liu, Zhi-Li Zhang, Jun Luo, Fan Zhang,<br/>\n<b>CityLines: Designing Hybrid Hub-and-Spoke Transit System with Urban Big Data</b> <a href=\"Includes/TBD18-HHS.pdf\">[PDF]</a> <a href=\"https://ieeexplore.ieee.org/document/8368242\">[Link]</a><br/>\n<i>IEEE Transactions on Big Data, Accepted for publication, 2018.</i>"
+  },
+  {
+    "id": "pub-82",
+    "year": 2018,
+    "tag": "TBD",
+    "venue": null,
+    "html": "Yichen Ding,<b>Yanhua Li</b>, Xun Zhou, Zhuojie Huang, Simin You, Jun Luo,<br/>\n<b>Sampling Big Trajectory Data for Traversal Trajectory Aggregate Query</b>[<a href=\"http://users.wpi.edu/~yli15/Includes/TBD18_Trj_sampling.pdf\">PDF</a>]<br/>\n<i>IEEE Transactions on Big Data, Accepted for publication, 2018.</i>"
+  },
+  {
+    "id": "pub-83",
+    "year": 2018,
+    "tag": "TBD",
+    "venue": null,
+    "html": "Ruiyuan Li, Sijie Ruan, Jie Bao, <b>Yanhua Li</b>, Yingcai Wu, and, Yu Zheng,<br/>\n<b>Efficient Path Query Processing over Massive Trajectories on the Cloud</b> [To be available soon.]<br/>\n<i>IEEE Transactions on Big Data, Accepted for publication, 2018.</i>"
+  },
+  {
+    "id": "pub-84",
+    "year": 2018,
+    "tag": "Urbcomp'18",
+    "venue": null,
+    "html": "Menghai Pan, <b>Yanhua Li</b>, Taihui Li, Zhi-Li Zhang, Jun Luo, <br/><b>Smart Cloud Commuting with Shared Autonomous Vehicles: A First Feasibility Study. </b>[<a href=\"http://users.wpi.edu/~yli15/Includes/Urbcomp2018.pdf\">PDF</a>]<br/>\n<i>Urbcomp'18: The 7th International Workshop on Urban Computing, August 20, 2018, London, UK. (Held in conjunction with ACM SIGKDD 2018).(The papers with this workshop are not included in any public digital labraries. The copyright of the paper belongs to the authors.)</i>"
+  },
+  {
+    "id": "pub-85",
+    "year": 2018,
+    "tag": "IWCTS'18",
+    "venue": null,
+    "html": "Haoyi Xiong, Amin Vahedian, Xun Zhou, <b>Yanhua Li</b>, Jun Luo, <br/><b>Predicting Traffic Congestion Propagation Patterns: A Propagation Graph Approach.</b>[To be avaiable soon.]<br/>\n<i>IWCTS'18: the 11th International Workshop on Computational Transportation Science, November 6th, 2018, Seattle, Washington, USA. (Held in conjunction with ACM SIGSPATIAL GIS 2018.)</i>"
+  },
+  {
+    "id": "pub-86",
+    "year": 2017,
+    "tag": "KDD'17",
+    "venue": "KDD",
+    "html": "Jie Bao, Tianfu He, Sijie Ruan, <b>Yanhua Li</b>, Yu Zheng,<br/>\n<b>Planning bike lanes based on Sharing-bike’s trajectories</b>[<a href=\"Includes/kdd17mobike.pdf\">PDF</a>]<br/>\n<i>the 23th SIGKDD conference on Knowledge Discovery and Data Mining, Halifax, Nova Scotia, Canada, August 13 - 17, 2017, (Oral Presentation with 8.8% Acceptance Ratio=35/395)</i>"
+  },
+  {
+    "id": "pub-87",
+    "year": 2017,
+    "tag": "RTSS'17",
+    "venue": null,
+    "html": "Zhen Dong, Cong Liu, <b>Yanhua Li</b>, Jie Bao, and Tian He<br/>\n<b>REC: Predictable Charging Scheduling for Electric Taxi Fleets</b>[<a href=\"http://users.wpi.edu/~yli15/Includes/RTSS17_EV.pdf\">PDF</a>]<br/>\n<i>IEEE Real-Time Systems Symposium, Paris, France, December 5 - 8, 2017.</i>"
+  },
+  {
+    "id": "pub-88",
+    "year": 2017,
+    "tag": "CDC'17",
+    "venue": null,
+    "html": "Guojun Wu, Yichen Ding, <b>Yanhua Li</b>, Jun Luo, Fan Zhang, and Jie Fu<br/>\n<b>Data-driven inverse learning of passenger preferences in urban public transits</b>[<a href=\"http://users.wpi.edu/~yli15/Includes/CDC17_IRL.pdf\">PDF</a>]<br/>\n<i>The 56th IEEE Conference on Decision and Control, Melbourne, Australia, December 12 - 15, 2017.</i>"
+  },
+  {
+    "id": "pub-89",
+    "year": 2017,
+    "tag": "ICDE'17",
+    "venue": "ICDE",
+    "html": "Guojun Wu*, Yichen Ding*, <b>Yanhua Li</b>, Jie Bao, Yu Zheng, Jun Luo,<br/>\n<b>Mining Spatio-Temporal Reachable Regions over Massive Trajectory Data</b>[<a href=\"Includes/icde17reachability.pdf\">PDF</a>][<a href=\"http://users.wpi.edu/~yli15/res.html\">Bibtex</a>][<a href=\"Includes/icde17_package.zip\">code and data</a>]<br/>\n<i>33rd IEEE International Conference on Data Engineering, April 19-22, 2017 in San Diego, California, USA.</i>"
+  },
+  {
+    "id": "pub-90",
+    "year": 2017,
+    "tag": "SIGSPATIAL GIS'17",
+    "venue": "SIGSPATIAL",
+    "html": "Guanxiong Liu, <b>Yanhua Li</b>, Zhi-Li Zhang, Jun Luo, Fan Zhang <br/><b>CityLines: Hybrid Hub-and-Spoke Urban Transit System. </b>[<a href=\"http://users.wpi.edu/~yli15/Includes/Li-SIGSPATIAL-17-hub-4p.pdf\">PDF</a>][<a href=\"http://users.wpi.edu/~yli15/Bib/SIGSPATIAL17CityLines.txt\">Bibtex</a>]<br/>\n<i>24th ACM SIGSPATIAL International Conference on Advances in Geographic Information Systems, Nov 7 - Nov 10, 2017, Redondo Beach, CA, USA.</i>"
+  },
+  {
+    "id": "pub-91",
+    "year": 2017,
+    "tag": "SIGSPATIAL GIS'17",
+    "venue": "SIGSPATIAL",
+    "html": "Amin Vahedian Khezerlou, Xun Zhou, Ling Tong, <b>Yanhua Li</b> and Jun Luo,  <br/><b>Forecasting Gathering Events through Continuous Destination Prediction on Big Trajectory Data. </b>[<a href=\"http://users.wpi.edu/~yli15/Includes/GIS_2017_forecasting.pdf\">PDF</a>][<a href=\"http://users.wpi.edu/~yli15/Bib/SIGSPATIAL17Events.txt\">Bibtex</a>]<br/>\n<i>24th ACM SIGSPATIAL International Conference on Advances in Geographic Information Systems, Nov 7 - Nov 10, 2017, Redondo Beach, CA, USA.</i>"
+  },
+  {
+    "id": "pub-92",
+    "year": 2017,
+    "tag": "SIGSPATIAL GIS'17",
+    "venue": "SIGSPATIAL",
+    "html": "Ruiyuan Li, Sijie Ruan, Jie Bao, <b>Yanhua Li</b>, Yingcai Wu and Yu Zheng <br/><b>Querying Massive Trajectories by Path on the Cloud. </b>[<a href=\"http://users.wpi.edu/~yli15/Includes/SIGSPATIAL17_Query.pdf\">PDF</a>][<a href=\"http://users.wpi.edu/~yli15/Bib/SIGSPATIAL17Cloud.txt\">Bibtex</a>]<br/>\n<i>24th ACM SIGSPATIAL International Conference on Advances in Geographic Information Systems, Nov 7 - Nov 10, 2017, Redondo Beach, CA, USA.</i>"
+  },
+  {
+    "id": "pub-93",
+    "year": 2017,
+    "tag": "TKDE",
+    "venue": null,
+    "html": "Ran Wang, Chi-Yin Chow, Yan Lyu, Victor C. S. Lee, Sam Kwong, <b>Yanhua Li</b>, and Jia Zeng<br/>\n<b>TaxiRec: Recommending Road Clusters to Taxi Drivers Using Ranking-based Extreme Learning Machines</b>[<a href=\"http://users.wpi.edu/~yli15/res.html\">PDF</a>]<br/>\n<i>IEEE Transactions on Knowledge and Data Engineering, Accepted for publication, Nov. 2017.</i>"
+  },
+  {
+    "id": "pub-94",
+    "year": 2017,
+    "tag": "TBD",
+    "venue": null,
+    "html": "Bo Lyu, <b>Yanhua Li</b>, Jie Fu, Andrew C. Trapp, Haiyong Xie, Yong Liao<br/>\n<b>Scalable User-Substation Assignment with Big Data from Power Grids</b>[<a href=\"http://users.wpi.edu/~yli15/Includes/TBD-Power.pdf\">PDF</a>]<br/>\n<i>IEEE Transactions on Big Data, Accepted for publication, Oct. 2017.</i>"
+  },
+  {
+    "id": "pub-95",
+    "year": 2017,
+    "tag": "TBD",
+    "venue": null,
+    "html": "Yuhong Li, Jie Bao, <b>Yanhua Li</b>, Yingcai Wu, Zhiguo Gong, Yu Zheng<br/>\n<b>Mining the Most Influential k-Location Set From Massive Trajectories</b>[<a href=\"Includes/TBD17kinfluential.pdf\">PDF</a>]<br/>\n<i>IEEE Transactions on Big Data, Accepted for publication, 2017.</i>"
+  },
+  {
+    "id": "pub-96",
+    "year": 2017,
+    "tag": "TBD",
+    "venue": null,
+    "html": "Ye Ding, <b>Yanhua Li</b>, Ke Deng, Haoyu Tan, Mingxuan Yuan, Lionel M. Ni<br/>\n<b>Detecting and Analyzing Urban Regions with High Impact of Weather Change on Transport. </b>[<a href=\"Includes/tbd16_weather.pdf\">PDF</a>]<br/>\n<i>IEEE Transactions on Big Data, Volume: 3, Issue: 2, June 1 2017.</i><br/>\n# Featured the most popular article in Transactions on Big Data by the statistics of August 2017. <a href=\"http://ieeexplore.ieee.org/xpl/topAccessedArticles.jsp?punumber=6687317&amp;topArticlesDate=August+2017\">(link)</a>"
+  },
+  {
+    "id": "pub-97",
+    "year": 2017,
+    "tag": "IEEE Access",
+    "venue": null,
+    "html": "Yan Lyu, Chi-Yin Chow, Victor Lee, Joseph Kee-Yin Ng, <b>Yanhua Li</b>, and Jia Zeng<br/>\n<b>R-Sharing: Rendezvous for Personalized Taxi Sharing. </b>[Availabe soon.]<br/>\n<i>IEEE Access, Accepted for publication.</i>"
+  },
+  {
+    "id": "pub-98",
+    "year": 2017,
+    "tag": "SmartCity'17",
+    "venue": null,
+    "html": "Guanxiong Liu*, Menghai Pan*, <b>Yanhua Li</b>, Zhi-Li Zhang, Jun Luo,<br/><b>Modeling Urban Trip Demands in Cloud-Commuting System: A Holistic Approach. </b>[<a href=\"Includes/SC_17_CC.pdf\">PDF</a>]<br/>\n<i>SmartCity'17: The 3rd IEEE INFOCOM Workshop on Smart Cities and Urban Computing, May 1-4 2017, Atlanta, GA, USA.</i>"
+  },
+  {
+    "id": "pub-99",
+    "year": 2016,
+    "tag": "ICDM'16",
+    "venue": "ICDM",
+    "html": "Chen Liu, Ke Deng, Chaojie Li, Jianxin Li, <b>Yanhua Li</b>, Jun Luo<br/><b>The Optimal Distribution of Electric-Vehicle Chargers across A City. </b>[<a href=\"http://ieeexplore.ieee.org/document/7837850/\">PDF</a>][<a href=\"http://users.wpi.edu/~yli15/Bib/ICDM16EV.txt\">Bibtex</a>]<br/>\n<i>IEEE International Conference on Data Mining, (8.5% Acceptance Ratio), Barcelona, Spain, December 12-15, 2016.</i>"
+  },
+  {
+    "id": "pub-100",
+    "year": 2016,
+    "tag": "SIGSPATIAL GIS'16",
+    "venue": "SIGSPATIAL",
+    "html": "Bo Lyu, Shijian Li, <b>Yanhua Li</b>, Jie Fu, Andrew Trapp, Haiyong Xie, Yong Liao <br/><b>Scalable User Assignment in Power Grids: A Data Driven Approach. </b>[<a href=\"http://users.wpi.edu/~yli15/Includes/SIGSPATIAL16-CR-font.pdf\">PDF</a>][<a href=\"http://users.wpi.edu/~yli15/Bib/SIGSPATIAL16Li.txt\">Bibtex</a>]<br/>\n<i>23rd ACM SIGSPATIAL International Conference on Advances in Geographic Information Systems, Oct 31 - Nov 3, 2016, San Francisco, CA, USA.</i>"
+  },
+  {
+    "id": "pub-101",
+    "year": 2016,
+    "tag": "SIGSPATIAL GIS'16",
+    "venue": "SIGSPATIAL",
+    "html": "Yuhong Li, Jie Bao, <b>Yanhua Li</b>, Yu Zheng, Yingcai Wu, Zhiguo Gong  <br/><b>Mining the Most Influential k-Location Set from Massive Trajectories. </b>[<a href=\"https://dl.acm.org/citation.cfm?doid=2996913.2997009\">PDF</a>][<a href=\"http://users.wpi.edu/~yli15/Bib/SIGSPATIAL16Jie.txt\">Bibtex</a>]<br/>\n<i>23rd ACM SIGSPATIAL International Conference on Advances in Geographic Information Systems, Oct 31 - Nov 3, 2016, San Francisco, CA, USA.</i>"
+  },
+  {
+    "id": "pub-102",
+    "year": 2016,
+    "tag": "CIKM'16",
+    "venue": null,
+    "html": "Xinyue Liu, Xiangnan Kong, <b>Yanhua Li</b> <br/><b>Collective Traffic Prediction with Partially Observed Traffic History using Location-Base Social Media. </b>[<a href=\"https://dl.acm.org/citation.cfm?id=2983662\">PDF</a>]<br/>\n<i>The 25th ACM International Conference on Information and Knowledge Management, Indianapolis, IN, on Oct 24 - 28, 2016.</i>"
+  },
+  {
+    "id": "pub-103",
+    "year": 2016,
+    "tag": "ECML-PKDD'16",
+    "venue": null,
+    "html": "Ermal Toto, Elke A. Rundensteiner, <b>Yanhua Li</b>, Richard Jordan, Mariya Ishutkina, Kajal Claypool, Jun Luo, and Fan Zhang  <br/><b>PULSE: A Real Time System for Crowd Flow Prediction at Metropolitan Subway Stations. </b>[<a href=\"http://users.wpi.edu/~yli15/Includes/16_ECML_Subway.pdf\">PDF</a>][<a href=\"http://users.wpi.edu/~yli15/Bib/ECML16.txt\">Bibtex</a>]<br/>\n<i>The European Conference on Machine Learning and Principles and Practice of Knowledge Discovery, (20% Acceptance Ratio), Riva del Garda, Italy, September 19–23, 2016</i>"
+  },
+  {
+    "id": "pub-104",
+    "year": 2016,
+    "tag": "e-Energy'16",
+    "venue": null,
+    "html": "Zhichun Huang, Ting Zhu, Yu Gu, <b>Yanhua Li</b> <br/><b>Shepherd: Sharing Energy for Privacy Preserving in Hybrid AC-DC Microgrids. </b>[<a href=\"http://users.wpi.edu/~yli15/Includes/E-energy16-paper.pdf\">PDF</a>][<a href=\"http://users.wpi.edu/~yli15/Bib/eEnergy16.txt\">Bibtex</a>]<br/>\n<i>The seventh ACM International Conference on Future Energy Systems (ACM e-Energy), (22/73=30% Accepatance Ratio), Waterloo, Canada on June 21-24, 2016.</i>"
+  },
+  {
+    "id": "pub-105",
+    "year": 2016,
+    "tag": "SmartCity'16",
+    "venue": null,
+    "html": "Yan Lyu, Chi-Yin Chow, Victor Lee, <b>Yanhua Li</b>, Jia Zeng <br/><b>T2CBS: Mining Taxi Trajectories for Customized Bus Systems. </b>[<a href=\"http://users.wpi.edu/~yli15/Includes/15_GIS_TaxiRec.pdf\">PDF</a>]<br/>\n<i>SmartCity16: The 2nd IEEE INFOCOM Workshop on Smart Cities and Urban Computing, 10-15 April 2016, San Francisco, CA, USA.</i>"
+  },
+  {
+    "id": "pub-106",
+    "year": 2016,
+    "tag": "SAC'16",
+    "venue": null,
+    "html": "Bin Cao, Jing Fan, Mingxuan Yuan, <b>Yanhua Li</b><br/><b>Toward Accurate Energy-Efficient Cellular Network: Switching Off Excessive Carriers based on Traffic Profiling.  </b>[<a href=\"https://dl.acm.org/citation.cfm?id=2851708&amp;dl=ACM&amp;coll=DL&amp;CFID=999257650&amp;CFTOKEN=58595631\">PDF</a>][<a href=\"http://users.wpi.edu/~yli15/Bib/SAC16Cellular.txt\">Bibtex</a>]<br/>\n<i>ACM 2016 SYMPOSIUM ON APPLIED COMPUTING, April 4-8, 2016, Pisa, Italy.</i>"
+  },
+  {
+    "id": "pub-107",
+    "year": 2015,
+    "tag": "GeoInformatica",
+    "venue": null,
+    "html": "Ran Wang, Chi-Yin Chow, Yan Lyu, Victor C.S. Lee, Sarana Nutanong, <b>Yanhua Li</b>, Mingxuan Yuan<br/><b>Exploring Cell Tower Data Dumps for Supervised Learning-based Point-of-Interest Prediction.  </b>[<a href=\"https://link.springer.com/article/10.1007/s10707-015-0237-7\">PDF</a>]<br/>\n<i>Springer GeoInformatica, Accepted for publication, 2015.</i>"
+  },
+  {
+    "id": "pub-108",
+    "year": 2015,
+    "tag": "SIGSPATIAL GIS'15",
+    "venue": "SIGSPATIAL",
+    "html": "Ran Wang, Chi-Yin Chow, Yan Lyu, Victor C. S. Lee, Sam Kwong, <b>Yanhua Li</b>, Jia Zeng<br/><b>TaxiRec: Recommending Road Clusters to Taxi Drivers Using Ranking-based Extreme Learning Machines.  </b>[<a href=\"http://users.wpi.edu/~yli15/Includes/15_GIS_TaxiRec.pdf\">PDF</a>]<br/>\n<i>ACM 23rd ACM SIGSPATIAL International Conference on Advances in Geographic Information Systems, Seattle, WA USA on Nov 3 - 6, 2015.</i>"
+  },
+  {
+    "id": "pub-109",
+    "year": 2015,
+    "tag": "ICDM'15",
+    "venue": "ICDM",
+    "html": "Ye Ding, <b>Yanhua Li</b>, Ke Deng, Haoyu Tan, Mingxuan Yuan, Lionel M. Ni<br/><b>Dissecting Regional Weather-Traffic Sensitivity throughout a City.  </b>[<a href=\"http://users.wpi.edu/~yli15/Includes/15_ICDM_Weather.pdf\">PDF</a>]<br/>\n<i>IEEE International Conference on Data Mining, (18.2% Acceptance Ratio), Atlantic City, NJ, USA on Nov 14 - 17, 2015.</i>"
+  },
+  {
+    "id": "pub-110",
+    "year": 2015,
+    "tag": "TNSM",
+    "venue": null,
+    "html": "<b>Yanhua Li</b>, Haiyong Xie, Yonggang Wen, Chi-Yin Chow, Zhi-Li Zhang<br/><b>How Much to Coordinate? Optimizing In-Network Caching in Content-Centric Networks.  </b>[<a href=\"http://ieeexplore.ieee.org/document/7161334/\">link</a>]<br/>\n<i>IEEE Transactions on Network and Services Management, Volume: 12, Issue: 3, pages 420-434, September 2015.</i>"
+  },
+  {
+    "id": "pub-111",
+    "year": 2015,
+    "tag": "CIKM'15",
+    "venue": null,
+    "html": "<b>Yanhua Li</b>, Chi-Yin Chow, Ke Deng, Mingxuan Yuan, Jia Zeng, Jia-Dong Zhang, Qiang Yang, Zhi-Li Zhang<br/><b>Sampling Big Trajectory Data.  </b>[<a href=\"http://users.wpi.edu/~yli15/Includes/15_CIKM_Sampling.pdf\">PDF</a>]<br/>\n<i>The 24th ACM International Conference on Information and Knowledge Management, (35/166=21.1% Acceptance Ratio), Melbourne, VIC, Australia on Oct 19 - 23, 2015.</i>"
+  },
+  {
+    "id": "pub-112",
+    "year": 2015,
+    "tag": "SIGMOD'15",
+    "venue": null,
+    "html": "Yiqing Huang, Fangzhou Zhu, Mingxuan Yuan, Ke Deng, <b>Yanhua Li</b>, Bing Ni, Wenyuan Dai, Qiang Yang, Jia Zeng<br/><b>Telco Churn Prediction with Big Data.  </b>[<a href=\"http://users.wpi.edu/~yli15/Includes/SIGMOD15-huang.pdf\">PDF</a>][<a href=\"http://users.wpi.edu/~yli15/Bib/SIGMOD15Telco.txt\">Bibtex</a>]<br/>\n<i>ACM Conference on Management of Data, Melbourne, VIC, Australia on May 31 - June 4, 2015.</i>"
+  },
+  {
+    "id": "pub-113",
+    "year": 2015,
+    "tag": "ICDE'15",
+    "venue": "ICDE",
+    "html": "<b>Yanhua Li</b>, Jun Luo, Chi-Yin Chow, Kam-Lam Chan, Ye Ding, and Fan Zhang<br/><b>Growing the Charging Station Network for Electr ic Vehicles with Trajectory Data Analytics.  </b>[<a href=\"http://users.wpi.edu/~yli15/Includes/ICDE15_EV_LI.pdf\">PDF</a>][<a href=\"http://users.wpi.edu/~yli15/Bib/ICDE15EV.txt\">Bibtex</a>]<br/>\n<i>31st IEEE International Conference on Data Engineering, Apr 13 - 17, 2015, Coex, Seoul, Korea.</i>"
+  },
+  {
+    "id": "pub-114",
+    "year": 2015,
+    "tag": "SIMPLEX'15 Best Paper Awawrd",
+    "venue": null,
+    "html": "Golshan Golnari, Daniel Boley, <b>Yanhua Li</b>, Zhi-Li Zhang<br/><b>Pivotality of Nodes in Reachability Problems Using Avoidance and Transit Hitting Time Metrics.  </b>[<a href=\"http://users.wpi.edu/~yli15/Includes/Golnari.pdf\">PDF</a>][<a href=\"http://users.wpi.edu/~yli15/Bib/ICDE15EV.txt\">Bibtex</a>]<br/>\n<i>The 7th Annual Workshop on Simplifying Complex Networks for Practitioners (In conjunction with the WWW'15), May 18-22, 2015, Florence, Italy.</i>"
+  },
+  {
+    "id": "pub-115",
+    "year": 2015,
+    "tag": "SIMPLEX'15 Invited Paper",
+    "venue": null,
+    "html": "<b>Yanhua Li</b>, Zhi-Li Zhang<br/><b>Understanding Complex Networks Using Graph Spectrum.  </b>[<a href=\"\">Available Soon</a>]<br/>\n<i>The 7th Annual Workshop on Simplifying Complex Networks for Practitioners (In conjunction with the WWW'15), May 18-22, 2015, Florence, Italy.</i>"
+  },
+  {
+    "id": "pub-116",
+    "year": 2015,
+    "tag": "IJDSN",
+    "venue": null,
+    "html": "Ting Zhu, Sheng Xiao, Qingquan Zhang, Yu Gu, Ping Yi, and <b>Yanhua Li</b>\n<br/><b>Emergent Technologies in Big Data Sensing: A Survey.  </b>[<a href=\"http://users.wpi.edu/~yli15/Includes/IJDSN_2015.pdf\">PDF</a>][<a href=\"http://users.wpi.edu/~yli15/Bib/IJDSN_2015.txt\">Bibtex</a>]<br/>\n<i>International Journal of Distributed Sensor Networks, Volume 2015.</i>"
+  },
+  {
+    "id": "pub-117",
+    "year": 2014,
+    "tag": "SIGSPATIAL GIS'14",
+    "venue": "SIGSPATIAL",
+    "html": "Jia-Dong Zhang, Chi-Yin Chow, <b>Yanhua Li</b><br/><b>LORE: Exploiting Sequential Influence for Location Recommendations.  </b>[<a href=\"http://users.wpi.edu/~yli15/Includes/SIGSPATIAL2014_lore.pdf\">PDF</a>][<a href=\"http://users.wpi.edu/~yli15/Bib/SIGSPATIAL14LORE.txt\">Bibtex</a>]<br/>\n<i>22nd ACM SIGSPATIAL International Conference on Advances in Geographic Information Systems, (39/184=21.2% Acceptance Ratio), Nov 4 - 7, 2014, Dallas, TX, USA. </i><p style=\"color: blue\">(Runnerup for the 2024 10-Year Impact Award for the ACM SIGSPATIAL Conference!)</p>"
+  },
+  {
+    "id": "pub-118",
+    "year": 2014,
+    "tag": "SIGSPATIAL GIS'14",
+    "venue": "SIGSPATIAL",
+    "html": "Ran Wang, Chi-Yin Chow, Sarana Nutanong, Yan Lv, <b>Yanhua Li</b>, Mingxuan Yuan, Victor C. S. Lee<br/><b>Exploring Cell Tower Data Dumps for Supervised Learning-based Point-of-Interest Prediction.  </b>[<a href=\"http://users.wpi.edu/~yli15/Includes/SIGSPATIAL2014_cell_tower_data.pdf\">PDF</a>][<a href=\"http://users.wpi.edu/~yli15/Bib/SIGSPATIAL14Cell.txt\">Bibtex</a>]<br/>\n<i>22nd ACM SIGSPATIAL International Conference on Advances in Geographic Information Systems, Nov 4 - 7, 2014, Dallas, TX, USA.</i>"
+  },
+  {
+    "id": "pub-119",
+    "year": 2014,
+    "tag": "TSC",
+    "venue": null,
+    "html": "Jia-Dong Zhang, Chi-Yin Chow, <b>Yanhua Li</b><br/><b>iGeoRec: A Personalized and Efficient Geographical Location Recommendation Framework.  </b>[<a href=\"http://users.wpi.edu/~yli15/Includes/TSC_2014.pdf\">PDF</a>][<a href=\"http://users.wpi.edu/~yli15/Bib/TSC14_iGeoRec.txt\">Bibtex</a>]<br/>\n<i>IEEE Transactions on Services Computing, Accepted for publication, 2014.</i>"
+  },
+  {
+    "id": "pub-120",
+    "year": 2014,
+    "tag": "VLDB'14 Demo",
+    "venue": null,
+    "html": "Mingxuan Yuan, Ke Deng, Jia Zeng, <b>Yanhua Li</b>, Bing Ni, Xiuqiang He, Fei Wang, Wenyuan Dai, Qiang Yang <br/><b>OceanST: A Distributed Analytic System for Large-Scale Spatiotemporal Mobile Broadband Data.  </b>[<a href=\"http://users.wpi.edu/~yli15/Includes/vldb_sample.pdf\">PDF</a>][<a href=\"http://users.wpi.edu/~yli15/Bib/vldb_sample.txt\">Bibtex</a>]<br/>\n<i>The 40th International Conference on Very Large Data Bases, September 1st-5th, 2014, Hang Zhou, China.</i>"
+  },
+  {
+    "id": "pub-121",
+    "year": 2014,
+    "tag": "SocialCom'14",
+    "venue": null,
+    "html": "Golshan Golnari, <b>Yanhua Li</b>, Zhi-Li Zhang <br/><b>What Drives the Growth of YouTube? Measuring and Analyzing the Evolution Dynamics of YouTube Video Uploads.  </b>[<a href=\"http://users.wpi.edu/~yli15/Includes/SocialCom14YouTube.pdf\">PDF</a>][<a href=\"http://users.wpi.edu/~yli15/Bib/SocialCom14YouTube.txt\">Bibtex</a>]<br/>\n<i>The Sixth ASE International Conference on Social Computing, May 27 - May 31, 2014, Stanford, CA, USA.</i>"
+  },
+  {
+    "id": "pub-122",
+    "year": 2014,
+    "tag": "ICDE'14",
+    "venue": "ICDE",
+    "html": "<b>Yanhua Li</b>, Moritz Steiner, Jie Bao, Limin Wang, and Ting Zhu <br/><b>Region Sampling and Estimation of GeoSocial Data with Dynamic Range Calibration.  </b>[<a href=\"http://users.wpi.edu/~yli15/Includes/ICDE14Foursquare.pdf\">PDF</a>][<a href=\"http://users.wpi.edu/~yli15/Bib/ICDE14Foursquare.txt\">Bibtex</a>]<br/>\n<i>The 30th International Conference on Data Engineering, (20.0% Acceptance Ratio), March 31 - April 04, 2014, Chicago, IL, USA.</i>"
+  },
+  {
+    "id": "pub-123",
+    "year": 2014,
+    "tag": "IM",
+    "venue": null,
+    "html": "<b>Yanhua Li</b>, Wei Chen, Yajun Wang, Zhi-Li Zhang  <br/><b>Voter Model on Signed Social Networks.  </b>[<a href=\"http://users.wpi.edu/~yli15/Includes/IMVoterModel.pdf\">PDF</a>][<a href=\"http://users.wpi.edu/~yli15/Bib/IM14Voter.txt\">Bibtex</a>]<br/>\n<i>Internet Mathematics, Accepted for publication, 2014.</i>"
+  },
+  {
+    "id": "pub-124",
+    "year": 2014,
+    "tag": "TPDS",
+    "venue": null,
+    "html": "<b>Yanhua Li</b>, Zhi-Li Zhang, and Daniel Boley <br/><b>From Shortest-path to All-path: The Routing Continuum Theory and its applications.  </b>[<a href=\"http://users.wpi.edu/~yli15/Includes/TPDS13-Li.pdf\">PDF</a>][<a href=\"http://users.wpi.edu/~yli15/Includes/TPDS-supp-Li.pdf\">Supplementary Materials</a>][<a href=\"http://users.wpi.edu/~yli15/Bib/TPDS13RCT.txt\">Bibtex</a>]<br/>\n<i>IEEE Transactions on Parallel and Distributed Systems, Vol.25 (Num. 7), pages 1745-1755, Jul 2014.</i>"
+  },
+  {
+    "id": "pub-125",
+    "year": 2013,
+    "tag": "TVT",
+    "venue": null,
+    "html": "<b>Yanhua Li</b>, Abedelaziz Mohaisen, and Zhi-Li Zhang <br/><b>Trading Optimality for Scalability in Large-scale Wireless Network Opportunistic Routing. </b>[<a href=\"http://users.wpi.edu/~yli15/Includes/TVT13Trading.pdf\">PDF</a>][<a href=\"http://users.wpi.edu/~yli15/Bib/TVT13Trading.txt\">Bibtex</a>]<br/>\n<i>IEEE Transactions on Vehicular Technology, Vol.62 (Num.5), Jun 2013.</i>"
+  },
+  {
+    "id": "pub-126",
+    "year": 2013,
+    "tag": "ToN",
+    "venue": null,
+    "html": "<b>Yanhua Li</b>, Zhi-Li Zhang  <br/><b>Random Walks and Green's Function on Digraphs: A Framework for Estimating Wireless Transmission Costs. </b>[<a href=\"http://users.wpi.edu/~yli15/Includes/ToN13RW.pdf\">PDF</a>][<a href=\"http://users.wpi.edu/~yli15/Bib/ToN12RW.txt\">Bibtex</a>]<br/>\n<i>IEEE/ACM Transactions on Networking, 21(1), pages 135-148, Feb 2013.</i>"
+  },
+  {
+    "id": "pub-127",
+    "year": 2013,
+    "tag": "ICDCS'13",
+    "venue": null,
+    "html": "<b>Yanhua Li</b>, Haiyong Xie, Yonggang Wen, and Zhi-Li Zhang <br/><b>Coordinating In-Network Caching in Content-Centric Networks: Model and Analysis. </b>[<a href=\"http://users.wpi.edu/~yli15/Includes/ICDCS13Caching.pdf\">PDF</a>][<a href=\"http://users.wpi.edu/~yli15/Bib/ICDCS13Caching.txt\">Bibtex</a>]<br/>\n<i>The 33rd International Conference on Distributed Computing Systems, July 8-11, 2013, Philadelphia, USA. (13.1% Acceptance Ratio)</i>"
+  },
+  {
+    "id": "pub-128",
+    "year": 2013,
+    "tag": "ICNP'13 Poster",
+    "venue": null,
+    "html": "Haiyong Xie, <b>Yanhua Li</b>, Jin Wang, Diego Lopez, Tina Tsou, and Yonggang Wen <br/><b>vRGW: Towards Network Function Virtualization Enabled by Software Defined Networking. </b>[<a href=\"http://users.wpi.edu/~yli15/Includes/icnp13vrgw.pdf\">PDF</a>][<a href=\"http://users.wpi.edu/~yli15/Bib/ICNP13vRGW.txt\">Bibtex</a>]<br/>\n<i>The 21st IEEE International Conference on Network Protocols, October 7-10, 2013, Gottingen, Germany.</i>"
+  },
+  {
+    "id": "pub-129",
+    "year": 2013,
+    "tag": "NetSciCom'13",
+    "venue": null,
+    "html": "<b>Yanhua Li</b>, Moritz Steiner, Limin Wang, Zhi-Li Zhang, and Jie Bao <br/><b>Exploring Venue Popularity in Foursquare. </b>[<a href=\"http://users.wpi.edu/~yli15/Includes/NetSciCom13Foursquare.pdf\">PDF</a>][<a href=\"http://users.wpi.edu/~yli15/Bib/NetSciCom13Foursquare.txt\">Bibtex</a>]<br/>\n<i>The Fifth IEEE International Workshop on Network Science for Communication Networks, colocated with INFOCOM 2013, April 19, 2013, Turin, Italy.</i>"
+  },
+  {
+    "id": "pub-130",
+    "year": 2013,
+    "tag": "WSDM'13",
+    "venue": null,
+    "html": "<b>Yanhua Li</b>, Wei Chen, Yajun Wang, Zhi-Li Zhang <br/><b>Influence Diffusion Dynamics and Influence Maximization in Social Networks with Friend and Foe Relationships. </b>[<a href=\"http://users.wpi.edu/~yli15/Includes/WSDM51-li.pdf\">PDF</a>][<a href=\"https://arxiv.org/abs/1111.4729\">Full Version</a>][<a href=\"http://users.wpi.edu/~yli15/Bib/WSDM13Voter.txt\">Bibtex</a>]<br/>\n<i>The 6th ACM International Conference on Web Search and Data Mining, February 4-8, 2013, Rome, Italy. (18.9% Acceptance Ratio) </i><p style=\"color: blue\">(This work is selected for oral presentation in a WSDM spotlight session.)</p>"
+  },
+  {
+    "id": "pub-131",
+    "year": 2012,
+    "tag": "IM",
+    "venue": null,
+    "html": "<b>Yanhua Li</b>, Zhi-Li Zhang <br/><b>Digraph Laplacian and the Degree of Asymmetry. </b>[<a href=\"http://users.wpi.edu/~yli15/Includes/Li-Yanhua-Digraph-Laplacian-special-issue-of-Internet-Mathematics.pdf\">PDF</a>][<a href=\"http://users.wpi.edu/~yli15/Bib/IM12Lap.txt\">Bibtex</a>]<br/>\n<i>Internet Mathematics, 8(4), pages 381--401, Dec 2012.</i>"
+  },
+  {
+    "id": "pub-132",
+    "year": 2012,
+    "tag": "CoNEXT'12 Student Workshop",
+    "venue": null,
+    "html": "<b>Yanhua Li</b>, Moritz Steiner, Limin Wang, Zhi-Li Zhang, Jie Bao <br/><b>Dissecting Foursquare Venue Popularity via Random Region Sampling. (Poster) </b>[<a href=\"http://conferences.sigcomm.org/co-next/2012/eproceedings/student/p21.pdf\">PDF</a>][<a href=\"http://users.wpi.edu/~yli15/Bib/CoNEXT12Foursquare.txt\">Bibtex</a>]<br/>\n<i>The 8th International Conference on emerging Networking EXperiments and Technologies, December 10-13, 2012 Nice, France.</i>"
+  },
+  {
+    "id": "pub-133",
+    "year": 2012,
+    "tag": "Milcom'12",
+    "venue": null,
+    "html": "Abedelaziz Mohaisen, Pengkui Luo, <b>Yanhua Li</b>, Yongdae Kim, Zhi-Li Zhang  <br/><b>Measuring Bias in the Mixing Time of Social Graphs due to Graph Sampling.  </b>[<a href=\"http://users.wpi.edu/~yli15/Includes/milcom12camer-ready.pdf\">PDF</a>][<a href=\"http://users.wpi.edu/~yli15/Bib/Milcom12Mixing.txt\">Bibtex</a>]<br/>\n<i>The 2012 Military Communications Conference. Orlando, FL, USA, October 29- November 1, 2012.</i>"
+  },
+  {
+    "id": "pub-134",
+    "year": 2012,
+    "tag": "WAW'12",
+    "venue": null,
+    "html": "<b>Yanhua Li</b>, Zhi-Li Zhang, Jie Bao <br/><b>Mutual or Unrequited Love: Identifying Stable Clusters in Social Networks with Uni- and Bi-directional Links. </b>[<a href=\"http://users.wpi.edu/~yli15/Includes/Paper12WAW12.pdf\">PDF</a>][<a href=\"https://arxiv.org/abs/1203.5474\">Full Version</a>][<a href=\"http://users.wpi.edu/~yli15/Bib/WAW12Mutual.txt\">Bibtex</a>]<br/>\n<i>The 9th Workshop on Algorithms and Models for the Web Graph. Dalhousie University in Halifax, Nova Scotia, Canada, June 22-23, 2012.</i>"
+  },
+  {
+    "id": "pub-135",
+    "year": 2011,
+    "tag": "IMC'11",
+    "venue": null,
+    "html": "Jia Zhou, <b>Yanhua Li</b>, Vijay Kumar Adhikari, Zhi-Li Zhang <br/><b>Counting YouTube Videos via Random Prefix Sampling. </b>[<a href=\"http://users.wpi.edu/~yli15/Includes/imc091s.pdf\">PDF</a>][<a href=\"http://users.wpi.edu/~yli15/Bib/IMC11YouTube.txt\">Bibtex</a>]<br/>\n<i>The Internet Measurement Conference 2011, Berlin, Germany, November 2-4, 2011. (19.1% Acceptance Ratio)</i>"
+  },
+  {
+    "id": "pub-136",
+    "year": 2011,
+    "tag": "ICDCS'11",
+    "venue": null,
+    "html": "<b>Yanhua Li</b>, Zhi-Li Zhang, Daniel Boley <br/><b>The Routing Continuum from Shortest Path to All-path: A Unifying Theory. </b>[<a href=\"http://users.wpi.edu/~yli15/Includes/Yanhua-ICDCS-arXiv.pdf\">PDF</a>][<a href=\"http://users.wpi.edu/~yli15/Bib/ICDCS11Routing.txt\">Bibtex</a>]<br/>\n<i>The 31st Int'l Conference on Distributed Computing Systems, Minneapolis, Minnesota, June 20-24, 2011. (15% Acceptance Ratio)</i><p style=\"color: purple\">(This work was included in the graduate course CSCI 8363 Numerical Linear Algebra in Data Exploration and CSCI 5221 Foundations of Advanced Networking in Computer Science Department at University of Minnesota, Twin Cities.)</p>"
+  },
+  {
+    "id": "pub-137",
+    "year": 2011,
+    "tag": "ICC'11",
+    "venue": null,
+    "html": "Manar Mohaisen, Abedelaziz Mohaisen, <b>Yanhua Li</b>, Pengkui Luo <br/><b>Parallel QRD-M En- coder for Decentralized Multi-user MIMO Systems. </b>[<a href=\"\">PDF</a>][<a href=\"\">Bibtex</a>]<br/>\n<i>IEEE International Conference on Communications, Tokyo, Japan, June 5-9, 2011.</i>"
+  },
+  {
+    "id": "pub-138",
+    "year": 2010,
+    "tag": "WAW'10",
+    "venue": null,
+    "html": "<b>Yanhua Li</b>, Zhi-Li Zhang <br/><b>Random Walks on Digraphs, the Generalized Digraph Laplacian and the Degree of Asymmetry. </b>[<a href=\"http://users.wpi.edu/~yli15/Includes/mainWAW10.pdf\">PDF</a>][<a href=\"http://users.wpi.edu/~yli15/Bib/WAW10Lap.txt\">Bibtex</a>]<br/>\n<i>The 7th Workshop on Algorithms and Models for the Web Graph. Stanford University, CA, USA, December 13-14, 2010.</i>"
+  },
+  {
+    "id": "pub-139",
+    "year": 2010,
+    "tag": "INFOCOM'10",
+    "venue": null,
+    "html": "<b>Yanhua Li</b>, Zhi-Li Zhang <br/><b>Random Walks on Digraphs: A Theoretical Framework for Estimating Transmission Costs in Wireless Routing.  </b>[<a href=\"http://users.wpi.edu/~yli15/Includes/Infocom2010_YLi_1218-Camera-ready.pdf\">PDF</a>][<a href=\"http://users.wpi.edu/~yli15/Bib/Infocom10wireless.txt\">Bibtex</a>]<br/>\n<i>The 29th IEEE Conference on Computer Communications, San Diego, CA, USA, March 15-19, 2010. (17.5% Acceptance Ratio)</i>"
+  },
+  {
+    "id": "pub-140",
+    "year": 2010,
+    "tag": "Globecom'10",
+    "venue": null,
+    "html": "<b>Yanhua Li</b>, Debin Zou, Hao Wang, Zheng Zhou, Yuan-an Liu, and Yan Qiao,<br/><b>LOR: Localized Opportunistic Routing in Large-scale Wireless Networks.  </b>[<a href=\"\">PDF</a>][<a href=\"http://users.wpi.edu/~yli15/Bib/Globecom10LOR.txt\">Bibtex</a>]<br/>\n<i>IEEE Globecom Communications Conference. Miami, FL, USA, December 6-10, 2010.</i>"
+  },
+  {
+    "id": "pub-141",
+    "year": 2010,
+    "tag": "Globecom'10",
+    "venue": null,
+    "html": "Hao Wang, Wei Wei, <b>Yanhua Li</b>, Chenda Liao, Yan Qiao, and Zuohua Tian <br/><b>Two-Degree-of- Freedom Congestion Control Strategy against Time Delay and Disturbance.  </b>[<a href=\"\">PDF</a>][<a href=\"\">Bibtex</a>]<br/>\n<i>IEEE Globecom Communications Conference. Miami, Florida, December 6-10, 2010.</i>"
+  },
+  {
+    "id": "pub-142",
+    "year": 2009,
+    "tag": "Globecom'09",
+    "venue": null,
+    "html": "<b>Yanhua Li</b>, Debin Zou, Yuan-an Liu, Zheng Zhou, and Yong Li<br/><b>On the Efficiency of Random Walk Routing in Multihop Wireless Network. </b>[<a href=\"\">PDF</a>][<a href=\"\">Bibtex</a>]<br/>\n<i>IEEE Globecom Communications Conference. Honolulu, Hawaii, Nov. 30 - Dec. 4, 2009.</i>"
+  },
+  {
+    "id": "pub-143",
+    "year": 2009,
+    "tag": "MeshTech'09",
+    "venue": null,
+    "html": "<b>Yanhua Li</b>, Wei Chen, Zhi-Li Zhang<br/><b>Optimal Forwarder List Selection in Opportunistic Routing. </b>[<a href=\"http://users.wpi.edu/~yli15/Includes/YanhuaMeshTech09.pdf\">PDF</a>][<a href=\"http://users.wpi.edu/~yli15/Bib/MeshTech09Opp.txt\">Bibtex</a>][<a href=\"http://users.wpi.edu/~yli15/Includes/MTS.rar\">Code</a>]<br/>\n<i>Third IEEE International Workshop on Enabling Technologies and Standards for Wireless Mesh Networking (co-located with IEEE MASS 2009).Macau SAR, P.R. China. October 12-14, 2009.</i>"
+  },
+  {
+    "id": "pub-144",
+    "year": 2009,
+    "tag": "WCNC'09",
+    "venue": null,
+    "html": "<b>Yanhua Li</b>, Yuanan Liu, Li Li, Pengkui Luo<br/><b>Local Scheduling Scheme For Opportunistic Routing. </b>[<a href=\"\">PDF</a>][<a href=\"\">Bibtex</a>]<br/>\n<i>2009 IEEE Wireless Communications and Networking Conference, Budapest, Hungary 5-8 April 2009.</i>"
+  },
+  {
+    "id": "pub-145",
+    "year": 2009,
+    "tag": "WCNC'09",
+    "venue": null,
+    "html": "Li Li, Chunyuan Zhang, <b>Yanhua Li</b><br/><b>QoS-Aware On-Demand Channel Width Adaptation Protocols For Multi-Radio Ad-Hoc Networks. </b>[<a href=\"\">PDF</a>][<a href=\"\">Bibtex</a>]<br/>\n<i>2009 IEEE Wireless Communications and Networking Conference, Budapest, Hungary 5-8 April 2009.</i>"
+  }
+]

@@ -1,0 +1,71 @@
+{
+  "faculty": [
+    {
+      "img": "yll.jpg",
+      "name": "Yanhua Li",
+      "link": null,
+      "bio": "Associate Professor<br/>\n        Ph.D., CS, University of Minnesota, Twin Cities, 2013<br/>\n        Ph.D., ECE, Beijing U of Posts and Telecommunications, 2009"
+    }
+  ],
+  "currentPhD": [
+    {
+      "img": "Zhiyang.jpg",
+      "name": "Zhiyang Zhang",
+      "link": "http://users.wpi.edu/~zzhang18/",
+      "bio": "PhD Student, Data Science, WPI<br/>\n          M.S., Statistics, University of Chinese Academy of Sciences, 2020<br/>\n          B.S., Mathematics, Northeastern University, 2017"
+    },
+    {
+      "img": "Fanxi.jpg",
+      "name": "Fanxi Kong",
+      "link": "http://users.wpi.edu/~fkong/",
+      "bio": "PhD Student, Data Science, WPI<br/>\n          M.S., Applied Statistics, Shanghai Jiaotong University, 2024<br/>\n          B.S., Statistics, Xiamen University, 2022"
+    },
+    {
+      "img": "Mingzhi.jpeg",
+      "name": "Mingzhi Hu",
+      "link": "http://web.cs.wpi.edu/~mhu3/",
+      "bio": "PhD Student, Data Science, WPI<br/>\n          MS, Applied Statistics, Syracuse University, 2018<br/>\n          BE, Applied Mathematics, Dalian University of Technology, 2016"
+    }
+  ],
+  "pastPhD": [
+    {
+      "img": "Menghai.jpg",
+      "name": "Menghai Pan",
+      "link": "http://web.cs.wpi.edu/~mpan/",
+      "bio": "Now at VISA research lab.<br/>\n          WPI Computer Science PhD (2021)<br/>\n          BE, Huazhong University of Science and Technology, 2016"
+    },
+    {
+      "img": "Guojun.jpg",
+      "name": "Guojun Wu",
+      "link": "http://users.wpi.edu/~gwu/",
+      "bio": "Now at ByteDance.<br/>\n          WPI Data Science PhD (2021)<br/>\n          BE, Beihang University, 2014"
+    },
+    {
+      "img": "yingxue.jpeg",
+      "name": "Yingxue Zhang",
+      "link": "https://yingxuezhang.com/",
+      "bio": "Now, Tenure Track Assistant Professor in CS department at SUNY Binghamton University (since Fall 2022).<br/>\n          Ph.D. Data Science, at WPI (2022)<br/>\n          ME, Financial Engineering, Steven Institute of Technology, 2018<br/>\n          BE, Computer Science, Shanghai Jiaotong University, 2016"
+    },
+    {
+      "img": "xin.jpg",
+      "name": "Xin Zhang",
+      "link": "https://xinzhang525.netlify.app/",
+      "bio": "Now, Tenure Track Assistant Professor in CS department at San Diego State University (since Fall 2023).<br/>\n          Ph.D., Data Science, at WPI (2023)<br/>\n          BS, Applied Math, University of Illinois Urbana-Champaign, 2017"
+    },
+    {
+      "img": "huimin_profile.jpg",
+      "name": "Huimin Ren",
+      "link": null,
+      "bio": "Now, at Li Auto Inc.<br/>\n          PhD Student, Data Science, at WPI (2022)<br/>\n          MS, Data Science, WPI, 2018<br/>\n          BE, Finance, Southwestern University of Finance and Economics, 2016"
+    }
+  ],
+  "pastMastersInterns": [
+    "Mingzhou Yang (Visiting student at WPI, MS from Xi'An Jiaotong University), Summer 2019 → Now, PhD student at University of Minnesota, Twin Cities.",
+    "Yichen Ding (MS Student with WPI), Summer 2017 → Then, a PhD student at University of Iowa.",
+    "Shijian Li (MS Student with WPI), Summer and Fall 2016 → Then, a PhD student at WPI.",
+    "Ziye Zhou (PhD Student with Chinese University of Hong Kong), Fall 2014 → Researcher, Lenovo Research at Hong Kong.",
+    "Ye Ding (PhD Student with Hong Kong University of Science and Technology), Summer 2014 → Research associate at Hong Kong University of Science and Technology.",
+    "Kam-Lam (Antony) Chan (B.Sc. with City University of Hong Kong), Summer 2014 → Contract Systems Specialist at The Bank of East Asia, Limited, Hong Kong.",
+    "Fei Wang (M.Sc. with The University of Hong Kong), Fall 2013 → Software Engineer at Facebook, USA."
+  ]
+}
