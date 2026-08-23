@@ -1,5 +1,19 @@
 # Publishing this site to your WPI userspace
 
+## Quick way: `sync-to-wpi.sh`
+
+Once `public_html` is mounted (see step 1 below), from a Terminal in this project folder:
+
+```bash
+./sync-to-wpi.sh
+```
+
+This pulls the latest from GitHub, compares every deployable file to what's currently live, copies over anything that changed, and tells you either what it synced or "nothing to sync" if you're already up to date. Safe to run any time, as often as you like — it only touches files that actually differ.
+
+Run this after saving changes in the [web editor](https://urbanintelligence.github.io/WPI_PersonalSite/) (or after editing `data/*.json` directly and pushing to GitHub yourself).
+
+## Manual way
+
 Your new site lives in this folder as plain files: `index.html`, `res.html`, `talk.html`, `proj.html`, `fund.html`, `team.html`, `teach.html`, `serve.html`, `REU.html`, `cv.html`, `style.css`, and the `img/` folder. WPI serves whatever is in your `public_html` folder at `https://users.wpi.edu/~yli15/`, so publishing is just copying these files there.
 
 This step requires your own WPI username and password — only you can do it.
