@@ -1,6 +1,16 @@
 # How to update Publications, Talks, Funding & Awards, Team, Teaching, and Service
 
-These six pages no longer contain hand-written HTML lists. Each one reads its content from a small JSON file in `data/`, and a shared script (`assets/render.js`) turns that data into the styled page automatically. **To add something new, you edit a JSON file, not the HTML.**
+These six pages no longer contain hand-written HTML lists. Each one reads its content from a small JSON file in `data/`, and a shared script (`assets/render.js`) turns that data into the styled page automatically.
+
+## Easiest way: the web editor
+
+**[urbanintelligence.github.io/WPI_PersonalSite](https://urbanintelligence.github.io/WPI_PersonalSite/)** — a form-based editor (add / edit / delete, no JSON or HTML to write) that saves straight to the GitHub repo. Works on any of your devices; the first time on a new device you'll need a GitHub access token (steps are shown right on the page).
+
+After saving there, the change is committed to GitHub immediately. To make it live on `users.wpi.edu`, either ask Claude Code to pull the latest and redeploy, or copy the changed `data/*.json` file(s) (and any new `img/` files) onto `public_html` yourself, same as `PUBLISH.md` describes.
+
+## Manual way: editing the JSON directly
+
+If you'd rather edit the files directly (or the web editor is unavailable), each file follows a simple format. **To add something new this way, you edit a JSON file, not the HTML.**
 
 General rules for all the files below:
 - Each item is one `{ ... }` block inside a list `[ ... ]`.
