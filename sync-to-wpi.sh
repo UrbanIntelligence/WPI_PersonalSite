@@ -37,7 +37,7 @@ fi
 echo "==> Comparing local files to what's currently live..."
 CHANGED=0
 FILES_TO_CHECK=(index.html res.html talk.html proj.html fund.html team.html teach.html serve.html REU.html cv.html news.html style.css)
-for f in "${FILES_TO_CHECK[@]}" assets/*.js data/*.json img/*; do
+for f in "${FILES_TO_CHECK[@]}" assets/*.js data/*.json img/* papers/*; do
   if [ -f "$f" ]; then
     if ! cmp -s "$f" "$PUBLIC_HTML/$f" 2>/dev/null; then
       echo "  changed: $f"

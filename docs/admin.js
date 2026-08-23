@@ -70,20 +70,29 @@ const GH = {
   }
 };
 
+function publicationSummary(e) {
+  if (e.title) {
+    var authors = (e.authors || []).map(function (a) { return (a.first || '') + ' ' + (a.last || ''); }).join(', ');
+    return e.year + ' · [' + e.tag + '] ' + e.title;
+  }
+  return e.year + ' · [' + e.tag + '] ' + (e.html || '').replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim().slice(0, 70);
+}
+
 const SCHEMAS = {
   publications: {
     file: 'data/publications.json', type: 'array', label: 'Publications',
+    /* Legacy fields: used only to edit pre-existing entries stored as a single
+       HTML blob. New entries always use the structured form (openPublicationForm). */
     fields: [
-      { name: 'id', label: 'ID', type: 'text', required: true, help: 'Unique, e.g. pub-146 (one more than the highest existing number)' },
       { name: 'year', label: 'Year', type: 'number', required: true },
       { name: 'tag', label: 'Venue badge text', type: 'text', required: true, help: "Shown on the badge, e.g. KDD'26" },
       { name: 'venue', label: 'Prestige venue (for filter + color)', type: 'select', nullable: true,
         options: ['NeurIPS', 'KDD', 'ICML', 'ICDM', 'SIGSPATIAL', 'AAAI', 'SDM', 'IJCAI', 'WWW', 'ICDE'],
         help: 'Leave as "(none)" for journals/workshops that shouldn\'t be filterable' },
       { name: 'html', label: 'Authors, title, details', type: 'textarea', required: true,
-        help: 'HTML allowed: <b>bold</b>, <i>italic</i>, <a href="...">links</a>, <br> for line breaks' }
+        help: 'HTML allowed: <b>bold</b>, <i>italic</i>, <a href="...">links</a>, <br> for line breaks (legacy entry format)' }
     ],
-    summary: e => `${e.year} · [${e.tag}] ` + (e.html || '').replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim().slice(0, 70)
+    summary: publicationSummary
   },
   talks: {
     file: 'data/talks.json', type: 'array', label: 'Talks',
@@ -264,7 +273,7 @@ function renderListSection(key, content) {
   const card = el('div', { class: 'card' });
   card.appendChild(el('div', { class: 'section-title' }, [
     el('h2', {}, [text(schema.label + ' (' + entry.data.length + ')')]),
-    el('button', { class: 'primary', onclick: function () { openEditForm(key, null); } }, [text('+ Add new')])
+    el('button', { class: 'primary', onclick: function () { openAddOrEdit(key, null); } }, [text('+ Add new')])
   ]));
 
   if (entry.data.length === 0) {
@@ -274,7 +283,7 @@ function renderListSection(key, content) {
       const row = el('div', { class: 'entry-row' }, [
         el('span', { class: 'summary' }, [text(schema.summary(item))]),
         el('div', { class: 'actions' }, [
-          el('button', { onclick: function () { openEditForm(key, idx); } }, [text('Edit')]),
+          el('button', { onclick: function () { openAddOrEdit(key, idx); } }, [text('Edit')]),
           el('button', { class: 'danger', onclick: function () { confirmDeleteEntry(key, idx); } }, [text('Delete')])
         ])
       ]);
@@ -282,6 +291,21 @@ function renderListSection(key, content) {
     });
   }
   content.appendChild(card);
+}
+
+/* Publications get the rich structured form for Add and for editing any
+   entry already in the new format; pre-existing HTML-blob entries still
+   edit through the simple legacy form. Every other page always uses the
+   generic form. */
+function openAddOrEdit(key, idx) {
+  if (key === 'publications') {
+    const entry = state.cache.publications;
+    const isLegacy = idx !== null && entry.data[idx].html && !entry.data[idx].title;
+    if (isLegacy) { openEditForm(key, idx); return; }
+    openPublicationForm(idx);
+    return;
+  }
+  openEditForm(key, idx);
 }
 
 function confirmDeleteEntry(key, idx) {
@@ -321,6 +345,7 @@ function openEditForm(key, idx) {
           }
           newItem[f.name] = v;
         }
+        if (key === 'publications') newItem.id = isNew ? nextPublicationId(entry.data) : item.id;
         if (isNew) entry.data.push(newItem); else entry.data[idx] = newItem;
         backdrop.remove();
         await saveArrayFile(key, (isNew ? 'Add' : 'Update') + ' entry in ' + schema.label);
@@ -516,6 +541,322 @@ async function saveTeamFile() {
   } catch (err) {
     showToast(err.message, true);
   }
+}
+
+/* --- Structured publication form (new entries + editing new-format entries) --- */
+
+const PRESTIGE_VENUES = ['NeurIPS', 'KDD', 'ICML', 'ICDM', 'SIGSPATIAL', 'AAAI', 'SDM', 'IJCAI', 'WWW', 'ICDE'];
+const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June',
+  'July', 'August', 'September', 'October', 'November', 'December'];
+
+function nextPublicationId(data) {
+  var max = 0;
+  data.forEach(function (e) {
+    var m = /^pub-(\d+)$/.exec(e.id || '');
+    if (m) max = Math.max(max, parseInt(m[1], 10));
+  });
+  return 'pub-' + (max + 1);
+}
+
+function labeledField(labelText, required, helpText, inputEl) {
+  var wrapper = el('div', { class: 'field' });
+  wrapper.appendChild(el('label', {}, [text(labelText + (required ? ' *' : ''))]));
+  wrapper.appendChild(inputEl);
+  if (helpText) wrapper.appendChild(el('div', { class: 'help' }, [text(helpText)]));
+  return wrapper;
+}
+function textInput(value, onChange, placeholder) {
+  var input = el('input', { type: 'text' });
+  input.value = value || '';
+  if (placeholder) input.placeholder = placeholder;
+  input.addEventListener('input', function () { onChange(input.value); });
+  return input;
+}
+function numberInput(value, onChange) {
+  var input = el('input', { type: 'number' });
+  input.value = (value === null || value === undefined) ? '' : value;
+  input.addEventListener('input', function () { onChange(input.value === '' ? null : Number(input.value)); });
+  return input;
+}
+function dateInput(value, onChange) {
+  var input = el('input', { type: 'date' });
+  input.value = value || '';
+  input.addEventListener('input', function () { onChange(input.value); });
+  return input;
+}
+function selectInput(value, options, onChange) {
+  var select = el('select', {});
+  options.forEach(function (opt) {
+    var o = el('option', { value: opt[0] }, [text(opt[1])]);
+    if (opt[0] === value) o.selected = true;
+    select.appendChild(o);
+  });
+  select.addEventListener('change', function () { onChange(select.value); });
+  return select;
+}
+
+function openPublicationForm(idx) {
+  const entry = state.cache.publications;
+  const isNew = idx === null;
+  const original = isNew ? null : entry.data[idx];
+
+  const st = {
+    id: isNew ? nextPublicationId(entry.data) : original.id,
+    year: isNew ? new Date().getFullYear() : original.year,
+    tag: isNew ? '' : (original.tag || ''),
+    venue: isNew ? null : (original.venue || null),
+    title: isNew ? '' : (original.title || ''),
+    fileUrl: isNew ? null : (original.fileUrl || null),
+    uploadFile: null,
+    kind: isNew ? 'conference' : (original.kind || 'conference'),
+    conference: Object.assign(
+      { fullName: '', startDate: '', endDate: '', isUS: true, city: '', state: '', country: '', track: '', accepted: null, submitted: null },
+      (original && original.conference) || {}
+    ),
+    journal: Object.assign(
+      { fullName: '', status: 'Accepted', statusMonth: '', statusYear: null },
+      (original && original.journal) || {}
+    ),
+    authors: isNew
+      ? [{ first: 'Yanhua', last: 'Li', isMe: true }]
+      : (original.authors ? original.authors.map(function (a) { return Object.assign({}, a); }) : [{ first: 'Yanhua', last: 'Li', isMe: true }])
+  };
+
+  const backdrop = el('div', { class: 'modal-backdrop', onclick: function (e) { if (e.target === backdrop) backdrop.remove(); } });
+  const modal = el('div', { class: 'modal', style: 'max-width:720px;' });
+  modal.appendChild(el('h3', {}, [text((isNew ? 'Add publication' : 'Edit publication') + (isNew ? '' : ' (' + st.id + ')'))]));
+
+  const body = el('div', {});
+  modal.appendChild(body);
+
+  function renderAuthorsList(container) {
+    container.innerHTML = '';
+    st.authors.forEach(function (a, i) {
+      var row = el('div', {
+        draggable: 'true',
+        style: 'display:flex; gap:8px; align-items:center; padding:6px 0; border-bottom:1px solid var(--border);'
+      });
+
+      var handle = el('span', { style: 'cursor:grab; color:var(--text-muted); user-select:none;' }, [text('⠿')]);
+      var first = el('input', { type: 'text', placeholder: 'First name', style: 'width:130px;' });
+      first.value = a.first || '';
+      first.addEventListener('input', function () { a.first = first.value; });
+      var last = el('input', { type: 'text', placeholder: 'Last name', style: 'width:130px;' });
+      last.value = a.last || '';
+      last.addEventListener('input', function () { a.last = last.value; });
+
+      var meLabel = el('label', { style: 'display:flex; align-items:center; gap:4px; font-size:0.82rem; color:var(--text-secondary); white-space:nowrap;' });
+      var meCheck = el('input', { type: 'checkbox' });
+      meCheck.checked = !!a.isMe;
+      meCheck.addEventListener('change', function () {
+        st.authors.forEach(function (x) { x.isMe = false; });
+        a.isMe = meCheck.checked;
+        renderAuthorsList(container);
+      });
+      meLabel.appendChild(meCheck);
+      meLabel.appendChild(text('This is me'));
+
+      var removeBtn = el('button', {
+        onclick: function () { st.authors.splice(i, 1); renderAuthorsList(container); },
+        style: 'padding:3px 8px; font-size:0.8rem;'
+      }, [text('Remove')]);
+
+      row.appendChild(handle);
+      row.appendChild(first);
+      row.appendChild(last);
+      row.appendChild(meLabel);
+      row.appendChild(removeBtn);
+
+      row.addEventListener('dragstart', function (ev) {
+        ev.dataTransfer.setData('text/plain', String(i));
+        ev.dataTransfer.effectAllowed = 'move';
+      });
+      row.addEventListener('dragover', function (ev) { ev.preventDefault(); });
+      row.addEventListener('drop', function (ev) {
+        ev.preventDefault();
+        var from = parseInt(ev.dataTransfer.getData('text/plain'), 10);
+        if (isNaN(from) || from === i) return;
+        var moved = st.authors.splice(from, 1)[0];
+        st.authors.splice(i, 0, moved);
+        renderAuthorsList(container);
+      });
+
+      container.appendChild(row);
+    });
+  }
+
+  function renderKindFields(container) {
+    container.innerHTML = '';
+    if (st.kind === 'conference') {
+      var c = st.conference;
+      container.appendChild(labeledField('Conference full name', true,
+        'e.g. "the 33rd ACM SIGKDD Conference on Knowledge Discovery and Data Mining"',
+        textInput(c.fullName, function (v) { c.fullName = v; })));
+
+      var dateRow = el('div', { class: 'field' }, [
+        el('div', { style: 'display:flex; gap:12px;' }, [
+          el('div', { style: 'flex:1' }, [el('label', {}, [text('Start date')]), dateInput(c.startDate, function (v) { c.startDate = v; })]),
+          el('div', { style: 'flex:1' }, [el('label', {}, [text('End date')]), dateInput(c.endDate, function (v) { c.endDate = v; })])
+        ])
+      ]);
+      container.appendChild(dateRow);
+
+      container.appendChild(labeledField('Location', false, null,
+        selectInput(c.isUS ? 'us' : 'intl', [['us', 'United States'], ['intl', 'International']],
+          function (v) { c.isUS = (v === 'us'); renderKindFields(container); })));
+
+      var locRow = el('div', { class: 'field' }, [
+        el('div', { style: 'display:flex; gap:12px;' }, [
+          el('div', { style: 'flex:1' }, [el('label', {}, [text('City')]), textInput(c.city, function (v) { c.city = v; })]),
+          c.isUS
+            ? el('div', { style: 'flex:1' }, [el('label', {}, [text('State')]), textInput(c.state, function (v) { c.state = v; }, 'e.g. CA')])
+            : el('div', { style: 'flex:1' }, [el('label', {}, [text('Country')]), textInput(c.country, function (v) { c.country = v; })])
+        ])
+      ]);
+      container.appendChild(locRow);
+
+      container.appendChild(labeledField('Track (optional)', false, 'e.g. "Research Track"',
+        textInput(c.track, function (v) { c.track = v; })));
+
+      var ratioPreview = el('div', { class: 'help' }, [text('')]);
+      function updateRatioPreview() {
+        if (c.accepted != null && c.submitted) {
+          var pct = (c.accepted / c.submitted * 100).toFixed(1);
+          ratioPreview.textContent = 'Will show: ' + pct + '%=' + c.accepted + '/' + c.submitted + ' Acceptance Ratio';
+        } else {
+          ratioPreview.textContent = '';
+        }
+      }
+      var statsRow = el('div', { class: 'field' }, [
+        el('div', { style: 'display:flex; gap:12px;' }, [
+          el('div', { style: 'flex:1' }, [el('label', {}, [text('# Accepted (optional)')]), numberInput(c.accepted, function (v) { c.accepted = v; updateRatioPreview(); })]),
+          el('div', { style: 'flex:1' }, [el('label', {}, [text('# Submitted (optional)')]), numberInput(c.submitted, function (v) { c.submitted = v; updateRatioPreview(); })])
+        ]),
+        ratioPreview
+      ]);
+      container.appendChild(statsRow);
+      updateRatioPreview();
+    } else {
+      var j = st.journal;
+      container.appendChild(labeledField('Journal full name', true, 'e.g. "Knowledge and Information Systems"',
+        textInput(j.fullName, function (v) { j.fullName = v; })));
+      container.appendChild(labeledField('Status', true, null,
+        selectInput(j.status, [['Accepted', 'Accepted'], ['Published', 'Published']], function (v) { j.status = v; })));
+      container.appendChild(el('div', { class: 'field' }, [
+        el('div', { style: 'display:flex; gap:12px;' }, [
+          el('div', { style: 'flex:1' }, [el('label', {}, [text('Month')]),
+            selectInput(j.statusMonth, [['', '(choose)']].concat(MONTHS.map(function (m) { return [m, m]; })), function (v) { j.statusMonth = v; })],
+          ),
+          el('div', { style: 'flex:1' }, [el('label', {}, [text('Year')]), numberInput(j.statusYear, function (v) { j.statusYear = v; })])
+        ])
+      ]));
+    }
+  }
+
+  function renderBody() {
+    body.innerHTML = '';
+
+    body.appendChild(labeledField('Title', true, null, textInput(st.title, function (v) { st.title = v; })));
+
+    body.appendChild(el('label', { style: 'display:block; font-size:0.85rem; font-weight:600; color:var(--text-secondary); margin-bottom:4px;' }, [text('Authors')]));
+    var authorsContainer = el('div', { style: 'margin-bottom:6px;' });
+    body.appendChild(authorsContainer);
+    renderAuthorsList(authorsContainer);
+    body.appendChild(el('button', {
+      onclick: function () { st.authors.push({ first: '', last: '', isMe: false }); renderAuthorsList(authorsContainer); },
+      style: 'margin:6px 0 18px;'
+    }, [text('+ Add author')]));
+    body.appendChild(el('div', { class: 'help', style: 'margin:-14px 0 16px;' }, [text('Drag rows by the handle to reorder.')]));
+
+    var fileWrap = el('div', { class: 'field' });
+    fileWrap.appendChild(el('label', {}, [text('Paper file (optional)')]));
+    if (st.fileUrl && !st.uploadFile) {
+      fileWrap.appendChild(el('div', { class: 'help' }, [text('Current file is linked. ')]));
+      fileWrap.appendChild(el('button', { onclick: function () { st.fileUrl = null; renderBody(); } }, [text('Remove file (show "To be available soon")')]));
+    } else {
+      var fileInput = el('input', { type: 'file', accept: 'application/pdf' });
+      fileInput.addEventListener('change', function () {
+        var f = fileInput.files[0];
+        if (!f) return;
+        var reader = new FileReader();
+        reader.onload = function () {
+          st.uploadFile = { name: f.name, base64: reader.result.split(',')[1] };
+          showToast('File ready: ' + f.name + ' (uploads when you Save)');
+        };
+        reader.readAsDataURL(f);
+      });
+      fileWrap.appendChild(fileInput);
+      fileWrap.appendChild(el('div', { class: 'help' }, [text('If left empty, the entry shows "[To be available soon]" like other unpublished papers.')]));
+    }
+    body.appendChild(fileWrap);
+
+    body.appendChild(labeledField('Venue type', true, null,
+      selectInput(st.kind, [['conference', 'Conference paper'], ['journal', 'Journal paper']],
+        function (v) { st.kind = v; renderBody(); })));
+
+    var kindContainer = el('div', {});
+    body.appendChild(kindContainer);
+    renderKindFields(kindContainer);
+
+    body.appendChild(labeledField('Venue badge text', true, "Shown on the badge, e.g. \"KDD'27\"",
+      textInput(st.tag, function (v) { st.tag = v; })));
+    body.appendChild(labeledField('Prestige venue (for filter + color)', false,
+      'Choose if this is one of the top-tier venues; leave as "(none)" otherwise',
+      selectInput(st.venue || '', [['', '(none)']].concat(PRESTIGE_VENUES.map(function (v) { return [v, v]; })),
+        function (v) { st.venue = v || null; })));
+    body.appendChild(labeledField('Year', true, 'Used to group and sort the entry on the page', numberInput(st.year, function (v) { st.year = v; })));
+  }
+
+  renderBody();
+
+  modal.appendChild(el('div', { class: 'modal-actions' }, [
+    el('button', { onclick: function () { backdrop.remove(); } }, [text('Cancel')]),
+    el('button', {
+      class: 'primary',
+      onclick: async function () {
+        if (!st.title.trim()) { showToast('Title is required', true); return; }
+        if (!st.tag.trim()) { showToast('Venue badge text is required', true); return; }
+        if (!st.year) { showToast('Year is required', true); return; }
+        if (st.authors.filter(function (a) { return a.first || a.last; }).length === 0) { showToast('Add at least one author', true); return; }
+        if (st.kind === 'conference' && !st.conference.fullName.trim()) { showToast('Conference full name is required', true); return; }
+        if (st.kind === 'journal' && !st.journal.fullName.trim()) { showToast('Journal full name is required', true); return; }
+
+        backdrop.remove();
+
+        if (st.uploadFile) {
+          try {
+            var path = 'papers/' + st.uploadFile.name;
+            var existing = await GH.getFile(path);
+            await GH.putBase64(path, st.uploadFile.base64, existing ? existing.sha : null, 'Add/update paper file ' + st.uploadFile.name);
+            st.fileUrl = 'https://users.wpi.edu/~yli15/' + path;
+            showToast('File uploaded.');
+          } catch (err) {
+            showToast('File upload failed: ' + err.message, true);
+            return;
+          }
+        }
+
+        var newEntry = {
+          id: st.id,
+          year: Number(st.year),
+          tag: st.tag.trim(),
+          venue: st.venue || null,
+          title: st.title.trim(),
+          fileUrl: st.fileUrl || null,
+          authors: st.authors.filter(function (a) { return a.first || a.last; }),
+          kind: st.kind
+        };
+        if (st.kind === 'conference') newEntry.conference = st.conference;
+        else newEntry.journal = st.journal;
+
+        if (isNew) entry.data.push(newEntry); else entry.data[idx] = newEntry;
+        await saveArrayFile('publications', (isNew ? 'Add' : 'Update') + ' publication: ' + newEntry.title);
+      }
+    }, [text('Save')])
+  ]));
+
+  backdrop.appendChild(modal);
+  document.body.appendChild(backdrop);
 }
 
 initApp();

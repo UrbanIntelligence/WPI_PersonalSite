@@ -27,22 +27,51 @@ General rules for all the files below:
 
 Used by `res.html` (with the venue filter) **and** the homepage's "Recent Publications" (auto-pulls the latest 3 years in ICDM/ICML/NeurIPS/KDD from this same file — nothing extra to update there).
 
+**In the web editor**, new publications use real form fields — a repeatable, drag-to-reorder author list (you're pre-filled in and bolded by default), a required title, an optional PDF upload (shows "[To be available soon]" until one is provided), and a Conference/Journal switch with the matching fields for each (dates, location, track, accepted/submitted counts with a live-computed acceptance ratio for conferences; journal name, status, and month/year for journals). The ID is generated for you. Within each year, entries are always ordered prestige venues first, then other conference papers, then journal papers — automatic, nothing to set.
+
+That form saves a **structured** entry like this (you never need to write this by hand — this is just what ends up in the file):
+
 ```json
 {
   "id": "pub-146",
   "year": 2026,
   "tag": "KDD'26",
   "venue": "KDD",
-  "html": "Author One, Author Two, <b>Yanhua Li</b>, and Author Three,<br><b>Your Paper Title Goes Here.</b>[PDF]<br><i>the 32nd SIGKDD conference on Knowledge Discovery and Data Mining, August 2026.</i>"
+  "title": "Your Paper Title Goes Here",
+  "fileUrl": null,
+  "authors": [
+    { "first": "Author", "last": "One" },
+    { "first": "Yanhua", "last": "Li", "isMe": true },
+    { "first": "Author", "last": "Three" }
+  ],
+  "kind": "conference",
+  "conference": {
+    "fullName": "the 32nd SIGKDD conference on Knowledge Discovery and Data Mining",
+    "startDate": "2026-08-09",
+    "endDate": "2026-08-13",
+    "isUS": false,
+    "city": "Jeju",
+    "country": "Korea",
+    "track": "",
+    "accepted": null,
+    "submitted": null
+  }
 }
 ```
 
-- `id`: must be unique across the whole file. Easiest: use the next number after the last `pub-N` in the file (check the bottom of the file for the highest number so far).
-- `tag`: the short badge text shown on the entry, e.g. `"KDD'26"`, `"TKDE"`, `"AAAI'27"`.
-- `venue`: one of `"NeurIPS"`, `"KDD"`, `"ICML"`, `"ICDM"`, `"SIGSPATIAL"`, `"AAAI"`, `"SDM"`, `"IJCAI"`, `"WWW"`, `"ICDE"` if this is one of those top-tier venues (it'll get the colored badge and show up in the filter chips and counts automatically) — or `null` (no quotes) if it's a journal/workshop/other venue that shouldn't be highlighted or filterable.
-- `html`: authors, bolded title, links, and italicized venue details — same style as every existing entry. Copy one that's close to what you need and edit the text.
+A journal entry looks the same except `"kind": "journal"` and a `"journal"` block instead of `"conference"`:
 
-New entries can go anywhere in the file — they get grouped and sorted by `year` automatically, newest year first.
+```json
+"journal": { "fullName": "Knowledge and Information Systems", "status": "Accepted", "statusMonth": "June", "statusYear": 2023 }
+```
+
+Notes if editing this by hand instead of the form:
+- `authors`: the person with `"isMe": true` is bolded on the page; order in the array is the display order.
+- `fileUrl`: a link, or `null` to show "[To be available soon]".
+- `venue`: one of `"NeurIPS"`, `"KDD"`, `"ICML"`, `"ICDM"`, `"SIGSPATIAL"`, `"AAAI"`, `"SDM"`, `"IJCAI"`, `"WWW"`, `"ICDE"` for a top-tier venue (colored badge + filterable), or `null` otherwise.
+- The **145 pre-existing entries** (from before this structured format existed) still use the old single-`html`-field format (`{ "id", "year", "tag", "venue", "html" }`) and keep working exactly as before — the web editor recognizes those and edits them with a simple text form instead. You never need to convert them.
+
+New entries can go anywhere in the file — they get grouped by `year` and sorted automatically (prestige first, then conference, then journal within each year), newest year first.
 
 ---
 

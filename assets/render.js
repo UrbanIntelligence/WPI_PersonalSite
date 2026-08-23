@@ -103,6 +103,102 @@ var SiteRender = (function () {
       });
   }
 
+  /* --- Structured publication entries (v2 schema) --- */
+
+  var MONTH_NAMES = ['January', 'February', 'March', 'April', 'May', 'June',
+    'July', 'August', 'September', 'October', 'November', 'December'];
+
+  function formatDateRange(startISO, endISO) {
+    if (!startISO) return '';
+    var s = new Date(startISO + 'T00:00:00');
+    if (!endISO || endISO === startISO) {
+      return MONTH_NAMES[s.getMonth()] + ' ' + s.getDate() + ', ' + s.getFullYear();
+    }
+    var e = new Date(endISO + 'T00:00:00');
+    if (s.getFullYear() === e.getFullYear() && s.getMonth() === e.getMonth()) {
+      return MONTH_NAMES[s.getMonth()] + ' ' + s.getDate() + ' - ' + e.getDate() + ', ' + s.getFullYear();
+    }
+    if (s.getFullYear() === e.getFullYear()) {
+      return MONTH_NAMES[s.getMonth()] + ' ' + s.getDate() + ' - ' +
+        MONTH_NAMES[e.getMonth()] + ' ' + e.getDate() + ', ' + s.getFullYear();
+    }
+    return MONTH_NAMES[s.getMonth()] + ' ' + s.getDate() + ', ' + s.getFullYear() + ' - ' +
+      MONTH_NAMES[e.getMonth()] + ' ' + e.getDate() + ', ' + e.getFullYear();
+  }
+
+  function formatAuthorsHtml(authors) {
+    var names = (authors || []).map(function (a) {
+      var full = ((a.first || '') + ' ' + (a.last || '')).trim();
+      return a.isMe ? '<b>' + full + '</b>' : full;
+    }).filter(function (n) { return n; });
+    if (names.length === 0) return '';
+    if (names.length === 1) return names[0];
+    if (names.length === 2) return names[0] + ' and ' + names[1];
+    return names.slice(0, -1).join(', ') + ', and ' + names[names.length - 1];
+  }
+
+  function acceptanceRatioText(accepted, submitted) {
+    if (accepted == null || !submitted) return null;
+    var pct = (accepted / submitted * 100).toFixed(1);
+    return pct + '%=' + accepted + '/' + submitted + ' Acceptance Ratio';
+  }
+
+  /* Returns { badge, html } for either a v2 structured entry (has .title) or
+     a legacy entry (has .html only, pre-existing content). */
+  function composePublicationEntry(e) {
+    if (!e.title) return { html: e.html };
+
+    var authorsHtml = formatAuthorsHtml(e.authors);
+    var fileHtml = e.fileUrl ? '[<a href="' + e.fileUrl + '">PDF</a>]' : '[To be available soon]';
+    var titleHtml = '<b>' + e.title + '.</b>' + fileHtml;
+
+    var detailsHtml = '';
+    if (e.kind === 'journal' && e.journal) {
+      var j = e.journal;
+      var statusText = j.status === 'Published' ? 'Published' : 'Accepted for publication';
+      detailsHtml = [j.fullName, statusText, ((j.statusMonth || '') + ' ' + (j.statusYear || '')).trim()]
+        .filter(Boolean).join(', ');
+    } else if (e.conference) {
+      var c = e.conference;
+      var loc = c.isUS
+        ? [c.city, c.state, 'USA'].filter(Boolean).join(', ')
+        : [c.city, c.country].filter(Boolean).join(', ');
+      var dates = formatDateRange(c.startDate, c.endDate);
+      var parenParts = [];
+      if (c.track) parenParts.push(c.track);
+      var ratio = acceptanceRatioText(c.accepted, c.submitted);
+      if (ratio) parenParts.push(ratio);
+      var paren = parenParts.length ? ' (' + parenParts.join(', ') + ')' : '';
+      detailsHtml = [c.fullName, loc, dates].filter(Boolean).join(', ') + paren;
+    }
+
+    var html = (authorsHtml ? authorsHtml + ',<br>' : '') + titleHtml +
+      (detailsHtml ? '<br><i>' + detailsHtml + '</i>' : '');
+    return { html: html };
+  }
+
+  /* Sort rank within a year: prestige venue first (0), then regular
+     conference papers (1), then journal papers (2). Legacy entries without
+     an explicit "kind" are treated as conference-bucket, same as before. */
+  function publicationRank(e) {
+    if (e.venue) return 0;
+    return e.kind === 'journal' ? 2 : 1;
+  }
+
+  function getPublicationTitle(e) {
+    if (e.title) return e.title;
+    var div = document.createElement('div');
+    div.innerHTML = e.html || '';
+    var bolds = div.querySelectorAll('b');
+    var best = null;
+    bolds.forEach(function (b) {
+      var t = b.textContent.trim();
+      if (t === 'Yanhua Li') return;
+      if (!best || t.length > best.length) best = t;
+    });
+    return best || div.textContent.trim().slice(0, 140);
+  }
+
   /* Publications page: publications.json, with venue filter + year grouping */
   function renderPublications(containerId, filterContainerId, jsonUrl) {
     var container = document.getElementById(containerId);
@@ -110,7 +206,10 @@ var SiteRender = (function () {
 
     fetchJSON(jsonUrl)
       .then(function (entries) {
-        entries.sort(function (a, b) { return b.year - a.year; });
+        entries.sort(function (a, b) {
+          if (b.year !== a.year) return b.year - a.year;
+          return publicationRank(a) - publicationRank(b);
+        });
 
         var counts = {};
         entries.forEach(function (e) {
@@ -138,8 +237,9 @@ var SiteRender = (function () {
             var cls = 'pub-entry' + (e.venue ? ' prestige' : '');
             var dataVenue = e.venue ? ' data-venue="' + e.venue + '"' : '';
             var badgeCls = 'venue-badge' + (e.venue ? ' prestige v-' + e.venue.toLowerCase() : '');
+            var composed = composePublicationEntry(e);
             html += '<li id="' + e.id + '" class="' + cls + '" data-year="' + year + '"' + dataVenue + '>' +
-              '<span class="' + badgeCls + '">' + e.tag + '</span> ' + e.html + '</li>';
+              '<span class="' + badgeCls + '">' + e.tag + '</span> ' + composed.html + '</li>';
           });
           html += '</ul>';
         });
@@ -177,6 +277,9 @@ var SiteRender = (function () {
     renderTeachingTable: renderTeachingTable,
     renderTeam: renderTeam,
     renderPublications: renderPublications,
+    composePublicationEntry: composePublicationEntry,
+    publicationRank: publicationRank,
+    getPublicationTitle: getPublicationTitle,
     fetchJSON: fetchJSON
   };
 })();
