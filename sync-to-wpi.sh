@@ -53,7 +53,7 @@ for f in "${HTML_FILES[@]}"; do
     sed "s/__BUILD__/$BUILD_ID/g" "$f" > "$TMPDIR/$f"
     if ! cmp -s "$TMPDIR/$f" "$PUBLIC_HTML/$f" 2>/dev/null; then
       echo "  changed: $f"
-      cp "$TMPDIR/$f" "$PUBLIC_HTML/$f"
+      cp -X "$TMPDIR/$f" "$PUBLIC_HTML/$f"
       CHANGED=$((CHANGED + 1))
     fi
   fi
@@ -64,7 +64,7 @@ for f in style.css assets/*.js data/*.json img/* papers/*; do
     if ! cmp -s "$f" "$PUBLIC_HTML/$f" 2>/dev/null; then
       echo "  changed: $f"
       mkdir -p "$PUBLIC_HTML/$(dirname "$f")"
-      cp "$f" "$PUBLIC_HTML/$f"
+      cp -X "$f" "$PUBLIC_HTML/$f"
       CHANGED=$((CHANGED + 1))
     fi
   fi
