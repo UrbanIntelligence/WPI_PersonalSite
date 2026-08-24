@@ -305,6 +305,14 @@ function renderListSection(key, content) {
         if (by !== ay) return by - ay;
         return publicationDisplayRank(a.item) - publicationDisplayRank(b.item);
       });
+    } else if (key === 'news') {
+      /* news.json is stored newest-year-first (matching the public page),
+         so sort by year rather than just reversing array order — a plain
+         reverse() would flip the whole thing to oldest-first, which is
+         what caused the mixed-up ordering. Stable sort keeps same-year
+         entries (including a freshly-added one, pushed to the end of its
+         year's run) in a sensible relative position. */
+      order.sort(function (a, b) { return (b.item.year || 0) - (a.item.year || 0); });
     } else {
       order.reverse();
     }
