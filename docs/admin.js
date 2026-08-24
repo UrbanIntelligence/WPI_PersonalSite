@@ -79,6 +79,16 @@ function publicationSummary(e) {
 }
 
 const SCHEMAS = {
+  news: {
+    file: 'data/news.json', type: 'array', label: 'News',
+    fields: [
+      { name: 'tag', label: 'Label', type: 'text', nullable: true, help: 'e.g. "Award", "Paper", "TPC", "Talk", "Students" — leave blank for none' },
+      { name: 'date', label: 'Date', type: 'text', required: true, help: 'Shown as-is, e.g. "11/2024" or "Nov. 2016"' },
+      { name: 'year', label: 'Year', type: 'number', required: true, help: 'Used to sort and to decide the homepage\'s "latest 3 years"' },
+      { name: 'html', label: 'Description', type: 'textarea', required: true, help: 'HTML allowed, same as existing entries' }
+    ],
+    summary: e => (e.tag ? '[' + e.tag + '] ' : '') + e.date + ': ' + (e.html || '').replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim().slice(0, 60)
+  },
   publications: {
     file: 'data/publications.json', type: 'array', label: 'Publications',
     /* Legacy fields: used only to edit pre-existing entries stored as a single

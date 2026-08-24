@@ -1,6 +1,6 @@
-# How to update Publications, Talks, Funding & Awards, Team, Teaching, and Service
+# How to update News, Publications, Talks, Funding & Awards, Team, Teaching, and Service
 
-These six pages no longer contain hand-written HTML lists. Each one reads its content from a small JSON file in `data/`, and a shared script (`assets/render.js`) turns that data into the styled page automatically.
+These pages no longer contain hand-written HTML lists. Each one reads its content from a small JSON file in `data/`, and a shared script (`assets/render.js`) turns that data into the styled page automatically.
 
 ## Easiest way: the web editor
 
@@ -20,6 +20,28 @@ General rules for all the files below:
 - Bold: `<b>text</b>`. Italics: `<i>text</i>`.
 - After saving, open the page locally (or just redeploy) to check it looks right — a JSON syntax mistake (like a missing comma or quote) will make the whole list fail to load, showing a "couldn't load" message instead of crashing the rest of the page.
 - Any online "JSON validator" (search that phrase) will catch syntax mistakes if a list stops working — paste the file contents in and it'll point at the exact error.
+
+---
+
+## News — `data/news.json`
+
+Used by both `news.html` (the full archive, grouped by year) **and** the homepage's News card (auto-shows the latest 3 years from this same file — nothing extra to update there, same pattern as Recent Publications).
+
+```json
+{
+  "tag": "Paper",
+  "date": "08/2026",
+  "year": 2026,
+  "html": "One paper was accepted by <a href=\"https://example.com\">SomeConf 2026</a>."
+}
+```
+
+- `tag`: optional short label — `"Award"`, `"Paper"`, `"TPC"`, `"Talk"`, `"Students"`, or leave blank/`null` for no badge. Color is picked automatically from the word, same logic as everywhere else on the site.
+- `date`: shown exactly as typed, e.g. `"08/2026"` or `"Nov. 2016"`.
+- `year`: a plain number, used to group entries on the archive page and to decide what counts as the homepage's "latest 3 years" — keep it in sync with `date`.
+- `html`: the description, links allowed.
+
+New entries can go anywhere in the file — sorted automatically, newest year first.
 
 ---
 

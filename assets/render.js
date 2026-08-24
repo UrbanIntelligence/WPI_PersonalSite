@@ -56,6 +56,52 @@ var SiteRender = (function () {
       .catch(function (err) { showError(container, err); });
   }
 
+  function newsItemHtml(e) {
+    var badge = tagBadge(e.tag);
+    var dateHtml = e.date ? '<span class="news-date">' + e.date + ':</span> ' : '';
+    return '<li>' + badge + dateHtml + e.html + '</li>';
+  }
+
+  /* Full news archive (news.html): news.json grouped by year, newest first. */
+  function renderNewsArchive(containerId, jsonUrl) {
+    var container = document.getElementById(containerId);
+    fetchJSON(jsonUrl)
+      .then(function (entries) {
+        var byYear = {};
+        var yearOrder = [];
+        entries.forEach(function (e) {
+          if (!byYear[e.year]) { byYear[e.year] = []; yearOrder.push(e.year); }
+          byYear[e.year].push(e);
+        });
+        yearOrder.sort(function (a, b) { return b - a; });
+
+        var html = '';
+        yearOrder.forEach(function (year) {
+          html += '<h2 class="year-heading">' + year + '</h2><ul class="news-list">';
+          byYear[year].forEach(function (e) { html += newsItemHtml(e); });
+          html += '</ul>';
+        });
+        container.innerHTML = html;
+      })
+      .catch(function (err) { showError(container, err); });
+  }
+
+  /* Homepage News card: latest N distinct years from news.json, flat list
+     (no year headers), newest first — same source news.html's full
+     archive reads, so nothing to keep in sync by hand. */
+  function renderRecentNews(containerId, jsonUrl, yearsToShow) {
+    var container = document.getElementById(containerId);
+    fetchJSON(jsonUrl)
+      .then(function (entries) {
+        var distinctYears = Array.from(new Set(entries.map(function (e) { return e.year; })))
+          .sort(function (a, b) { return b - a; });
+        var allowedYears = new Set(distinctYears.slice(0, yearsToShow));
+        var shown = entries.filter(function (e) { return allowedYears.has(e.year); });
+        container.innerHTML = shown.map(newsItemHtml).join('');
+      })
+      .catch(function (err) { showError(container, err); });
+  }
+
   /* Teaching table: teaching.json. "offerings" is an array of term strings
      (e.g. "2019 Fall"), each rendered as its own tag. Old data where
      offerings was still a single comma-separated string is also accepted. */
@@ -293,6 +339,8 @@ var SiteRender = (function () {
     composePublicationEntry: composePublicationEntry,
     publicationRank: publicationRank,
     getPublicationTitle: getPublicationTitle,
+    renderNewsArchive: renderNewsArchive,
+    renderRecentNews: renderRecentNews,
     fetchJSON: fetchJSON
   };
 })();
