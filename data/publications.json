@@ -1013,5 +1013,63 @@
     "tag": "WCNC'09",
     "venue": null,
     "html": "Li Li, Chunyuan Zhang, <b>Yanhua Li</b><br/><b>QoS-Aware On-Demand Channel Width Adaptation Protocols For Multi-Radio Ad-Hoc Networks. </b>[<a href=\"\">PDF</a>][<a href=\"\">Bibtex</a>]<br/>\n<i>2009 IEEE Wireless Communications and Networking Conference, Budapest, Hungary 5-8 April 2009.</i>"
+  },
+  {
+    "id": "pub-146",
+    "year": 2026,
+    "tag": "ICDM'26",
+    "venue": "ICDM",
+    "title": "Traj-Transformer: Diffusion Models with Transformer for GPS Trajectory Generation",
+    "fileUrl": null,
+    "authors": [
+      {
+        "first": "Zhiyang",
+        "last": "Zhang",
+        "isMe": false
+      },
+      {
+        "first": "Ningcong",
+        "last": "Chen",
+        "isMe": false
+      },
+      {
+        "first": "Xin",
+        "last": "Zhang",
+        "isMe": false
+      },
+      {
+        "first": "Yanhua",
+        "last": "Li",
+        "isMe": true
+      },
+      {
+        "first": "Shen",
+        "last": "Su",
+        "isMe": false
+      },
+      {
+        "first": "Hui",
+        "last": "Lu",
+        "isMe": false
+      },
+      {
+        "first": "Jun",
+        "last": "Luo",
+        "isMe": false
+      }
+    ],
+    "kind": "conference",
+    "conference": {
+      "fullName": "IEEE International Conference on Data Mining",
+      "startDate": "2026-11-12",
+      "endDate": "2026-11-15",
+      "isUS": false,
+      "city": "Shenyang",
+      "state": "",
+      "country": "China",
+      "track": "Research Track",
+      "accepted": 289,
+      "submitted": 1450
+    }
   }
 ]
