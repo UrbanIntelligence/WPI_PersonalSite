@@ -86,17 +86,19 @@ var SiteRender = (function () {
       .catch(function (err) { showError(container, err); });
   }
 
-  /* Homepage News card: latest N distinct years from news.json, flat list
-     (no year headers), newest first — same source news.html's full
-     archive reads, so nothing to keep in sync by hand. */
-  function renderRecentNews(containerId, jsonUrl, yearsToShow) {
+  /* Homepage News card: the N newest entries from news.json (by year;
+     entries are stored/edited newest-year-first, so this is stable
+     without needing exact dates), flat list, no year headers — always
+     exactly N items regardless of how many fall in any given year, so
+     the card doesn't shrink or balloon as the news list grows. Same
+     source news.html's full archive reads, so nothing to keep in sync
+     by hand. */
+  function renderRecentNews(containerId, jsonUrl, count) {
     var container = document.getElementById(containerId);
     fetchJSON(jsonUrl)
       .then(function (entries) {
-        var distinctYears = Array.from(new Set(entries.map(function (e) { return e.year; })))
-          .sort(function (a, b) { return b - a; });
-        var allowedYears = new Set(distinctYears.slice(0, yearsToShow));
-        var shown = entries.filter(function (e) { return allowedYears.has(e.year); });
+        var sorted = entries.slice().sort(function (a, b) { return (b.year || 0) - (a.year || 0); });
+        var shown = sorted.slice(0, count);
         container.innerHTML = shown.map(newsItemHtml).join('');
       })
       .catch(function (err) { showError(container, err); });

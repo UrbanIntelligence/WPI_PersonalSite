@@ -25,7 +25,7 @@ General rules for all the files below:
 
 ## News — `data/news.json`
 
-Used by both `news.html` (the full archive, grouped by year) **and** the homepage's News card (auto-shows the latest 3 years from this same file — nothing extra to update there, same pattern as Recent Publications).
+Used by both `news.html` (the full archive, grouped by year) **and** the homepage's News card (auto-shows the 10 newest entries from this same file — always exactly 10, regardless of how many fall in any given year — nothing extra to update there, same pattern as Recent Publications).
 
 ```json
 {
@@ -38,7 +38,7 @@ Used by both `news.html` (the full archive, grouped by year) **and** the homepag
 
 - `tag`: optional short label — `"Award"`, `"Paper"`, `"TPC"`, `"Talk"`, `"Students"`, or leave blank/`null` for no badge. Color is picked automatically from the word, same logic as everywhere else on the site.
 - `date`: shown exactly as typed, e.g. `"08/2026"` or `"Nov. 2016"`.
-- `year`: a plain number, used to group entries on the archive page and to decide what counts as the homepage's "latest 3 years" — keep it in sync with `date`.
+- `year`: a plain number, used to group entries on the archive page and to determine the 10 newest for the homepage — keep it in sync with `date`.
 - `html`: the description, links allowed.
 
 New entries can go anywhere in the file — sorted automatically, newest year first.
