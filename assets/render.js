@@ -21,7 +21,10 @@ var SiteRender = (function () {
   }
 
   function fetchJSON(url) {
-    return fetch(url).then(function (r) {
+    /* 'no-cache' forces the browser to revalidate with the server (a
+       304 still returns fast if unchanged) rather than silently serving
+       a possibly-stale cached copy of the data file. */
+    return fetch(url, { cache: 'no-cache' }).then(function (r) {
       if (!r.ok) throw new Error('Failed to load ' + url + ' (' + r.status + ')');
       return r.json();
     });

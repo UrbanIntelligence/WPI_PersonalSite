@@ -34,10 +34,32 @@ else
   echo "==> Pulled new changes: $BEFORE -> $AFTER"
 fi
 
-echo "==> Comparing local files to what's currently live..."
+BUILD_ID=$(git rev-parse --short HEAD)
+TMPDIR=$(mktemp -d)
+trap 'rm -rf "$TMPDIR"' EXIT
+
+echo "==> Comparing local files to what's currently live (build $BUILD_ID)..."
 CHANGED=0
-FILES_TO_CHECK=(index.html res.html talk.html proj.html fund.html team.html teach.html serve.html REU.html cv.html news.html style.css)
-for f in "${FILES_TO_CHECK[@]}" assets/*.js data/*.json img/* papers/*; do
+
+# HTML pages reference style.css and assets/render.js with a "?v=__BUILD__"
+# cache-busting query string. Stamp it with the current commit hash before
+# comparing/copying, so every deploy forces browsers to fetch the new CSS/JS
+# instead of silently keeping a stale cached copy (this is what caused a
+# saved publication to render as "undefined" until the browser was hard-
+# refreshed — the page loaded fine, but its cached render.js was outdated).
+HTML_FILES=(index.html res.html talk.html proj.html fund.html team.html teach.html serve.html REU.html cv.html news.html)
+for f in "${HTML_FILES[@]}"; do
+  if [ -f "$f" ]; then
+    sed "s/__BUILD__/$BUILD_ID/g" "$f" > "$TMPDIR/$f"
+    if ! cmp -s "$TMPDIR/$f" "$PUBLIC_HTML/$f" 2>/dev/null; then
+      echo "  changed: $f"
+      cp "$TMPDIR/$f" "$PUBLIC_HTML/$f"
+      CHANGED=$((CHANGED + 1))
+    fi
+  fi
+done
+
+for f in style.css assets/*.js data/*.json img/* papers/*; do
   if [ -f "$f" ]; then
     if ! cmp -s "$f" "$PUBLIC_HTML/$f" 2>/dev/null; then
       echo "  changed: $f"
