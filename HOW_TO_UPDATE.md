@@ -98,7 +98,18 @@ New entries can go anywhere in the file — they get grouped by `year` and sorte
 }
 ```
 
-Every item on this page always shows with the same red "award" badge, so `tag` is just the label text (e.g. `"NSF Grant"`, `"Industry Grant"`, `"Best Paper Award"`) — no color to think about.
+`tag` is the label text, and its color is picked automatically from keywords in the text — you don't choose a color directly:
+
+| Contains | Color | Example |
+| --- | --- | --- |
+| "NSF" | blue | `"NSF Grant"` |
+| "Industry" | teal | `"Industry Grant"`, `"Industry Support"` |
+| "WPI" or "Seed" | purple | `"WPI Seed Grant"` |
+| "Impact" or "Best Paper" | gold | `"10-Year Impact Award"`, `"Best Paper Award"` |
+| "Award" (anything else) | red | `"Travel Award"` |
+| none of the above | blue-gray | falls back to a neutral tag |
+
+This same color logic is reused for the `[NSF]` / `[Industry]` tags on the homepage's Research Projects section, so both pages always stay visually consistent — no separate place to update.
 
 ---
 
@@ -133,11 +144,11 @@ When a current student graduates, move their `{ ... }` block from `currentPhD` t
 ```json
 {
   "course": "CS599: New Course Title",
-  "offerings": "2027 Fall"
+  "offerings": ["2027 Fall"]
 }
 ```
 
-To add a new semester to an existing course, just edit that course's `offerings` string and add the new term to the end (e.g. `"...2026 Fall, 2027 Fall"`).
+`offerings` is a list of terms — each one renders as its own tag on the page. **In the web editor**, each term shows as a small removable chip with an "×", plus a box to type a new one and press Enter to add it — no commas or JSON to edit by hand. Editing the JSON directly works the same way: add a new string to the list, e.g. `["2026 Fall", "2027 Fall"]`.
 
 ---
 

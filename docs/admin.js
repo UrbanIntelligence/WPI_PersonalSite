@@ -114,9 +114,9 @@ const SCHEMAS = {
     file: 'data/teaching.json', type: 'array', label: 'Teaching',
     fields: [
       { name: 'course', label: 'Course', type: 'text', required: true },
-      { name: 'offerings', label: 'Recent offerings', type: 'text', required: true, help: 'Comma-separated, e.g. "2025 Fall, 2026 Spring"' }
+      { name: 'offerings', label: 'Recent offerings', type: 'tags', required: true, help: 'Add each term separately, e.g. "2025 Fall"' }
     ],
-    summary: e => e.course + ' — ' + e.offerings
+    summary: e => e.course + ' — ' + (Array.isArray(e.offerings) ? e.offerings.join(', ') : e.offerings)
   },
   service: {
     file: 'data/service.json', type: 'array', label: 'Service',
@@ -354,7 +354,8 @@ function openEditForm(key, idx) {
         const newItem = {};
         for (const f of schema.fields) {
           const v = fieldEls[f.name].getValue();
-          if (f.required && (v === '' || v === null || v === undefined)) {
+          const isEmpty = Array.isArray(v) ? v.length === 0 : (v === '' || v === null || v === undefined);
+          if (f.required && isEmpty) {
             showToast('Please fill in "' + f.label + '"', true);
             return;
           }
@@ -394,6 +395,40 @@ function buildField(f, value) {
     input = el('input', { type: 'number' });
     input.value = (value === undefined || value === null) ? '' : value;
     getValue = function () { return input.value === '' ? null : Number(input.value); };
+  } else if (f.type === 'tags') {
+    const list = Array.isArray(value) ? value.slice() : [];
+    const chipsWrap = el('div', { style: 'display:flex; flex-wrap:wrap; gap:6px; margin-bottom:8px;' });
+    function renderChips() {
+      chipsWrap.innerHTML = '';
+      list.forEach(function (tagText, i) {
+        const chip = el('span', {
+          style: 'display:inline-flex; align-items:center; gap:6px; background:var(--bg-page); border:1px solid var(--border); border-radius:20px; padding:4px 6px 4px 12px; font-size:0.85rem;'
+        });
+        chip.appendChild(text(tagText));
+        chip.appendChild(el('button', {
+          type: 'button',
+          style: 'padding:0 6px; font-size:0.8rem; line-height:1.6; border:none; background:transparent; cursor:pointer; color:var(--text-muted);',
+          onclick: function () { list.splice(i, 1); renderChips(); }
+        }, [text('×')]));
+        chipsWrap.appendChild(chip);
+      });
+    }
+    renderChips();
+    const addRow = el('div', { style: 'display:flex; gap:6px;' });
+    const addInput = el('input', { type: 'text', placeholder: f.placeholder || 'Add one and press Enter', style: 'flex:1;' });
+    function addFromInput() {
+      const v = addInput.value.trim();
+      if (!v) return;
+      list.push(v);
+      addInput.value = '';
+      renderChips();
+    }
+    addInput.addEventListener('keydown', function (e) { if (e.key === 'Enter') { e.preventDefault(); addFromInput(); } });
+    const addBtn = el('button', { type: 'button', onclick: addFromInput }, [text('+ Add')]);
+    addRow.appendChild(addInput);
+    addRow.appendChild(addBtn);
+    input = el('div', {}, [chipsWrap, addRow]);
+    getValue = function () { return list; };
   } else {
     input = el('input', { type: 'text' });
     input.value = (value === undefined || value === null) ? '' : value;

@@ -7,7 +7,11 @@ var SiteRender = (function () {
   function classifyTag(label) {
     if (!label) return 'tag-tpc';
     var l = label.toLowerCase();
-    if (l.indexOf('award') !== -1 || l.indexOf('impact') !== -1) return 'tag-award';
+    if (l.indexOf('nsf') !== -1) return 'tag-grant-nsf';
+    if (l.indexOf('industry') !== -1) return 'tag-grant-industry';
+    if (l.indexOf('wpi') !== -1 || l.indexOf('seed') !== -1) return 'tag-grant-wpi';
+    if (l.indexOf('impact') !== -1 || l.indexOf('best paper') !== -1) return 'tag-honor';
+    if (l.indexOf('award') !== -1) return 'tag-award';
     if (l.indexOf('student') !== -1) return 'tag-students';
     if (l.indexOf('invited') !== -1 || l.indexOf('talk') !== -1) return 'tag-talk';
     if (l.indexOf('paper') !== -1) return 'tag-paper';
@@ -52,7 +56,9 @@ var SiteRender = (function () {
       .catch(function (err) { showError(container, err); });
   }
 
-  /* Teaching table: teaching.json */
+  /* Teaching table: teaching.json. "offerings" is an array of term strings
+     (e.g. "2019 Fall"), each rendered as its own tag. Old data where
+     offerings was still a single comma-separated string is also accepted. */
   function renderTeachingTable(tbodyId, jsonUrl) {
     var tbody = document.getElementById(tbodyId);
     fetchJSON(jsonUrl)
@@ -60,7 +66,11 @@ var SiteRender = (function () {
         tbody.innerHTML = '';
         rows.forEach(function (row) {
           var tr = document.createElement('tr');
-          tr.innerHTML = '<td>' + row.course + '</td><td>' + row.offerings + '</td>';
+          var list = Array.isArray(row.offerings)
+            ? row.offerings
+            : String(row.offerings || '').split(',').map(function (s) { return s.trim(); }).filter(Boolean);
+          var offeringsHtml = list.map(function (o) { return '<span class="tag tag-term">' + o + '</span>'; }).join('');
+          tr.innerHTML = '<td>' + row.course + '</td><td>' + offeringsHtml + '</td>';
           tbody.appendChild(tr);
         });
       })

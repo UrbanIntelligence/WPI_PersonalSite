@@ -199,6 +199,22 @@ main.container { padding-top: 24px; padding-bottom: 48px; }
 .tag-tpc   { background: #e2ecfb; color: #1d4e8f; }
 .tag-students { background: #fde0e0; color: #8f1d1d; }
 .tag-talk  { background: var(--purple-bg); color: var(--purple-text); }
+.tag-grant-nsf      { background: #e2ecfb; color: #1d4e8f; }
+.tag-grant-industry { background: #dcf5f0; color: #0f6e56; }
+.tag-grant-wpi      { background: var(--purple-bg); color: var(--purple-text); }
+.tag-honor          { background: #fdf1d8; color: #8a5a00; }
+.tag-term {
+  background: #eceae5;
+  color: #5f5a50;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  text-transform: none;
+  padding: 3px 9px;
+  border-radius: 20px;
+  margin: 2px 4px 2px 0;
+  display: inline-block;
+}
 
 /* ---------- Lists ---------- */
 

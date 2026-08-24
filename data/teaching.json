@@ -1,30 +1,70 @@
 [
   {
     "course": "DS551/CS551: Reinforcement Learning",
-    "offerings": "2019 Fall, 2020 Fall, 2022 Spring, 2022 Fall, 2023 Fall, 2024 Fall, 2025 Fall"
+    "offerings": [
+      "2019 Fall",
+      "2020 Fall",
+      "2022 Spring",
+      "2022 Fall",
+      "2023 Fall",
+      "2024 Fall",
+      "2025 Fall"
+    ]
   },
   {
     "course": "DS504/CS586: Big Data Analytics",
-    "offerings": "2016 Fall, 2016 Spring, 2017 Fall, 2018 Spring, 2018 Fall, 2019 Spring, 2020 Spring, 2021 Spring, 2023 Spring, 2024 Spring, 2025 Spring, 2026 Spring"
+    "offerings": [
+      "2016 Fall",
+      "2016 Spring",
+      "2017 Fall",
+      "2018 Spring",
+      "2018 Fall",
+      "2019 Spring",
+      "2020 Spring",
+      "2021 Spring",
+      "2023 Spring",
+      "2024 Spring",
+      "2025 Spring",
+      "2026 Spring"
+    ]
   },
   {
     "course": "CS539: Machine Learning",
-    "offerings": "2024 Fall, 2025 Spring"
+    "offerings": [
+      "2024 Fall",
+      "2025 Spring"
+    ]
   },
   {
     "course": "DS3010: Data Science III: Computational Data Intelligence",
-    "offerings": "2022 Spring D-term"
+    "offerings": [
+      "2022 Spring D-term"
+    ]
   },
   {
     "course": "CS3516: Computer Networks",
-    "offerings": "2016 Fall A-term, 2017 Fall A-term, 2018 Fall A-term, 2019 Fall A-term, 2020 Fall A-term, 2023 Spring D-term, 2023 Fall B-term, 2024 Fall B-term, 2026 Spring D-term"
+    "offerings": [
+      "2016 Fall A-term",
+      "2017 Fall A-term",
+      "2018 Fall A-term",
+      "2019 Fall A-term",
+      "2020 Fall A-term",
+      "2023 Spring D-term",
+      "2023 Fall B-term",
+      "2024 Fall B-term",
+      "2026 Spring D-term"
+    ]
   },
   {
     "course": "DS595/CS525: Urban Network Analysis: Methodologies and Applications",
-    "offerings": "2017 Spring"
+    "offerings": [
+      "2017 Spring"
+    ]
   },
   {
     "course": "CS4516: Advanced Computer Networks",
-    "offerings": "2015 Fall B-term"
+    "offerings": [
+      "2015 Fall B-term"
+    ]
   }
 ]
