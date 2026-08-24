@@ -265,6 +265,11 @@ async function loadAndRenderTab(key, content) {
   }
 }
 
+function publicationDisplayRank(e) {
+  if (e.venue) return 0;
+  return e.kind === 'journal' ? 2 : 1;
+}
+
 function renderListSection(key, content) {
   const schema = SCHEMAS[key];
   const entry = state.cache[key];
@@ -279,7 +284,22 @@ function renderListSection(key, content) {
   if (entry.data.length === 0) {
     card.appendChild(el('p', { class: 'empty-state' }, [text('No entries yet.')]));
   } else {
-    entry.data.forEach(function (item, idx) {
+    /* Show newest first (and, for publications, in the same prestige > conference >
+       journal order the public page uses) so a just-added entry is visible without
+       scrolling through the whole list. idx always refers to the real position in
+       entry.data, which Edit/Delete need — only the display order is sorted. */
+    var order = entry.data.map(function (item, idx) { return { item: item, idx: idx }; });
+    if (key === 'publications') {
+      order.sort(function (a, b) {
+        var ay = a.item.year || 0, by = b.item.year || 0;
+        if (by !== ay) return by - ay;
+        return publicationDisplayRank(a.item) - publicationDisplayRank(b.item);
+      });
+    } else {
+      order.reverse();
+    }
+    order.forEach(function (pair) {
+      var item = pair.item, idx = pair.idx;
       const row = el('div', { class: 'entry-row' }, [
         el('span', { class: 'summary' }, [text(schema.summary(item))]),
         el('div', { class: 'actions' }, [
@@ -293,18 +313,13 @@ function renderListSection(key, content) {
   content.appendChild(card);
 }
 
-/* Publications get the rich structured form for Add and for editing any
-   entry already in the new format; pre-existing HTML-blob entries still
-   edit through the simple legacy form. Every other page always uses the
-   generic form. */
+/* Publications always use the rich structured form, for both Add and Edit.
+   Pre-existing HTML-blob entries get auto-parsed into the structured fields
+   on open (see parseLegacyPublicationHtml) — review before saving, since
+   older entries used enough varied formatting that the split isn't always
+   perfect. Every other page uses the generic form. */
 function openAddOrEdit(key, idx) {
-  if (key === 'publications') {
-    const entry = state.cache.publications;
-    const isLegacy = idx !== null && entry.data[idx].html && !entry.data[idx].title;
-    if (isLegacy) { openEditForm(key, idx); return; }
-    openPublicationForm(idx);
-    return;
-  }
+  if (key === 'publications') { openPublicationForm(idx); return; }
   openEditForm(key, idx);
 }
 
@@ -595,37 +610,135 @@ function selectInput(value, options, onChange) {
   return select;
 }
 
+/* Best-effort conversion of an old single-HTML-blob entry into the
+   structured fields, so Edit can open the same rich form for every entry.
+   Authors/title/file are extracted reliably (the original generator always
+   used the same "authors,<br><b>title.</b>[file]<br><i>details</i>" shape).
+   Journal-shaped details ("..., Accepted for publication, June 2021") are
+   split into the journal fields too. Conference-shaped details vary too
+   much across 15 years of formats to safely split into city/date/track/
+   ratio automatically, so the *entire* details sentence is kept intact in
+   "Conference full name" — nothing is lost, and the rendered page looks
+   identical unless you choose to break it apart further yourself. */
+function parseLegacyPublicationHtml(html) {
+  var result = {
+    authors: [{ first: 'Yanhua', last: 'Li', isMe: true }],
+    title: '', fileUrl: null, kind: 'conference',
+    conference: { fullName: '', startDate: '', endDate: '', isUS: true, city: '', state: '', country: '', track: '', accepted: null, submitted: null },
+    journal: { fullName: '', status: 'Accepted', statusMonth: '', statusYear: null },
+    parsed: false
+  };
+  try {
+    var div = document.createElement('div');
+    div.innerHTML = html || '';
+
+    var bolds = Array.from(div.querySelectorAll('b'));
+    var titleEl = null;
+    bolds.forEach(function (b) {
+      var t = b.textContent.trim();
+      if (t === 'Yanhua Li') return;
+      if (!titleEl || t.length > titleEl.textContent.trim().length) titleEl = b;
+    });
+    if (!titleEl) return result;
+    result.title = titleEl.textContent.trim().replace(/\.$/, '');
+
+    // Authors: everything in the DOM before the title <b>, as plain text.
+    var beforeTitleHtml = '';
+    var tmp = document.createElement('div');
+    for (var i = 0; i < div.childNodes.length; i++) tmp.appendChild(div.childNodes[i].cloneNode(true));
+    var idxOfTitle = tmp.innerHTML.indexOf(titleEl.outerHTML);
+    beforeTitleHtml = idxOfTitle >= 0 ? tmp.innerHTML.slice(0, idxOfTitle) : '';
+    var authorsDiv = document.createElement('div');
+    authorsDiv.innerHTML = beforeTitleHtml;
+    var authorsText = authorsDiv.textContent.replace(/,\s*$/, '').trim();
+    if (authorsText) {
+      var tokens = authorsText.replace(/\s+and\s+/gi, ', ').split(',').map(function (s) { return s.trim().replace(/\*$/, ''); }).filter(Boolean);
+      result.authors = tokens.map(function (nameStr) {
+        var parts = nameStr.split(/\s+/);
+        var last = parts.length > 1 ? parts.pop() : '';
+        var first = parts.join(' ');
+        var isMe = nameStr === 'Yanhua Li';
+        return { first: first, last: last || nameStr, isMe: isMe };
+      });
+      if (!result.authors.some(function (a) { return a.isMe; })) {
+        var me = result.authors.find(function (a) { return (a.first + ' ' + a.last).trim() === 'Yanhua Li'; });
+        if (me) me.isMe = true;
+      }
+    }
+
+    // Text after the title's closing </b>: strip every leading [link] group
+    // (papers often chain several, e.g. [PDF][GitHub][Bibtex]) — keep the
+    // first href found (normally the PDF) as fileUrl.
+    var afterHtml = tmp.innerHTML.slice(idxOfTitle + titleEl.outerHTML.length);
+    var linkRe = /^\s*\[(?:<a[^>]*href="([^"]*)"[^>]*>[^<]*<\/a>|[^\]]*)\]/;
+    var linkMatch;
+    while ((linkMatch = linkRe.exec(afterHtml))) {
+      if (linkMatch[1] && !result.fileUrl) result.fileUrl = linkMatch[1];
+      afterHtml = afterHtml.slice(linkMatch[0].length);
+    }
+    afterHtml = afterHtml.replace(/^(<br\s*\/?>)+/i, '');
+    var detailsDiv = document.createElement('div');
+    detailsDiv.innerHTML = afterHtml;
+    var detailsText = detailsDiv.textContent.trim();
+
+    var journalMatch = /^(.*?),\s*(Accepted(?:\s+for\s+publication)?|Published)\.?,?\s*([A-Za-z]+\.?)?\s*(\d{4})\.?\s*$/i.exec(detailsText);
+    if (journalMatch) {
+      result.kind = 'journal';
+      result.journal.fullName = journalMatch[1].trim();
+      result.journal.status = /published/i.test(journalMatch[2]) ? 'Published' : 'Accepted';
+      var monthGuess = (journalMatch[3] || '').replace(/\.$/, '');
+      var monthFull = MONTHS.find(function (m) { return m.toLowerCase().indexOf(monthGuess.toLowerCase()) === 0 && monthGuess; });
+      result.journal.statusMonth = monthFull || '';
+      result.journal.statusYear = parseInt(journalMatch[4], 10);
+    } else {
+      result.kind = 'conference';
+      result.conference.fullName = detailsText;
+    }
+    result.parsed = true;
+  } catch (err) {
+    console.error('legacy publication parse failed', err);
+  }
+  return result;
+}
+
 function openPublicationForm(idx) {
   const entry = state.cache.publications;
   const isNew = idx === null;
   const original = isNew ? null : entry.data[idx];
+  const isLegacy = !isNew && !!original.html && !original.title;
+  const parsed = isLegacy ? parseLegacyPublicationHtml(original.html) : null;
 
   const st = {
     id: isNew ? nextPublicationId(entry.data) : original.id,
     year: isNew ? new Date().getFullYear() : original.year,
     tag: isNew ? '' : (original.tag || ''),
     venue: isNew ? null : (original.venue || null),
-    title: isNew ? '' : (original.title || ''),
-    fileUrl: isNew ? null : (original.fileUrl || null),
+    title: isNew ? '' : (isLegacy ? parsed.title : (original.title || '')),
+    fileUrl: isNew ? null : (isLegacy ? parsed.fileUrl : (original.fileUrl || null)),
     uploadFile: null,
-    kind: isNew ? 'conference' : (original.kind || 'conference'),
+    kind: isNew ? 'conference' : (isLegacy ? parsed.kind : (original.kind || 'conference')),
     conference: Object.assign(
       { fullName: '', startDate: '', endDate: '', isUS: true, city: '', state: '', country: '', track: '', accepted: null, submitted: null },
-      (original && original.conference) || {}
+      isLegacy ? parsed.conference : ((original && original.conference) || {})
     ),
     journal: Object.assign(
       { fullName: '', status: 'Accepted', statusMonth: '', statusYear: null },
-      (original && original.journal) || {}
+      isLegacy ? parsed.journal : ((original && original.journal) || {})
     ),
     authors: isNew
       ? [{ first: 'Yanhua', last: 'Li', isMe: true }]
-      : (original.authors ? original.authors.map(function (a) { return Object.assign({}, a); }) : [{ first: 'Yanhua', last: 'Li', isMe: true }])
+      : (isLegacy ? parsed.authors : (original.authors ? original.authors.map(function (a) { return Object.assign({}, a); }) : [{ first: 'Yanhua', last: 'Li', isMe: true }]))
   };
 
   const backdrop = el('div', { class: 'modal-backdrop', onclick: function (e) { if (e.target === backdrop) backdrop.remove(); } });
   const modal = el('div', { class: 'modal', style: 'max-width:720px;' });
   modal.appendChild(el('h3', {}, [text((isNew ? 'Add publication' : 'Edit publication') + (isNew ? '' : ' (' + st.id + ')'))]));
 
+  if (isLegacy) {
+    modal.appendChild(el('div', {
+      style: 'background:#fdf3e5; border:1px solid #e8c98a; border-radius:8px; padding:10px 14px; margin-bottom:16px; font-size:0.85rem; color:#6b4a12;'
+    }, [text('This entry was auto-converted from its original text. Older entries used varied formatting, so please double-check the fields below — especially the venue details — before saving.')]));
+  }
   const body = el('div', {});
   modal.appendChild(body);
 
