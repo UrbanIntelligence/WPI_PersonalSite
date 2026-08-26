@@ -508,5 +508,11 @@
     "date": "08/2026",
     "year": 2026,
     "html": "One paper was accepted by ICDM 2026."
+  },
+  {
+    "tag": "Paper",
+    "date": "05/2026",
+    "year": 2026,
+    "html": "Two papers were accepted by ICML'26 and KDD'26."
   }
 ]
