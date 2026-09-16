@@ -87,13 +87,21 @@ var SiteRender = (function () {
   /* Service page: service.json, grouped by role (each role shown with a
      colored badge, same idea as the publication venue badges), roles
      ordered by recency, newest year first within each role. */
+  function composeServiceEntry(e) {
+    if (!e.venue) return e.html;
+    var detail = (e.detail || '').replace(/\.+\s*$/, '');
+    var inner = e.venue + ' ' + e.year + ': ' + detail;
+    var linked = e.url ? '<a href="' + e.url + '">' + inner + '</a>' : inner;
+    return linked + '.';
+  }
+
   function renderServiceList(containerId, jsonUrl) {
     var container = document.getElementById(containerId);
     fetchJSON(jsonUrl)
       .then(function (entries) {
         var sorted = sortByRoleThenYear(entries);
         container.innerHTML = sorted.map(function (e) {
-          return '<li>' + tagBadge(e.role) + e.html + '</li>';
+          return '<li>' + tagBadge(e.role) + composeServiceEntry(e) + '</li>';
         }).join('');
       })
       .catch(function (err) { showError(container, err); });
@@ -387,6 +395,7 @@ var SiteRender = (function () {
     renderNewsArchive: renderNewsArchive,
     renderRecentNews: renderRecentNews,
     renderServiceList: renderServiceList,
+    composeServiceEntry: composeServiceEntry,
     sortByRoleThenYear: sortByRoleThenYear,
     fetchJSON: fetchJSON
   };

@@ -174,21 +174,30 @@ When a current student graduates, move their `{ ... }` block from `currentPhD` t
 
 ---
 
-## Service — `data/service.json`
+## Service — `data/service.json` (+ `data/service-venues.json`)
+
+**In the web editor**, Role and Venue are both dropdowns built from whatever values already exist in the data — pick one, or choose "+ Add new..." to type one that isn't there yet. For a handful of recurring venues (AAAI, KDD, NeurIPS, SIGSPATIAL, IJCAI, UrbComp, ICDE, ICDCS, ICCCN, INFOCOM, ICDIM, MobiGIS — auto-detected from your history), picking the venue and typing a year auto-suggests the right wording, including the correct edition number (e.g. picking KDD + 2027 suggests "the 33rd ACM SIGKDD Conference..." automatically) — a "Regenerate" button recomputes it if you change the year. You can still edit the suggested text freely, or type it from scratch for a venue with no known pattern yet.
+
+That produces an entry like this (you don't need to write this by hand):
 
 ```json
 {
   "role": "Technical Program Committee",
+  "venue": "KDD",
   "year": 2027,
-  "html": "<a href=\"https://example.com\">SomeConf 2027: The 1st Conference on Something</a>."
+  "url": "https://kdd2027.org",
+  "detail": "the 33rd ACM SIGKDD Conference on Knowledge Discovery and Data Mining"
 }
 ```
 
-- `role`: shown as a colored badge (color picked automatically from the word, same as everywhere else), and also used to group entries — all your Program Chair roles together, all your Technical Program Committee roles together, etc.
-- `year`: used to sort within a role (newest first) and to decide which role group shows first (whichever role you've been most recently active in leads). Leave blank/`null` for a standing role with no specific year, like an ongoing editorial appointment.
-- `html`: just the venue/committee details and link — don't repeat the role text here, it's rendered separately from `role`.
+- `role`: shown as a colored badge, and used to group entries — all your Program Chair roles together, all your Technical Program Committee roles together, etc. Groups are ordered by that role's most recent year (whichever role you've been most recently active in leads).
+- `venue`: the recurring conference/workshop short name. Used to find a wording template if one is known.
+- `year`: sorts entries within a role, newest first.
+- `url` / `detail`: the specific link and description for that year. Composed into `<a href="url">venue year: detail</a>.` when the page renders.
 
-Entries can go anywhere in the file — role grouping and sorting happens automatically when the page renders.
+For a one-off item that doesn't belong to a recurring venue (like an NSF panel summary), leave Venue as "(none)" — it falls back to a plain `{ "role": "...", "year": ..., "html": "..." }` shape instead, same as the other simple pages.
+
+`data/service-venues.json` holds the auto-detected wording templates (one entry per recurring venue, with the pattern and a reference year/edition number to compute future years from). It's derived from your existing history rather than something you'd typically hand-edit — adding a brand-new venue through the web editor just adds a plain dropdown option with no template, which is expected since there's no history yet to learn a pattern from.
 
 ---
 

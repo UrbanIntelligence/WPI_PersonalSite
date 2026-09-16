@@ -130,12 +130,11 @@ const SCHEMAS = {
   },
   service: {
     file: 'data/service.json', type: 'array', label: 'Service',
-    fields: [
-      { name: 'role', label: 'Role', type: 'text', required: true, help: 'e.g. "Technical Program Committee", "Program Chair", "Associate Editor" — shown as a colored badge, and used to group entries' },
-      { name: 'year', label: 'Year', type: 'number', nullable: true, help: 'Leave blank for an ongoing/evergreen role with no specific year (e.g. a standing editorial appointment)' },
-      { name: 'html', label: 'Description', type: 'textarea', required: true, help: 'HTML allowed, same as existing entries — the venue/committee name and link, without repeating the role' }
-    ],
-    summary: e => (e.role ? '[' + e.role + (e.year ? ' ' + e.year : '') + '] ' : '') + (e.html || '').replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim().slice(0, 55)
+    summary: e => {
+      var label = e.role ? '[' + e.role + '] ' : '';
+      var body = e.venue ? (e.venue + ' ' + (e.year || '') + ': ' + (e.detail || '')) : (e.html || '');
+      return label + body.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim().slice(0, 55);
+    }
   },
   team: {
     file: 'data/team.json', type: 'team-object', label: 'Team',
@@ -354,6 +353,7 @@ function renderListSection(key, content) {
    perfect. Every other page uses the generic form. */
 function openAddOrEdit(key, idx) {
   if (key === 'publications') { openPublicationForm(idx); return; }
+  if (key === 'service') { openServiceForm(idx); return; }
   openEditForm(key, idx);
 }
 
@@ -1033,6 +1033,209 @@ function openPublicationForm(idx) {
 
         if (isNew) entry.data.push(newEntry); else entry.data[idx] = newEntry;
         await saveArrayFile('publications', (isNew ? 'Add' : 'Update') + ' publication: ' + newEntry.title);
+      }
+    }, [text('Save')])
+  ]));
+
+  backdrop.appendChild(modal);
+  document.body.appendChild(backdrop);
+}
+
+/* --- Structured Service form: Role and Venue as dropdowns (built from
+   whatever values already exist in the data, plus an "add new" option),
+   with auto-suggested wording for well-known recurring venues. --- */
+
+const ORD_ONES = ['', 'First', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth', 'Seventh', 'Eighth', 'Ninth'];
+const ORD_TEENS = ['Tenth', 'Eleventh', 'Twelfth', 'Thirteenth', 'Fourteenth', 'Fifteenth', 'Sixteenth', 'Seventeenth', 'Eighteenth', 'Nineteenth'];
+const ORD_TENS_PREFIX = ['', '', 'Twent', 'Thirt', 'Fort', 'Fift', 'Sixt', 'Sevent', 'Eight', 'Ninet'];
+const ORD_TENS_CARDINAL = ['', '', 'Twenty', 'Thirty', 'Forty', 'Fifty', 'Sixty', 'Seventy', 'Eighty', 'Ninety'];
+
+function ordinalWords(n) {
+  if (n < 10) return ORD_ONES[n];
+  if (n < 20) return ORD_TEENS[n - 10];
+  var tens = Math.floor(n / 10), ones = n % 10;
+  if (ones === 0) return ORD_TENS_PREFIX[tens] + 'ieth';
+  return ORD_TENS_CARDINAL[tens] + '-' + ORD_ONES[ones];
+}
+function ordinalNumeric(n) {
+  var mod100 = n % 100;
+  if (mod100 >= 11 && mod100 <= 13) return n + 'th';
+  var suffix = { 1: 'st', 2: 'nd', 3: 'rd' }[n % 10] || 'th';
+  return n + suffix;
+}
+function formatOrdinal(n, style) {
+  if (n < 1) return String(n);
+  return style === 'words' ? ordinalWords(n) : ordinalNumeric(n);
+}
+
+const NEW_ROLE_VALUE = '__add_new_role__';
+const NEW_VENUE_VALUE = '__add_new_venue__';
+const NO_VENUE_VALUE = '';
+
+async function loadServiceVenues() {
+  if (!state.cache.serviceVenues) {
+    try {
+      const file = await GH.getFile('data/service-venues.json');
+      state.cache.serviceVenues = file ? JSON.parse(file.text) : [];
+    } catch (err) {
+      state.cache.serviceVenues = [];
+    }
+  }
+  return state.cache.serviceVenues;
+}
+
+function distinctRoles(data) {
+  var seen = {};
+  data.forEach(function (e) { if (e.role) seen[e.role] = true; });
+  return Object.keys(seen).sort();
+}
+
+async function openServiceForm(idx) {
+  const entry = state.cache.service;
+  const isNew = idx === null;
+  const original = isNew ? null : entry.data[idx];
+  const venueRegistry = await loadServiceVenues();
+
+  // Union of registry venues and any venue names already used in the data
+  // (in case the registry is out of date), so the dropdown never hides a
+  // venue that's actually in use.
+  var venueNames = {};
+  venueRegistry.forEach(function (v) { venueNames[v.name] = true; });
+  entry.data.forEach(function (e) { if (e.venue) venueNames[e.venue] = true; });
+  var venueList = Object.keys(venueNames).sort();
+  function templateFor(name) { return venueRegistry.find(function (v) { return v.name === name && v.template; }); }
+
+  const st = {
+    role: isNew ? '' : (original.role || ''),
+    venue: isNew ? '' : (original.venue || ''),
+    year: isNew ? new Date().getFullYear() : (original.year != null ? original.year : null),
+    url: isNew ? '' : (original.url || ''),
+    detail: isNew ? '' : (original.detail || ''),
+    html: isNew ? '' : (original.html || ''),
+    detailTouched: !isNew && !!(original.detail || original.html)
+  };
+
+  const backdrop = el('div', { class: 'modal-backdrop', onclick: function (e) { if (e.target === backdrop) backdrop.remove(); } });
+  const modal = el('div', { class: 'modal', style: 'max-width:640px;' });
+  modal.appendChild(el('h3', {}, [text(isNew ? 'Add service entry' : 'Edit service entry')]));
+
+  const body = el('div', {});
+  modal.appendChild(body);
+
+  function applyTemplateIfPossible(force) {
+    if (st.detailTouched && !force) return;
+    var tpl = templateFor(st.venue);
+    if (!tpl || !st.year) return;
+    var ordNum = tpl.anchorOrdinal + (st.year - tpl.anchorYear);
+    st.detail = tpl.template.replace('{ORD}', formatOrdinal(ordNum, tpl.ordinalStyle));
+    st.detailTouched = false; // auto-filled text isn't "touched" until the user edits it further
+  }
+
+  function renderBody() {
+    body.innerHTML = '';
+
+    // Role dropdown
+    var roleOptions = distinctRoles(entry.data).map(function (r) { return [r, r]; });
+    roleOptions.push([NEW_ROLE_VALUE, '+ Add new role...']);
+    var roleSelect = selectInput(st.role, roleOptions, function (v) {
+      if (v === NEW_ROLE_VALUE) {
+        var name = prompt('New role name (e.g. "Session Chair"):');
+        if (name && name.trim()) { st.role = name.trim(); }
+        renderBody();
+        return;
+      }
+      st.role = v;
+    });
+    // if the current role isn't in the option list yet (freshly typed via
+    // the prompt above), add it so the dropdown shows it as selected
+    if (st.role && roleOptions.every(function (o) { return o[0] !== st.role; })) {
+      var opt = el('option', { value: st.role }, [text(st.role)]);
+      roleSelect.insertBefore(opt, roleSelect.firstChild);
+      roleSelect.value = st.role;
+    }
+    body.appendChild(labeledField('Role', true, 'Shown as a colored badge; also groups entries on the page', roleSelect));
+
+    // Venue dropdown
+    var venueOptions = [[NO_VENUE_VALUE, '(none — plain text entry)']]
+      .concat(venueList.map(function (v) { return [v, v]; }))
+      .concat([[NEW_VENUE_VALUE, '+ Add new venue...']]);
+    var venueSelect = selectInput(st.venue, venueOptions, function (v) {
+      if (v === NEW_VENUE_VALUE) {
+        var name = prompt('New venue short name (e.g. "SIGMOD"):');
+        if (name && name.trim()) {
+          st.venue = name.trim();
+          if (venueList.indexOf(st.venue) === -1) venueList.push(st.venue);
+        }
+        renderBody();
+        return;
+      }
+      st.venue = v;
+      applyTemplateIfPossible(false);
+      renderBody();
+    });
+    body.appendChild(labeledField('Venue', false, 'The recurring conference/workshop, if any. Choose "(none)" for a one-off item like an NSF panel summary.', venueSelect));
+
+    if (st.venue) {
+      body.appendChild(labeledField('Year', true, null, numberInput(st.year, function (v) { st.year = v; applyTemplateIfPossible(false); })));
+      body.appendChild(labeledField('URL', false, 'Link for this specific year\'s conference page', textInput(st.url, function (v) { st.url = v; })));
+
+      var detailField = buildTextareaWithRegenerate();
+      body.appendChild(detailField);
+    } else {
+      body.appendChild(labeledField('Year', false, 'Leave blank if this item doesn\'t belong to one specific year', numberInput(st.year, function (v) { st.year = v; })));
+      body.appendChild(labeledField('Description', true, 'HTML allowed, same as existing entries', textInputArea(st.html, function (v) { st.html = v; })));
+    }
+  }
+
+  function textInputArea(value, onChange) {
+    var textarea = el('textarea', {});
+    textarea.value = value || '';
+    textarea.addEventListener('input', function () { onChange(textarea.value); });
+    return textarea;
+  }
+
+  function buildTextareaWithRegenerate() {
+    var wrapper = el('div', { class: 'field' });
+    wrapper.appendChild(el('label', {}, [text('Full name / description *')]));
+    var textarea = el('textarea', {});
+    textarea.value = st.detail || '';
+    textarea.addEventListener('input', function () { st.detail = textarea.value; st.detailTouched = true; });
+    wrapper.appendChild(textarea);
+    var tpl = templateFor(st.venue);
+    if (tpl) {
+      var regenBtn = el('button', {
+        style: 'margin-top:6px;',
+        onclick: function () { applyTemplateIfPossible(true); textarea.value = st.detail; }
+      }, [text('Regenerate suggested text for this year')]);
+      wrapper.appendChild(regenBtn);
+      wrapper.appendChild(el('div', { class: 'help' }, [text('Auto-filled from ' + st.venue + '\'s usual wording. Edit freely, or click above to recompute after changing the year.')]));
+    } else {
+      wrapper.appendChild(el('div', { class: 'help' }, [text('e.g. "the 40th AAAI Conference on Artificial Intelligence" — no auto-fill template known yet for this venue, so type it directly.')]));
+    }
+    return wrapper;
+  }
+
+  if (isNew) applyTemplateIfPossible(false);
+  renderBody();
+
+  modal.appendChild(el('div', { class: 'modal-actions' }, [
+    el('button', { onclick: function () { backdrop.remove(); } }, [text('Cancel')]),
+    el('button', {
+      class: 'primary',
+      onclick: async function () {
+        if (!st.role.trim()) { showToast('Please choose or add a role', true); return; }
+        var newEntry;
+        if (st.venue) {
+          if (!st.year) { showToast('Year is required when a venue is set', true); return; }
+          if (!st.detail || !st.detail.trim()) { showToast('Please fill in the description', true); return; }
+          newEntry = { role: st.role.trim(), venue: st.venue, year: Number(st.year), url: st.url || null, detail: st.detail.trim() };
+        } else {
+          if (!st.html || !st.html.trim()) { showToast('Please fill in the description', true); return; }
+          newEntry = { role: st.role.trim(), year: st.year ? Number(st.year) : null, html: st.html.trim() };
+        }
+        if (isNew) entry.data.push(newEntry); else entry.data[idx] = newEntry;
+        backdrop.remove();
+        await saveArrayFile('service', (isNew ? 'Add' : 'Update') + ' service entry: ' + newEntry.role);
       }
     }, [text('Save')])
   ]));

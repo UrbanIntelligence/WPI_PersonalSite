@@ -6,63 +6,87 @@
   },
   {
     "role": "Senior Program Committee",
+    "venue": "AAAI",
     "year": 2026,
-    "html": "<a href=\"https://aaai.org/conference/aaai/aaai-26/\" style=\"font-size:110%\">AAAI 2026: The 40th AAAI Conference on Artificial Intelligence</a>."
+    "url": "https://aaai.org/conference/aaai/aaai-26/",
+    "detail": "The 40th AAAI Conference on Artificial Intelligence"
   },
   {
     "role": "Program Chair",
+    "venue": "UrbComp",
     "year": 2025,
-    "html": "<a href=\"https://urbcomp25.netlify.app/\" style=\"font-size:110%\">UrbComp 2025: the 14th International Workshop on Urban Computing</a> (co-located with ACM SIGKDD 2023)."
+    "url": "https://urbcomp25.netlify.app/",
+    "detail": "the 14th International Workshop on Urban Computing"
   },
   {
     "role": "Program Chair",
+    "venue": "UrbComp",
     "year": 2024,
-    "html": "<a href=\"http://urban-computing.com/urbcomp2024/\" style=\"font-size:110%\">UrbComp 2024: the 13th International Workshop on Urban Computing</a> (co-located with ACM SIGKDD 2023)."
+    "url": "http://urban-computing.com/urbcomp2024/",
+    "detail": "the 13th International Workshop on Urban Computing"
   },
   {
     "role": "Program Chair",
+    "venue": "UrbComp",
     "year": 2023,
-    "html": "<a href=\"http://urban-computing.com/urbcomp2023/\" style=\"font-size:110%\">UrbComp 2023: the 12th International Workshop on Urban Computing</a> (co-located with ACM SIGKDD 2023)."
+    "url": "http://urban-computing.com/urbcomp2023/",
+    "detail": "the 12th International Workshop on Urban Computing"
   },
   {
     "role": "Program Chair",
+    "venue": "UrbComp",
     "year": 2022,
-    "html": "<a href=\"http://urban-computing.com/urbcomp2022/\" style=\"font-size:110%\">UrbComp 2022: the 11th International Workshop on Urban Computing</a> (co-located with ACM SIGKDD 2022)."
+    "url": "http://urban-computing.com/urbcomp2022/",
+    "detail": "the 11th International Workshop on Urban Computing"
   },
   {
     "role": "Program Chair",
+    "venue": "UrbComp",
     "year": 2021,
-    "html": "<a href=\"http://urban-computing.com/urbcomp2021/\" style=\"font-size:110%\">UrbComp 2021: the 10th International Workshop on Urban Computing</a> (co-located with ACM SIGSPATIAL 2021)."
+    "url": "http://urban-computing.com/urbcomp2021/",
+    "detail": "the 10th International Workshop on Urban Computing"
   },
   {
     "role": "Program Chair",
+    "venue": "UrbComp",
     "year": 2020,
-    "html": "<a href=\"http://urban.cs.wpi.edu/urbcomp2020/index.html\" style=\"font-size:110%\">UrbComp 2020: the 9th International Workshop on Urban Computing</a> (co-located with ACM SIGKDD 2020)."
+    "url": "http://urban.cs.wpi.edu/urbcomp2020/index.html",
+    "detail": "the 9th International Workshop on Urban Computing"
   },
   {
     "role": "Program Chair",
+    "venue": "UrbComp",
     "year": 2019,
-    "html": "<a href=\"http://urban.cs.wpi.edu/urbcomp2019/index.html\" style=\"font-size:110%\">UrbComp 2019: the 8th International Workshop on Urban Computing</a> (co-located with ACM SIGKDD 2019)."
+    "url": "http://urban.cs.wpi.edu/urbcomp2019/index.html",
+    "detail": "the 8th International Workshop on Urban Computing"
   },
   {
     "role": "Proceedings Chair",
+    "venue": "SIGSPATIAL",
     "year": 2021,
-    "html": "<a href=\"http://sigspatial2021.sigspatial.org/\" style=\"font-size:110%\">SIGSPATIAL 2021: 29th ACM SIGSPATIAL International Conference on Advances in Geographic Information Systems.</a>"
+    "url": "http://sigspatial2021.sigspatial.org/",
+    "detail": "29th ACM SIGSPATIAL International Conference on Advances in Geographic Information Systems"
   },
   {
     "role": "Proceedings Chair",
+    "venue": "SIGSPATIAL",
     "year": 2020,
-    "html": "<a href=\"http://sigspatial2020.sigspatial.org/\" style=\"font-size:110%\">SIGSPATIAL 2020: 28th ACM SIGSPATIAL International Conference on Advances in Geographic Information Systems.</a>"
+    "url": "http://sigspatial2020.sigspatial.org/",
+    "detail": "28th ACM SIGSPATIAL International Conference on Advances in Geographic Information Systems"
   },
   {
     "role": "Publicity Chair",
+    "venue": "SIGSPATIAL",
     "year": 2018,
-    "html": "<a href=\"http://sigspatial2018.sigspatial.org/\" style=\"font-size:110%\">SIGSPATIAL 2018: 26th ACM SIGSPATIAL International Conference on Advances in Geographic Information Systems.</a>"
+    "url": "http://sigspatial2018.sigspatial.org/",
+    "detail": "26th ACM SIGSPATIAL International Conference on Advances in Geographic Information Systems"
   },
   {
     "role": "Publicity Chair",
+    "venue": "SIGSPATIAL",
     "year": 2017,
-    "html": "<a href=\"http://sigspatial2017.sigspatial.org/\" style=\"font-size:110%\">SIGSPATIAL 2017: 25th ACM SIGSPATIAL International Conference on Advances in Geographic Information Systems.</a>"
+    "url": "http://sigspatial2017.sigspatial.org/",
+    "detail": "25th ACM SIGSPATIAL International Conference on Advances in Geographic Information Systems"
   },
   {
     "role": "Co-chair",
@@ -86,288 +110,402 @@
   },
   {
     "role": "Technical Program Committee",
+    "venue": "ICLR",
     "year": 2024,
-    "html": "<a href=\"https://iclr.cc/Conferences/2024\" style=\"font-size:110%\">ICLR 2024: Eleventh International Conference on Learning Representations</a>."
+    "url": "https://iclr.cc/Conferences/2024",
+    "detail": "Eleventh International Conference on Learning Representations"
   },
   {
     "role": "Senior Program Committee",
+    "venue": "SDM",
     "year": 2024,
-    "html": "<a href=\"https://www.siam.org/conferences/cm/conference/sdm24\" style=\"font-size:110%\">SDM 2024: SIAM International Conference on Data Mining</a>."
+    "url": "https://www.siam.org/conferences/cm/conference/sdm24",
+    "detail": "SIAM International Conference on Data Mining"
   },
   {
     "role": "Technical Program Committee",
+    "venue": "NeurIPS",
     "year": 2023,
-    "html": "<a href=\"https://neurips.cc/Conferences/2023/\" style=\"font-size:110%\">NeurIPS 2023: the Thirty-Seventh Annual Conference on Neural Information Processing Systems.</a>"
+    "url": "https://neurips.cc/Conferences/2023/",
+    "detail": "the Thirty-Seventh Annual Conference on Neural Information Processing Systems"
   },
   {
     "role": "Technical Program Committee",
+    "venue": "ICML",
     "year": 2023,
-    "html": "<a href=\"https://icml.cc/Conferences/2023/\" style=\"font-size:110%\">ICML 2023: the Fortieth International Conference on Machine Learning</a>."
+    "url": "https://icml.cc/Conferences/2023/",
+    "detail": "the Fortieth International Conference on Machine Learning"
   },
   {
     "role": "Technical Program Committee",
+    "venue": "KDD",
     "year": 2023,
-    "html": "<a href=\"https://www.kdd.org/kdd2023/\" style=\"font-size:110%\">KDD 2023: the 29th ACM SIGKDD Conference on Knowledge Discovery and Data Mining</a>."
+    "url": "https://www.kdd.org/kdd2023/",
+    "detail": "the 29th ACM SIGKDD Conference on Knowledge Discovery and Data Mining"
   },
   {
     "role": "Program Committee",
+    "venue": "IJCAI",
     "year": 2023,
-    "html": "<a href=\"https://ijcai23.org/\" style=\"font-size:110%\">IJCAI 2023: the 32nd International Joint Conference on Artificial Intelligence</a>."
+    "url": "https://ijcai23.org/",
+    "detail": "the 32nd International Joint Conference on Artificial Intelligence"
   },
   {
     "role": "Technical Program Committee",
+    "venue": "ICDM",
     "year": 2023,
-    "html": "<a href=\"https://www.cloud-conf.net/icdm2023/\" style=\"font-size:110%\">ICDM 2023: The IEEE International Conference on Data Mining.</a>"
+    "url": "https://www.cloud-conf.net/icdm2023/",
+    "detail": "The IEEE International Conference on Data Mining"
   },
   {
     "role": "Technical Program Committee",
+    "venue": "SIGSPATIAL",
     "year": 2023,
-    "html": "<a href=\"http://sigspatial2023.sigspatial.org/\" style=\"font-size:110%\">SIGSPATIAL 2023: 31st ACM SIGSPATIAL International Conference on Advances in Geographic Information Systems.</a>"
+    "url": "http://sigspatial2023.sigspatial.org/",
+    "detail": "31st ACM SIGSPATIAL International Conference on Advances in Geographic Information Systems"
   },
   {
     "role": "Technical Program Committee",
+    "venue": "ICLR",
     "year": 2023,
-    "html": "<a href=\"https://iclr.cc/Conferences/2023\" style=\"font-size:110%\">ICLR 2023: Tenth International Conference on Learning Representations</a>."
+    "url": "https://iclr.cc/Conferences/2023",
+    "detail": "Tenth International Conference on Learning Representations"
   },
   {
     "role": "Technical Program Committee",
+    "venue": "NeurIPS",
     "year": 2022,
-    "html": "<a href=\"https://neurips.cc/Conferences/2022/\" style=\"font-size:110%\">NeurIPS 2022: the Thirty-Sixth Annual Conference on Neural Information Processing Systems.</a>"
+    "url": "https://neurips.cc/Conferences/2022/",
+    "detail": "the Thirty-Sixth Annual Conference on Neural Information Processing Systems"
   },
   {
     "role": "Technical Program Committee",
+    "venue": "KDD",
     "year": 2022,
-    "html": "<a href=\"https://www.kdd.org/kdd2022/\" style=\"font-size:110%\">KDD 2022: the 28th ACM SIGKDD Conference on Knowledge Discovery and Data Mining</a>."
+    "url": "https://www.kdd.org/kdd2022/",
+    "detail": "the 28th ACM SIGKDD Conference on Knowledge Discovery and Data Mining"
   },
   {
     "role": "Technical Program Committee",
+    "venue": "ICML",
     "year": 2022,
-    "html": "<a href=\"https://icml.cc/Conferences/2022/\" style=\"font-size:110%\">ICML 2022: Thirty-ninth International Conference on Machine Learning</a>."
+    "url": "https://icml.cc/Conferences/2022/",
+    "detail": "Thirty-ninth International Conference on Machine Learning"
   },
   {
     "role": "Technical Program Committee",
+    "venue": "ICLR",
     "year": 2022,
-    "html": "<a href=\"https://iclr.cc/Conferences/2022\" style=\"font-size:110%\">ICLR 2022: Ninth International Conference on Learning Representations</a>."
+    "url": "https://iclr.cc/Conferences/2022",
+    "detail": "Ninth International Conference on Learning Representations"
   },
   {
     "role": "Senior Program Committee",
+    "venue": "AAAI",
     "year": 2022,
-    "html": "<a href=\"https://aaai.org/Conferences/AAAI-22/\" style=\"font-size:110%\">AAAI 2022: The Thirty-Sixth AAAI Conference on Artificial Intelligence</a>."
+    "url": "https://aaai.org/Conferences/AAAI-22/",
+    "detail": "The Thirty-Sixth AAAI Conference on Artificial Intelligence"
   },
   {
     "role": "Technical Program Committee",
+    "venue": "CVPR",
     "year": 2022,
-    "html": "<a href=\"http://cvpr2022.thecvf.com/\" style=\"font-size:110%\">CVPR 2022: IEEE/CVF Conference on Computer Vision and Pattern Recognition</a>."
+    "url": "http://cvpr2022.thecvf.com/",
+    "detail": "IEEE/CVF Conference on Computer Vision and Pattern Recognition"
   },
   {
     "role": "Program Committee",
+    "venue": "IJCAI",
     "year": 2022,
-    "html": "<a href=\"https://ijcai22.org/\" style=\"font-size:110%\">IJCAI 2022: the 31st International Joint Conference on Artificial Intelligence</a>."
+    "url": "https://ijcai22.org/",
+    "detail": "the 31st International Joint Conference on Artificial Intelligence"
   },
   {
     "role": "Technical Program Committee",
+    "venue": "ICDM",
     "year": 2022,
-    "html": "<a href=\"https://icdm22.cse.usf.edu/\" style=\"font-size:110%\">ICDM 2022: The IEEE International Conference on Data Mining.</a>"
+    "url": "https://icdm22.cse.usf.edu/",
+    "detail": "The IEEE International Conference on Data Mining"
   },
   {
     "role": "Technical Program Committee",
+    "venue": "SIGSPATIAL",
     "year": 2022,
-    "html": "<a href=\"http://sigspatial2022.sigspatial.org/\" style=\"font-size:110%\">SIGSPATIAL 2022: 30th ACM SIGSPATIAL International Conference on Advances in Geographic Information Systems.</a>"
+    "url": "http://sigspatial2022.sigspatial.org/",
+    "detail": "30th ACM SIGSPATIAL International Conference on Advances in Geographic Information Systems"
   },
   {
     "role": "Technical Program Committee",
+    "venue": "NeurIPS",
     "year": 2021,
-    "html": "<a href=\"https://nips.cc/\" style=\"font-size:110%\">NeurIPS 2021: the Thirty-Fifth Annual Conference on Neural Information Processing Systems.</a>"
+    "url": "https://nips.cc/",
+    "detail": "the Thirty-Fifth Annual Conference on Neural Information Processing Systems"
   },
   {
     "role": "Technical Program Committee",
+    "venue": "KDD",
     "year": 2021,
-    "html": "<a href=\"https://www.kdd.org/kdd2021/\" style=\"font-size:110%\">KDD 2021: the 27th ACM SIGKDD Conference on Knowledge Discovery and Data Mining</a>."
+    "url": "https://www.kdd.org/kdd2021/",
+    "detail": "the 27th ACM SIGKDD Conference on Knowledge Discovery and Data Mining"
   },
   {
     "role": "Technical Program Committee",
+    "venue": "ICML",
     "year": 2021,
-    "html": "<a href=\"https://icml.cc/Conferences/2021/\" style=\"font-size:110%\">ICML 2021: Thirty-eighth International Conference on Machine Learning</a>."
+    "url": "https://icml.cc/Conferences/2021/",
+    "detail": "Thirty-eighth International Conference on Machine Learning"
   },
   {
     "role": "Technical Program Committee",
+    "venue": "ICLR",
     "year": 2021,
-    "html": "<a href=\"https://iclr.cc/Conferences/2021\" style=\"font-size:110%\">ICLR 2021: Eighth International Conference on Learning Representations</a>."
+    "url": "https://iclr.cc/Conferences/2021",
+    "detail": "Eighth International Conference on Learning Representations"
   },
   {
     "role": "Technical Program Committee",
+    "venue": "SIGSPATIAL",
     "year": 2021,
-    "html": "<a href=\"http://sigspatial2021.sigspatial.org/\" style=\"font-size:110%\">SIGSPATIAL 2021: 29th ACM SIGSPATIAL International Conference on Advances in Geographic Information Systems.</a>"
+    "url": "http://sigspatial2021.sigspatial.org/",
+    "detail": "29th ACM SIGSPATIAL International Conference on Advances in Geographic Information Systems"
   },
   {
     "role": "Technical Program Committee",
+    "venue": "AAAI",
     "year": 2021,
-    "html": "<a href=\"https://aaai.org/Conferences/AAAI-21/\" style=\"font-size:110%\">AAAI 2021: The Thirty-Fifth AAAI Conference on Artificial Intelligence</a>."
+    "url": "https://aaai.org/Conferences/AAAI-21/",
+    "detail": "The Thirty-Fifth AAAI Conference on Artificial Intelligence"
   },
   {
     "role": "Senior Program Committee",
+    "venue": "IJCAI",
     "year": 2021,
-    "html": "<a href=\"https://ijcai21.org/\" style=\"font-size:110%\">IJCAI 2021: the 30th International Joint Conference on Artificial Intelligence</a>."
+    "url": "https://ijcai21.org/",
+    "detail": "the 30th International Joint Conference on Artificial Intelligence"
   },
   {
     "role": "Technical Program Committee",
+    "venue": "WWW",
     "year": 2021,
-    "html": "<a href=\"https://www2021.thewebconf.org/\" style=\"font-size:110%\">WWW 2021: The Web Conference 2021</a>."
+    "url": "https://www2021.thewebconf.org/",
+    "detail": "The Web Conference 2021"
   },
   {
     "role": "Technical Program Committee",
+    "venue": "CVPR",
     "year": 2021,
-    "html": "<a href=\"http://cvpr2021.thecvf.com/\" style=\"font-size:110%\">CVPR 2021: IEEE/CVF Conference on Computer Vision and Pattern Recognition</a>."
+    "url": "http://cvpr2021.thecvf.com/",
+    "detail": "IEEE/CVF Conference on Computer Vision and Pattern Recognition"
   },
   {
     "role": "Technical Program Committee",
+    "venue": "ICDM",
     "year": 2021,
-    "html": "<a href=\"https://icdm2021.auckland.ac.nz/\" style=\"font-size:110%\">ICDM 2021: The IEEE International Conference on Data Mining.</a>"
+    "url": "https://icdm2021.auckland.ac.nz/",
+    "detail": "The IEEE International Conference on Data Mining"
   },
   {
     "role": "Technical Program Committee",
+    "venue": "SDM",
     "year": 2021,
-    "html": "<a href=\"https://www.siam.org/Conferences/CM/Conference/sdm21\" style=\"font-size:110%\">SDM 2021: SIAM International Conference on Data Mining</a>."
+    "url": "https://www.siam.org/Conferences/CM/Conference/sdm21",
+    "detail": "SIAM International Conference on Data Mining"
   },
   {
     "role": "Technical Program Committee",
+    "venue": "NeurIPS",
     "year": 2020,
-    "html": "<a href=\"https://nips.cc/\" style=\"font-size:110%\">NeurIPS 2020: the Thirty-Fourth Annual Conference on Neural Information Processing Systems.</a>"
+    "url": "https://nips.cc/",
+    "detail": "the Thirty-Fourth Annual Conference on Neural Information Processing Systems"
   },
   {
     "role": "Technical Program Committee",
+    "venue": "KDD",
     "year": 2020,
-    "html": "<a href=\"https://www.kdd.org/kdd2020/\" style=\"font-size:110%\">KDD 2020: the 26th ACM SIGKDD Conference on Knowledge Discovery and Data Mining</a>."
+    "url": "https://www.kdd.org/kdd2020/",
+    "detail": "the 26th ACM SIGKDD Conference on Knowledge Discovery and Data Mining"
   },
   {
     "role": "Technical Program Committee",
+    "venue": "SIGSPATIAL",
     "year": 2020,
-    "html": "<a href=\"http://sigspatial2020.sigspatial.org/\" style=\"font-size:110%\">SIGSPATIAL 2020: 28th ACM SIGSPATIAL International Conference on Advances in Geographic Information Systems.</a>"
+    "url": "http://sigspatial2020.sigspatial.org/",
+    "detail": "28th ACM SIGSPATIAL International Conference on Advances in Geographic Information Systems"
   },
   {
     "role": "Technical Program Committee",
+    "venue": "ICML",
     "year": 2020,
-    "html": "<a href=\"https://icml.cc/Conferences/2020/\" style=\"font-size:110%\">ICML 2020: Thirty-seventh International Conference on Machine Learning</a>."
+    "url": "https://icml.cc/Conferences/2020/",
+    "detail": "Thirty-seventh International Conference on Machine Learning"
   },
   {
     "role": "Technical Program Committee",
+    "venue": "IJCAI",
     "year": 2020,
-    "html": "<a href=\"https://ijcai20.org/\" style=\"font-size:110%\">IJCAI 2020: the 29th International Joint Conference on Artificial Intelligence</a>."
+    "url": "https://ijcai20.org/",
+    "detail": "the 29th International Joint Conference on Artificial Intelligence"
   },
   {
     "role": "Technical Program Committee",
+    "venue": "ICLR",
     "year": 2020,
-    "html": "<a href=\"https://iclr.cc/Conferences/2020\" style=\"font-size:110%\">ICLR 2020: Eighth International Conference on Learning Representations</a>."
+    "url": "https://iclr.cc/Conferences/2020",
+    "detail": "Eighth International Conference on Learning Representations"
   },
   {
     "role": "Technical Program Committee",
+    "venue": "AAAI",
     "year": 2020,
-    "html": "<a href=\"https://aaai.org/Conferences/AAAI-20/\" style=\"font-size:110%\">AAAI 2020: The Thirty-Fourth AAAI Conference on Artificial Intelligence</a>."
+    "url": "https://aaai.org/Conferences/AAAI-20/",
+    "detail": "The Thirty-Fourth AAAI Conference on Artificial Intelligence"
   },
   {
     "role": "Technical Program Committee",
+    "venue": "ICDM",
     "year": 2020,
-    "html": "<a href=\"http://www.icdm2020.unical.it/\" style=\"font-size:110%\">ICDM 2020: The IEEE International Conference on Data Mining.</a>"
+    "url": "http://www.icdm2020.unical.it/",
+    "detail": "The IEEE International Conference on Data Mining"
   },
   {
     "role": "Technical Program Committee",
+    "venue": "SIGIR",
     "year": 2020,
-    "html": "<a href=\"https://sigir.org/sigir2020/\" style=\"font-size:110%\">SIGIR 2020: The 43rd International ACM SIGIR Conference on Research and Development in Information Retrieval.</a>."
+    "url": "https://sigir.org/sigir2020/",
+    "detail": "The 43rd International ACM SIGIR Conference on Research and Development in Information Retrieval"
   },
   {
     "role": "Technical Program Committee",
+    "venue": "SDM",
     "year": 2020,
-    "html": "<a href=\"https://www.siam.org/Conferences/CM/Conference/sdm20\" style=\"font-size:110%\">SDM 2020: SIAM International Conference on Data Mining</a>."
+    "url": "https://www.siam.org/Conferences/CM/Conference/sdm20",
+    "detail": "SIAM International Conference on Data Mining"
   },
   {
     "role": "Technical Program Committee",
+    "venue": "CIKM",
     "year": 2020,
-    "html": "<a href=\"http://cikm2020.org/\" style=\"font-size:110%\">CIKM 2020: 29th ACM International Conference on Information and Knowledge Management (both industry and research tracks).</a>"
+    "url": "http://cikm2020.org/",
+    "detail": "29th ACM International Conference on Information and Knowledge Management (both industry and research tracks)"
   },
   {
     "role": "Technical Program Committee",
+    "venue": "IJCAI",
     "year": 2019,
-    "html": "<a href=\"https://ijcai19.org/\" style=\"font-size:110%\">IJCAI 2019: the 28th International Joint Conference on Artificial Intelligence</a>."
+    "url": "https://ijcai19.org/",
+    "detail": "the 28th International Joint Conference on Artificial Intelligence"
   },
   {
     "role": "Technical Program Committee",
+    "venue": "KDD",
     "year": 2019,
-    "html": "<a href=\"https://www.kdd.org/kdd2019/\" style=\"font-size:110%\">KDD 2019: the 25th ACM SIGKDD Conference on Knowledge Discovery and Data Mining</a>."
+    "url": "https://www.kdd.org/kdd2019/",
+    "detail": "the 25th ACM SIGKDD Conference on Knowledge Discovery and Data Mining"
   },
   {
     "role": "Technical Program Committee",
+    "venue": "ICDM",
     "year": 2019,
-    "html": "<a href=\"http://icdm2019.bigke.org/\" style=\"font-size:110%\">ICDM 2019: The IEEE International Conference on Data Mining.</a>"
+    "url": "http://icdm2019.bigke.org/",
+    "detail": "The IEEE International Conference on Data Mining"
   },
   {
     "role": "Technical Program Committee",
+    "venue": "CIKM",
     "year": 2019,
-    "html": "<a href=\"http://cikm2019.org/\" style=\"font-size:110%\">CIKM 2019: 28th ACM International Conference on Information and Knowledge Management (both industry and research tracks).</a>"
+    "url": "http://cikm2019.org/",
+    "detail": "28th ACM International Conference on Information and Knowledge Management (both industry and research tracks)"
   },
   {
     "role": "Technical Program Committee",
+    "venue": "SIGSPATIAL",
     "year": 2019,
-    "html": "<a href=\"http://sigspatial2019.sigspatial.org/\" style=\"font-size:110%\">SIGSPATIAL 2019: 27th ACM SIGSPATIAL International Conference on Advances in Geographic Information Systems.</a>"
+    "url": "http://sigspatial2019.sigspatial.org/",
+    "detail": "27th ACM SIGSPATIAL International Conference on Advances in Geographic Information Systems"
   },
   {
     "role": "Technical Program Committee",
+    "venue": "AAAI",
     "year": 2019,
-    "html": "<a href=\"https://aaai.org/Conferences/AAAI-19/\" style=\"font-size:110%\">AAAI 2019: The Thirty-Third AAAI Conference on Artificial Intelligence</a>."
+    "url": "https://aaai.org/Conferences/AAAI-19/",
+    "detail": "The Thirty-Third AAAI Conference on Artificial Intelligence"
   },
   {
     "role": "Technical Program Committee",
+    "venue": "NeurIPS",
     "year": 2018,
-    "html": "<a href=\"https://nips.cc/\" style=\"font-size:110%\">NeurIPS 2018: the Thirty-Second Annual Conference on Neural Information Processing Systems.</a>"
+    "url": "https://nips.cc/",
+    "detail": "the Thirty-Second Annual Conference on Neural Information Processing Systems"
   },
   {
     "role": "Technical Program Committee",
+    "venue": "SIGSPATIAL",
     "year": 2018,
-    "html": "<a href=\"http://sigspatial2018.sigspatial.org/\" style=\"font-size:110%\">SIGSPATIAL 2018: 26th ACM SIGSPATIAL International Conference on Advances in Geographic Information Systems.</a>"
+    "url": "http://sigspatial2018.sigspatial.org/",
+    "detail": "26th ACM SIGSPATIAL International Conference on Advances in Geographic Information Systems"
   },
   {
     "role": "Technical Program Committee",
+    "venue": "ICDM",
     "year": 2018,
-    "html": "<a href=\"http://icdm2018.org/\" style=\"font-size:110%\">ICDM 2018: The IEEE International Conference on Data Mining.</a>"
+    "url": "http://icdm2018.org/",
+    "detail": "The IEEE International Conference on Data Mining"
   },
   {
     "role": "Technical Program Committee",
+    "venue": "ICDE",
     "year": 2018,
-    "html": "<a href=\"https://icde2018.org/\" style=\"font-size:110%\">ICDE 2018: 34th IEEE International Conference on Data Engineering.</a>"
+    "url": "https://icde2018.org/",
+    "detail": "34th IEEE International Conference on Data Engineering"
   },
   {
     "role": "Technical Program Committee",
+    "venue": "UrbComp",
     "year": 2018,
-    "html": "<a href=\"http://urbcomp.ist.psu.edu/2018/index.html\" style=\"font-size:110%\">UrbComp 2018: the 7th International Workshop on Urban Computing</a>(co-located with ACM SIGKDD 2018)."
+    "url": "http://urbcomp.ist.psu.edu/2018/index.html",
+    "detail": "the 7th International Workshop on Urban Computing"
   },
   {
     "role": "Technical Program Committee",
+    "venue": "CIKM",
     "year": 2018,
-    "html": "<a href=\"http://cikm2018.org/\" style=\"font-size:110%\">CIKM 2018: 27th ACM International Conference on Information and Knowledge Management (both industry and research tracks).</a>"
+    "url": "http://cikm2018.org/",
+    "detail": "27th ACM International Conference on Information and Knowledge Management (both industry and research tracks)"
   },
   {
     "role": "Technical Program Committee",
+    "venue": "AAAI",
     "year": 2018,
-    "html": "<a href=\"https://aaai.org/Conferences/AAAI/aaai18.php\" style=\"font-size:110%\">AAAI 2018: The Thirty-Second AAAI Conference on Artificial Intelligence</a>."
+    "url": "https://aaai.org/Conferences/AAAI/aaai18.php",
+    "detail": "The Thirty-Second AAAI Conference on Artificial Intelligence"
   },
   {
     "role": "Technical Program Committee",
+    "venue": "ICDM",
     "year": 2017,
-    "html": "<a href=\"http://www.icdm2017.bigke.org/\" style=\"font-size:110%\">ICDM 2017: The IEEE International Conference on Data Mining.</a>"
+    "url": "http://www.icdm2017.bigke.org/",
+    "detail": "The IEEE International Conference on Data Mining"
   },
   {
     "role": "Technical Program Committee",
+    "venue": "CIKM",
     "year": 2017,
-    "html": "<a href=\"http://cikm2017.org/\" style=\"font-size:110%\">CIKM 2017: 26th ACM International Conference on Information and Knowledge Management.</a>"
+    "url": "http://cikm2017.org/",
+    "detail": "26th ACM International Conference on Information and Knowledge Management"
   },
   {
     "role": "Technical Program Committee",
+    "venue": "SIGSPATIAL",
     "year": 2017,
-    "html": "<a href=\"http://sigspatial2017.sigspatial.org/\" style=\"font-size:110%\">SIGSPATIAL 2017: 25th ACM SIGSPATIAL International Conference on Advances in Geographic Information Systems.</a>"
+    "url": "http://sigspatial2017.sigspatial.org/",
+    "detail": "25th ACM SIGSPATIAL International Conference on Advances in Geographic Information Systems"
   },
   {
     "role": "Technical Program Committee",
+    "venue": "UrbComp",
     "year": 2017,
-    "html": "<a href=\"http://urbcomp.ist.psu.edu/2017/index.html\" style=\"font-size:110%\">UrbComp 2017: the 6th International Workshop on Urban Computing</a>(co-located with ACM SIGKDD 2017)."
+    "url": "http://urbcomp.ist.psu.edu/2017/index.html",
+    "detail": "the 6th International Workshop on Urban Computing"
   },
   {
     "role": "Technical Program Committee",
@@ -376,113 +514,157 @@
   },
   {
     "role": "Technical Program Committee",
+    "venue": "ICDE",
     "year": 2017,
-    "html": "<a href=\"http://icde2017.sdsc.edu/\" style=\"font-size:110%\">ICDE 2017: 33rd IEEE International Conference on Data Engineering.</a>"
+    "url": "http://icde2017.sdsc.edu/",
+    "detail": "33rd IEEE International Conference on Data Engineering"
   },
   {
     "role": "Technical Program Committee",
+    "venue": "ICCPS",
     "year": 2017,
-    "html": "<a href=\"http://iccps2017.cse.wustl.edu/\" style=\"font-size:110%\">ICCPS 2017: 8th IEEE International Conference on Cyber-Physical Systems.</a>"
+    "url": "http://iccps2017.cse.wustl.edu/",
+    "detail": "8th IEEE International Conference on Cyber-Physical Systems"
   },
   {
     "role": "Technical Program Committee",
+    "venue": "INFOCOM",
     "year": 2017,
-    "html": "<a href=\"http://infocom2017.ieee-infocom.org/\" style=\"font-size:110%\">INFOCOM 2017: The 36th IEEE International Conference on Computer Communications.</a>"
+    "url": "http://infocom2017.ieee-infocom.org/",
+    "detail": "The 36th IEEE International Conference on Computer Communications"
   },
   {
     "role": "Technical Program Committee",
+    "venue": "CIKM",
     "year": 2016,
-    "html": "<a href=\"http://cikm2016.cs.iupui.edu/\" style=\"font-size:110%\">CIKM 2016: 25th ACM International Conference on Information and Knowledge Management.</a>"
+    "url": "http://cikm2016.cs.iupui.edu/",
+    "detail": "25th ACM International Conference on Information and Knowledge Management"
   },
   {
     "role": "Technical Program Committee",
+    "venue": "SIGSPATIAL",
     "year": 2016,
-    "html": "<a href=\"http://sigspatial2016.sigspatial.org/\" style=\"font-size:110%\">SIGSPATIAL 2016: 24th ACM SIGSPATIAL International Conference on Advances in Geographic Information Systems.</a>"
+    "url": "http://sigspatial2016.sigspatial.org/",
+    "detail": "24th ACM SIGSPATIAL International Conference on Advances in Geographic Information Systems"
   },
   {
     "role": "Technical Program Committee",
+    "venue": "ICDCS",
     "year": 2016,
-    "html": "<a href=\"http://www-higashi.ist.osaka-u.ac.jp/\" style=\"font-size:110%\">ICDCS 2016: The 36th International Conference on Distributed Computing Systems.</a>"
+    "url": "http://www-higashi.ist.osaka-u.ac.jp/",
+    "detail": "The 36th International Conference on Distributed Computing Systems"
   },
   {
     "role": "Technical Program Committee",
+    "venue": "INFOCOM",
     "year": 2016,
-    "html": "<a href=\"http://infocom2016.ieee-infocom.org/\" style=\"font-size:110%\">INFOCOM 2016: The 35th IEEE International Conference on Computer Communications.</a>"
+    "url": "http://infocom2016.ieee-infocom.org/",
+    "detail": "The 35th IEEE International Conference on Computer Communications"
   },
   {
     "role": "Technical Program Committee",
+    "venue": "ICCCN",
     "year": 2016,
-    "html": "<a href=\"http://icccn.org/icccn16/\" style=\"font-size:110%\">ICCCN 2016: The 25th International Conference on Computer Communications and Networks.</a>"
+    "url": "http://icccn.org/icccn16/",
+    "detail": "The 25th International Conference on Computer Communications and Networks"
   },
   {
     "role": "Technical Program Committee",
+    "venue": "UrbComp",
     "year": 2016,
-    "html": "<a href=\"http://www2.cs.uic.edu/~urbcomp2013/urbcomp2016/index.html\" style=\"font-size:110%\">UrbComp 2016: the 5th International Workshop on Urban Computing</a>(co-located with ACM SIGKDD 2016)."
+    "url": "http://www2.cs.uic.edu/~urbcomp2013/urbcomp2016/index.html",
+    "detail": "the 5th International Workshop on Urban Computing"
   },
   {
     "role": "Technical Program Committee",
+    "venue": "MobiGIS",
     "year": 2016,
-    "html": "<a href=\"http://www.mobigis.org/\" style=\"font-size:110%\">MobiGIS 2016: The 5th ACM SIGSPATIAL International Workshop on Mobile Geographic Information Systems</a>(in conjunction with SIGSPATIAL 2016)."
+    "url": "http://www.mobigis.org/",
+    "detail": "The 5th ACM SIGSPATIAL International Workshop on Mobile Geographic Information Systems"
   },
   {
     "role": "Technical Program Committee",
+    "venue": "SIGSPATIAL",
     "year": 2015,
-    "html": "<a href=\"http://sigspatial2015.sigspatial.org/\" style=\"font-size:110%\">SIGSPATIAL 2015: 23rd ACM SIGSPATIAL International Conference on Advances in Geographic Information Systems.</a>"
+    "url": "http://sigspatial2015.sigspatial.org/",
+    "detail": "23rd ACM SIGSPATIAL International Conference on Advances in Geographic Information Systems"
   },
   {
     "role": "Technical Program Committee",
+    "venue": "ICDCS",
     "year": 2015,
-    "html": "<a href=\"http://icdcs-2015.cse.ohio-state.edu/\" style=\"font-size:110%\">ICDCS 2015: The 35th International Conference on Distributed Computing Systems.</a>"
+    "url": "http://icdcs-2015.cse.ohio-state.edu/",
+    "detail": "The 35th International Conference on Distributed Computing Systems"
   },
   {
     "role": "Technical Program Committee",
+    "venue": "INFOCOM",
     "year": 2015,
-    "html": "<a href=\"http://infocom2015.ieee-infocom.org/\" style=\"font-size:110%\">INFOCOM 2015: The 34th IEEE International Conference on Computer Communications.</a>"
+    "url": "http://infocom2015.ieee-infocom.org/",
+    "detail": "The 34th IEEE International Conference on Computer Communications"
   },
   {
     "role": "Technical Program Committee",
+    "venue": "MobiGIS",
     "year": 2015,
-    "html": "<a href=\"http://www.mobigis.org/2015/index.htm\" style=\"font-size:110%\">MobiGIS 2015: The 4th ACM SIGSPATIAL International Workshop on Mobile Geographic Information Systems</a>(in conjunction with SIGSPATIAL 2015)."
+    "url": "http://www.mobigis.org/2015/index.htm",
+    "detail": "The 4th ACM SIGSPATIAL International Workshop on Mobile Geographic Information Systems"
   },
   {
     "role": "Technical Program Committee",
+    "venue": "ICCCN",
     "year": 2015,
-    "html": "<a href=\"http://icccn.org/icccn15/\" style=\"font-size:110%\">ICCCN 2015: The 24th International Conference on Computer Communications and Networks.</a>"
+    "url": "http://icccn.org/icccn15/",
+    "detail": "The 24th International Conference on Computer Communications and Networks"
   },
   {
     "role": "Technical Program Committee",
+    "venue": "ICNS",
     "year": 2015,
-    "html": "<a href=\"http://www.iaria.org/conferences2015/ICNS15.html\" style=\"font-size:110%\">ICNS 2015: The 11th International Conference on Networking and Services.</a>"
+    "url": "http://www.iaria.org/conferences2015/ICNS15.html",
+    "detail": "The 11th International Conference on Networking and Services"
   },
   {
     "role": "Technical Program Committee",
+    "venue": "GraphSM",
     "year": 2015,
-    "html": "<a href=\"http://www.iaria.org/conferences2015/GraphSM.html#Committees\" style=\"font-size:110%\">GraphSM 2015: The Second International Workshop on Large-scale Graph Storage and Management.</a>"
+    "url": "http://www.iaria.org/conferences2015/GraphSM.html#Committees",
+    "detail": "The Second International Workshop on Large-scale Graph Storage and Management"
   },
   {
     "role": "Technical Program Committee",
+    "venue": "WASA",
     "year": 2015,
-    "html": "<a href=\"http://www.cs.gsu.edu/WASA/WASA2015\" style=\"font-size:110%\"> WASA 2015: The 10th International Conference on Wireless Algorithms, Systems, and Applications.</a>"
+    "url": "http://www.cs.gsu.edu/WASA/WASA2015",
+    "detail": "The 10th International Conference on Wireless Algorithms, Systems, and Applications"
   },
   {
     "role": "Technical Program Committee",
+    "venue": "BIGCOM",
     "year": 2015,
-    "html": "<a href=\"http://bigcom.tyut.edu.cn/index.html\" style=\"font-size:110%\">BIGCOM 2015: The 1st International Conference on Big Data Computing and Communication.</a>"
+    "url": "http://bigcom.tyut.edu.cn/index.html",
+    "detail": "The 1st International Conference on Big Data Computing and Communication"
   },
   {
     "role": "Technical Program Committee",
+    "venue": "ICDCS",
     "year": 2014,
-    "html": "<a href=\"http://lsd.ls.fi.upm.es/icdcs2014\" style=\"font-size:110%\">ICDCS 2014: The 34th International Conference on Distributed Computing Systems.</a>"
+    "url": "http://lsd.ls.fi.upm.es/icdcs2014",
+    "detail": "The 34th International Conference on Distributed Computing Systems"
   },
   {
     "role": "Technical Program Committee",
+    "venue": "SIMPLEX",
     "year": 2014,
-    "html": "<a href=\"http://www.simplexconf.net/\" style=\"font-size:110%\"> SIMPLEX 2014: The 6th Annual Workshop on Simplifying Complex Networks for Practitioners</a>(in conjunction with WWW 2014)."
+    "url": "http://www.simplexconf.net/",
+    "detail": "The 6th Annual Workshop on Simplifying Complex Networks for Practitioners"
   },
   {
     "role": "Technical Program Committee",
+    "venue": "MobiGIS",
     "year": 2014,
-    "html": "<a href=\"http://www.mobigis.org/\" style=\"font-size:110%\">MobiGIS 2014: The 3rd ACM SIGSPATIAL International Workshop on Mobile Geographic Information Systems</a>(in conjunction with SIGSPATIAL 2014)."
+    "url": "http://www.mobigis.org/",
+    "detail": "The 3rd ACM SIGSPATIAL International Workshop on Mobile Geographic Information Systems"
   },
   {
     "role": "Technical Program Committee",
@@ -491,12 +673,16 @@
   },
   {
     "role": "Technical Program Committee",
+    "venue": "ICDIM",
     "year": 2012,
-    "html": "<a href=\"#\" style=\"font-size:110%\">ICDIM 2012: The 7th International Conference on Digital Information Management.</a>"
+    "url": "#",
+    "detail": "The 7th International Conference on Digital Information Management"
   },
   {
     "role": "Technical Program Committee",
+    "venue": "ICDIM",
     "year": 2011,
-    "html": "<a href=\"#\" style=\"font-size:110%\">ICDIM 2011: The 6th International Conference on Digital Information Management.</a>"
+    "url": "#",
+    "detail": "The 6th International Conference on Digital Information Management"
   }
 ]

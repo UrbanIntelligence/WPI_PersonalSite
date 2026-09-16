@@ -1,0 +1,154 @@
+[
+  {
+    "name": "AAAI",
+    "count": 6,
+    "template": "The {ORD} AAAI Conference on Artificial Intelligence",
+    "ordinalStyle": "numeric",
+    "anchorYear": 2026,
+    "anchorOrdinal": 40
+  },
+  {
+    "name": "BIGCOM",
+    "count": 1
+  },
+  {
+    "name": "CIKM",
+    "count": 5
+  },
+  {
+    "name": "CVPR",
+    "count": 2
+  },
+  {
+    "name": "GraphSM",
+    "count": 1
+  },
+  {
+    "name": "ICCCN",
+    "count": 2,
+    "template": "The {ORD} International Conference on Computer Communications and Networks",
+    "ordinalStyle": "numeric",
+    "anchorYear": 2016,
+    "anchorOrdinal": 25
+  },
+  {
+    "name": "ICCPS",
+    "count": 1
+  },
+  {
+    "name": "ICDCS",
+    "count": 3,
+    "template": "The {ORD} International Conference on Distributed Computing Systems",
+    "ordinalStyle": "numeric",
+    "anchorYear": 2016,
+    "anchorOrdinal": 36
+  },
+  {
+    "name": "ICDE",
+    "count": 2,
+    "template": "{ORD} IEEE International Conference on Data Engineering",
+    "ordinalStyle": "numeric",
+    "anchorYear": 2018,
+    "anchorOrdinal": 34
+  },
+  {
+    "name": "ICDIM",
+    "count": 2,
+    "template": "The {ORD} International Conference on Digital Information Management",
+    "ordinalStyle": "numeric",
+    "anchorYear": 2012,
+    "anchorOrdinal": 7
+  },
+  {
+    "name": "ICDM",
+    "count": 7
+  },
+  {
+    "name": "ICLR",
+    "count": 5
+  },
+  {
+    "name": "ICML",
+    "count": 4
+  },
+  {
+    "name": "ICNS",
+    "count": 1
+  },
+  {
+    "name": "IJCAI",
+    "count": 5,
+    "template": "the {ORD} International Joint Conference on Artificial Intelligence",
+    "ordinalStyle": "numeric",
+    "anchorYear": 2023,
+    "anchorOrdinal": 32
+  },
+  {
+    "name": "INFOCOM",
+    "count": 3,
+    "template": "The {ORD} IEEE International Conference on Computer Communications",
+    "ordinalStyle": "numeric",
+    "anchorYear": 2017,
+    "anchorOrdinal": 36
+  },
+  {
+    "name": "KDD",
+    "count": 5,
+    "template": "the {ORD} ACM SIGKDD Conference on Knowledge Discovery and Data Mining",
+    "ordinalStyle": "numeric",
+    "anchorYear": 2023,
+    "anchorOrdinal": 29
+  },
+  {
+    "name": "MobiGIS",
+    "count": 3,
+    "template": "The {ORD} ACM SIGSPATIAL International Workshop on Mobile Geographic Information Systems",
+    "ordinalStyle": "numeric",
+    "anchorYear": 2016,
+    "anchorOrdinal": 5
+  },
+  {
+    "name": "NeurIPS",
+    "count": 5,
+    "template": "the {ORD} Annual Conference on Neural Information Processing Systems",
+    "ordinalStyle": "words",
+    "anchorYear": 2023,
+    "anchorOrdinal": 37
+  },
+  {
+    "name": "SDM",
+    "count": 3
+  },
+  {
+    "name": "SIGIR",
+    "count": 1
+  },
+  {
+    "name": "SIGSPATIAL",
+    "count": 13,
+    "template": "{ORD} ACM SIGSPATIAL International Conference on Advances in Geographic Information Systems",
+    "ordinalStyle": "numeric",
+    "anchorYear": 2023,
+    "anchorOrdinal": 31
+  },
+  {
+    "name": "SIMPLEX",
+    "count": 1
+  },
+  {
+    "name": "UrbComp",
+    "count": 10,
+    "template": "the {ORD} International Workshop on Urban Computing",
+    "ordinalStyle": "numeric",
+    "anchorYear": 2025,
+    "anchorOrdinal": 14
+  },
+  {
+    "name": "WASA",
+    "count": 1
+  },
+  {
+    "name": "WWW",
+    "count": 1
+  }
+]
