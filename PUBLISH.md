@@ -10,6 +10,8 @@ There's a real double-clickable app right in this project folder: **`Sync to WPI
 
 This runs the exact same `sync-to-wpi.sh` script underneath — the app is just a friendlier way to trigger it, built with macOS's own AppleScript, nothing extra to install or keep running in the background. `Sync to WPI.applescript` is the source, in case you ever want to see or tweak what it does (`osacompile -o "Sync to WPI.app" "Sync to WPI.applescript"` regenerates the app after an edit).
 
+**First double-click on a new Mac:** since this app isn't signed by a registered Apple developer, Gatekeeper may say it "can't be opened because it is from an unidentified developer." Right-click the app → **Open** → confirm once — after that, normal double-clicking works.
+
 ## Alternative: the "Sync to WPI" button on the web editor
 
 The [web editor](https://urbanintelligence.github.io/WPI_PersonalSite/) also has a **Sync to WPI** button next to Sign out, for when you'd rather stay in the browser. It needs a small local helper running first:
