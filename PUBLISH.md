@@ -1,5 +1,18 @@
 # Publishing this site to your WPI userspace
 
+## Fastest way: the "Sync to WPI" button
+
+The [web editor](https://urbanintelligence.github.io/WPI_PersonalSite/) has a **Sync to WPI** button next to Sign out. For it to work, a small local helper needs to be running on a Mac that has `public_html` mounted (see "Map your public_html folder" below):
+
+```bash
+cd /Users/yli15/Documents/ClaudeCode/WPI_Personal_Website
+python3 sync-server.py
+```
+
+Leave that running in a terminal window, then click **Sync to WPI** on the editor page (browsing from that same Mac, or another device on the same local network). It runs the exact same `sync-to-wpi.sh` script and shows you the result in a popup.
+
+This never touches or stores your WPI password — the helper just uses the drive you already mounted in Finder. It only works while `sync-server.py` is running and you're on the same Mac/network as it; it can't reach across the internet from, say, your iPhone away from home. If the button can't reach the helper, it'll tell you so and remind you how to start it.
+
 ## Quick way: `sync-to-wpi.sh`
 
 Once `public_html` is mounted (see step 1 below), from a Terminal in this project folder:

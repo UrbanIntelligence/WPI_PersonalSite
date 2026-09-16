@@ -177,6 +177,47 @@ function showToast(msg, isError) {
   setTimeout(function () { t.remove(); }, isError ? 6000 : 3200);
 }
 
+/* "Sync to WPI" button: talks to a small local helper (sync-server.py) that
+   you run on a Mac which already has public_html mounted in Finder. The
+   helper just shells out to sync-to-wpi.sh — no WPI password ever touches
+   this page or that script; it relies entirely on the drive already being
+   mounted. Only works while the helper is running on the machine you're
+   browsing from (or the same local network); see PUBLISH.md for setup. */
+const SYNC_HELPER_URL = 'http://localhost:8787';
+
+function showSyncResultModal(outputText, isError) {
+  const backdrop = el('div', { class: 'modal-backdrop', onclick: function (e) { if (e.target === backdrop) backdrop.remove(); } });
+  const modal = el('div', { class: 'modal', style: 'max-width:600px;' });
+  modal.appendChild(el('h3', {}, [text(isError ? 'Sync problem' : 'Sync result')]));
+  const pre = document.createElement('pre');
+  pre.style.cssText = 'white-space:pre-wrap; font-size:0.8rem; background:var(--bg-page); padding:10px 12px; border-radius:6px; max-height:320px; overflow:auto; margin:0;';
+  pre.textContent = outputText;
+  modal.appendChild(pre);
+  modal.appendChild(el('div', { class: 'modal-actions' }, [
+    el('button', { class: 'primary', onclick: function () { backdrop.remove(); } }, [text('Close')])
+  ]));
+  backdrop.appendChild(modal);
+  document.body.appendChild(backdrop);
+}
+
+async function syncToWPI() {
+  showToast('Syncing to WPI…');
+  try {
+    const res = await fetch(SYNC_HELPER_URL + '/sync', { method: 'POST' });
+    const data = await res.json();
+    showSyncResultModal(data.output || (data.ok ? 'Done.' : 'Sync failed.'), !data.ok);
+  } catch (err) {
+    showSyncResultModal(
+      'Could not reach the local sync helper on this device.\n\n' +
+      'Start it on a Mac that has public_html mounted:\n\n' +
+      '  cd /Users/yli15/Documents/ClaudeCode/WPI_Personal_Website\n' +
+      '  python3 sync-server.py\n\n' +
+      'Leave that running, then click "Sync to WPI" again from a browser on that same Mac (or its local network).',
+      true
+    );
+  }
+}
+
 function saveToken(tok) { localStorage.setItem(TOKEN_KEY, tok); }
 function loadToken() { return localStorage.getItem(TOKEN_KEY); }
 function clearToken() { localStorage.removeItem(TOKEN_KEY); }
@@ -239,6 +280,7 @@ function renderApp(login) {
     el('h1', {}, [text('Site editor')]),
     el('div', { style: 'display:flex;align-items:center;gap:14px;' }, [
       el('span', { class: 'meta' }, [text('Signed in as ' + login)]),
+      el('button', { class: 'ghost', onclick: syncToWPI }, [text('Sync to WPI')]),
       el('button', { class: 'ghost', onclick: function () { clearToken(); location.reload(); } }, [text('Sign out')])
     ])
   ]);
