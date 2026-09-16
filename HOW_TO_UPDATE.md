@@ -201,6 +201,10 @@ For a one-off item that doesn't belong to a recurring venue (like an NSF panel s
 
 ---
 
+## Sync Log — `data/sync-log.json`
+
+The **Sync Log** tab in the [web editor](https://urbanintelligence.github.io/WPI_PersonalSite/) is read-only — it shows every time `Sync to WPI.app` (or `sync-to-wpi.sh`) has been run, on any of your Macs: timestamp, machine name, a ✅/➖/❌ status, and an expandable full log. Each run appends its own entry automatically; there's nothing to edit here yourself.
+
 ## Publishing your changes
 
 After editing any `data/*.json` file (or images in `img/`), copy the changed files onto `public_html` the same way described in `PUBLISH.md` — just the files you actually changed need to go over; you don't need to re-copy the whole site each time.

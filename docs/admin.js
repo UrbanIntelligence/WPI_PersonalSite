@@ -144,6 +144,9 @@ const SCHEMAS = {
       { key: 'pastPhD', label: 'Past PhD Students', person: true },
       { key: 'pastMastersInterns', label: 'Past Master/Intern Students', plainText: true }
     ]
+  },
+  synclog: {
+    file: 'data/sync-log.json', type: 'synclog', label: 'Sync Log'
   }
 };
 
@@ -311,6 +314,7 @@ async function loadAndRenderTab(key, content) {
     const data = file ? JSON.parse(file.text) : (schema.type === 'team-object' ? {} : []);
     state.cache[key] = { data, sha: file ? file.sha : null };
     if (schema.type === 'team-object') renderTeamSection(key, content);
+    else if (schema.type === 'synclog') renderSyncLogSection(key, content);
     else renderListSection(key, content);
   } catch (err) {
     content.innerHTML = '';
@@ -382,6 +386,48 @@ function renderListSection(key, content) {
           el('button', { class: 'danger', onclick: function () { confirmDeleteEntry(key, idx); } }, [text('Delete')])
         ])
       ]);
+      card.appendChild(row);
+    });
+  }
+  content.appendChild(card);
+}
+
+function renderSyncLogSection(key, content) {
+  const entry = state.cache[key];
+  content.innerHTML = '';
+
+  const card = el('div', { class: 'card' });
+  card.appendChild(el('div', { class: 'section-title' }, [
+    el('h2', {}, [text('Sync Log (' + entry.data.length + ')')]),
+    el('button', { class: 'ghost', onclick: function () { loadAndRenderTab(key, content); } }, [text('Refresh')])
+  ]));
+  card.appendChild(el('p', { class: 'meta' }, [
+    text('Read-only history of every run of "Sync to WPI.app" (or sync-to-wpi.sh), across all your Macs.')
+  ]));
+
+  if (entry.data.length === 0) {
+    card.appendChild(el('p', { class: 'empty-state' }, [text('No syncs recorded yet.')]));
+  } else {
+    entry.data.forEach(function (item) {
+      const icon = item.status === 'success' ? '✅' : item.status === 'no-change' ? '➖' : '❌';
+      const statusLabel = item.status === 'success' ? 'Synced changes'
+        : item.status === 'no-change' ? 'Already up to date'
+        : 'Failed';
+      const when = item.timestamp ? new Date(item.timestamp).toLocaleString() : '(unknown time)';
+
+      const row = el('div', { class: 'entry-row', style: 'flex-direction:column;align-items:stretch;gap:6px;' });
+      row.appendChild(el('div', { class: 'summary' }, [
+        text(icon + ' ' + statusLabel + ' — ' + when + (item.machine ? ' (' + item.machine + ')' : ''))
+      ]));
+      if (item.log) {
+        const details = document.createElement('details');
+        const summary = document.createElement('summary');
+        summary.textContent = 'View log';
+        const pre = el('pre', { style: 'white-space:pre-wrap;font-size:12px;background:#f6f6f6;padding:8px;border-radius:6px;margin-top:6px;' }, [text(item.log)]);
+        details.appendChild(summary);
+        details.appendChild(pre);
+        row.appendChild(details);
+      }
       card.appendChild(row);
     });
   }
