@@ -1,5 +1,11 @@
 [
   {
+    "timestamp": "2026-09-16T18:10:52-04:00",
+    "machine": "cs50",
+    "status": "failure",
+    "log": "==> Checking public_html is mounted...\npublic_html isn't mounted at /Volumes/nonexistent_test.\nIn Finder: Go > Connect to Server > smb://users.wpi.edu/personalweb/public_html, then re-run this script."
+  },
+  {
     "timestamp": "2026-09-16T18:10:42-04:00",
     "machine": "cs50",
     "status": "no-change",
