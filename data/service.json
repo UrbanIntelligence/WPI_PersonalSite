@@ -691,5 +691,12 @@
     "year": 2026,
     "url": "https://uim3-2026-icdm.github.io/",
     "detail": "Urban Intelligence and Multimodal Mobility Mining"
+  },
+  {
+    "role": "Program Chair",
+    "venue": "UrbComp",
+    "year": 2026,
+    "url": "https://urbcomp26.netlify.app/",
+    "detail": "the 15th International Workshop on Urban Computing"
   }
 ]
