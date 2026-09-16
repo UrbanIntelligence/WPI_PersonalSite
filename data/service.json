@@ -684,5 +684,12 @@
     "year": 2011,
     "url": "#",
     "detail": "The 6th International Conference on Digital Information Management"
+  },
+  {
+    "role": "Program Chair",
+    "venue": "UIM3",
+    "year": 2026,
+    "url": "https://uim3-2026-icdm.github.io/",
+    "detail": "Urban Intelligence and Multimodal Mobility Mining"
   }
 ]
