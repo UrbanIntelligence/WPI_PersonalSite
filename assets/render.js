@@ -12,6 +12,10 @@ var SiteRender = (function () {
     if (l.indexOf('wpi') !== -1 || l.indexOf('seed') !== -1) return 'tag-grant-wpi';
     if (l.indexOf('impact') !== -1 || l.indexOf('best paper') !== -1) return 'tag-honor';
     if (l.indexOf('award') !== -1) return 'tag-award';
+    if (l.indexOf('chair') !== -1) return 'tag-grant-wpi';
+    if (l.indexOf('editor') !== -1) return 'tag-honor';
+    if (l.indexOf('panel') !== -1) return 'tag-students';
+    if (l.indexOf('committee') !== -1) return 'tag-tpc';
     if (l.indexOf('student') !== -1) return 'tag-students';
     if (l.indexOf('invited') !== -1 || l.indexOf('talk') !== -1) return 'tag-talk';
     if (l.indexOf('paper') !== -1) return 'tag-paper';
@@ -52,6 +56,45 @@ var SiteRender = (function () {
           li.innerHTML = badge + item.html;
           container.appendChild(li);
         });
+      })
+      .catch(function (err) { showError(container, err); });
+  }
+
+  /* Group ranking shared by the Service page and its admin list: role
+     groups are ordered by that role's most recent year (so whichever role
+     you've been most recently active in surfaces first), and within a
+     role, entries sort newest year first. Entries with no year sort last
+     within their role. */
+  function roleMaxYears(entries) {
+    var maxYear = {};
+    entries.forEach(function (e) {
+      var r = e.role || '';
+      var y = e.year || 0;
+      if (!(r in maxYear) || y > maxYear[r]) maxYear[r] = y;
+    });
+    return maxYear;
+  }
+  function sortByRoleThenYear(entries) {
+    var maxYear = roleMaxYears(entries);
+    return entries.slice().sort(function (a, b) {
+      var rankA = maxYear[a.role || ''] || 0;
+      var rankB = maxYear[b.role || ''] || 0;
+      if (rankB !== rankA) return rankB - rankA;
+      return (b.year || 0) - (a.year || 0);
+    });
+  }
+
+  /* Service page: service.json, grouped by role (each role shown with a
+     colored badge, same idea as the publication venue badges), roles
+     ordered by recency, newest year first within each role. */
+  function renderServiceList(containerId, jsonUrl) {
+    var container = document.getElementById(containerId);
+    fetchJSON(jsonUrl)
+      .then(function (entries) {
+        var sorted = sortByRoleThenYear(entries);
+        container.innerHTML = sorted.map(function (e) {
+          return '<li>' + tagBadge(e.role) + e.html + '</li>';
+        }).join('');
       })
       .catch(function (err) { showError(container, err); });
   }
@@ -343,6 +386,8 @@ var SiteRender = (function () {
     getPublicationTitle: getPublicationTitle,
     renderNewsArchive: renderNewsArchive,
     renderRecentNews: renderRecentNews,
+    renderServiceList: renderServiceList,
+    sortByRoleThenYear: sortByRoleThenYear,
     fetchJSON: fetchJSON
   };
 })();

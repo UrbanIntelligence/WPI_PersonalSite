@@ -131,9 +131,11 @@ const SCHEMAS = {
   service: {
     file: 'data/service.json', type: 'array', label: 'Service',
     fields: [
-      { name: 'html', label: 'Description', type: 'textarea', required: true, help: 'HTML allowed, same as existing entries' }
+      { name: 'role', label: 'Role', type: 'text', required: true, help: 'e.g. "Technical Program Committee", "Program Chair", "Associate Editor" — shown as a colored badge, and used to group entries' },
+      { name: 'year', label: 'Year', type: 'number', nullable: true, help: 'Leave blank for an ongoing/evergreen role with no specific year (e.g. a standing editorial appointment)' },
+      { name: 'html', label: 'Description', type: 'textarea', required: true, help: 'HTML allowed, same as existing entries — the venue/committee name and link, without repeating the role' }
     ],
-    summary: e => (e.html || '').replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim().slice(0, 80)
+    summary: e => (e.role ? '[' + e.role + (e.year ? ' ' + e.year : '') + '] ' : '') + (e.html || '').replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim().slice(0, 55)
   },
   team: {
     file: 'data/team.json', type: 'team-object', label: 'Team',
@@ -313,6 +315,20 @@ function renderListSection(key, content) {
          entries (including a freshly-added one, pushed to the end of its
          year's run) in a sensible relative position. */
       order.sort(function (a, b) { return (b.item.year || 0) - (a.item.year || 0); });
+    } else if (key === 'service') {
+      /* Match the public Service page: role groups ordered by that role's
+         most recent year, newest-first within a role. */
+      var maxYearByRole = {};
+      order.forEach(function (pair) {
+        var r = pair.item.role || '', y = pair.item.year || 0;
+        if (!(r in maxYearByRole) || y > maxYearByRole[r]) maxYearByRole[r] = y;
+      });
+      order.sort(function (a, b) {
+        var rankA = maxYearByRole[a.item.role || ''] || 0;
+        var rankB = maxYearByRole[b.item.role || ''] || 0;
+        if (rankB !== rankA) return rankB - rankA;
+        return (b.item.year || 0) - (a.item.year || 0);
+      });
     } else {
       order.reverse();
     }

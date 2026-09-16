@@ -178,11 +178,17 @@ When a current student graduates, move their `{ ... }` block from `currentPhD` t
 
 ```json
 {
-  "html": "Technical Program Committee, <a href=\"https://example.com\">SomeConf 2027: The 1st Conference on Something</a>."
+  "role": "Technical Program Committee",
+  "year": 2027,
+  "html": "<a href=\"https://example.com\">SomeConf 2027: The 1st Conference on Something</a>."
 }
 ```
 
-Simplest of the six — just one field, no tag/badge. Add a new `{ "html": "..." }` block anywhere in the list.
+- `role`: shown as a colored badge (color picked automatically from the word, same as everywhere else), and also used to group entries — all your Program Chair roles together, all your Technical Program Committee roles together, etc.
+- `year`: used to sort within a role (newest first) and to decide which role group shows first (whichever role you've been most recently active in leads). Leave blank/`null` for a standing role with no specific year, like an ongoing editorial appointment.
+- `html`: just the venue/committee details and link — don't repeat the role text here, it's rendered separately from `role`.
+
+Entries can go anywhere in the file — role grouping and sorting happens automatically when the page renders.
 
 ---
 
