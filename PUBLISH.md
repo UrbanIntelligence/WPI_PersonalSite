@@ -1,17 +1,25 @@
 # Publishing this site to your WPI userspace
 
-## Fastest way: the "Sync to WPI" button
+## Easiest way: double-click "Sync to WPI.app"
 
-The [web editor](https://urbanintelligence.github.io/WPI_PersonalSite/) has a **Sync to WPI** button next to Sign out. For it to work, a small local helper needs to be running on a Mac that has `public_html` mounted (see "Map your public_html folder" below):
+There's a real double-clickable app right in this project folder: **`Sync to WPI.app`**. No Terminal, no typing.
+
+1. Make sure `public_html` is mounted (see "Map your public_html folder" below) — you only need to do this once per login session.
+2. Double-click `Sync to WPI.app` (in Finder, or drag it to your Dock/Desktop for easy access — works from Spotlight too, just type "Sync to WPI").
+3. A dialog pops up telling you what it synced, or that everything's already up to date.
+
+This runs the exact same `sync-to-wpi.sh` script underneath — the app is just a friendlier way to trigger it, built with macOS's own AppleScript, nothing extra to install or keep running in the background. `Sync to WPI.applescript` is the source, in case you ever want to see or tweak what it does (`osacompile -o "Sync to WPI.app" "Sync to WPI.applescript"` regenerates the app after an edit).
+
+## Alternative: the "Sync to WPI" button on the web editor
+
+The [web editor](https://urbanintelligence.github.io/WPI_PersonalSite/) also has a **Sync to WPI** button next to Sign out, for when you'd rather stay in the browser. It needs a small local helper running first:
 
 ```bash
 cd /Users/yli15/Documents/ClaudeCode/WPI_Personal_Website
 python3 sync-server.py
 ```
 
-Leave that running in a terminal window, then click **Sync to WPI** on the editor page (browsing from that same Mac, or another device on the same local network). It runs the exact same `sync-to-wpi.sh` script and shows you the result in a popup.
-
-This never touches or stores your WPI password — the helper just uses the drive you already mounted in Finder. It only works while `sync-server.py` is running and you're on the same Mac/network as it; it can't reach across the internet from, say, your iPhone away from home. If the button can't reach the helper, it'll tell you so and remind you how to start it.
+Leave that running, then click the button (from that same Mac, or another device on the same local network — it can't reach across the internet, e.g. from your iPhone away from home). Same underlying script, same no-stored-password guarantee; the double-click app above is simpler for day-to-day use on a Mac you're sitting at.
 
 ## Quick way: `sync-to-wpi.sh`
 
